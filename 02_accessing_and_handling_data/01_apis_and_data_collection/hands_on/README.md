@@ -8,6 +8,7 @@ hands_on/
 ├── README.md                    ← this guide (setup, steps, checklist, notes)
 ├── start.sh                     ← one-command launcher (venv + checks + Jupyter Lab)
 ├── check_setup.py               ← verifies packages, jq and API access
+├── run_snakemake.sh             ← run the Snakemake exercise from any folder
 ├── requirements.txt             ← packages for this practical (mgnipy pinned, see below)
 ├── part0_first_api_call/
 │   └── first_api_call.sh        ← Part 0: first API call from the terminal
@@ -109,19 +110,45 @@ A two-step workflow: **filter** `measurements.txt` with a shell script → **plo
 | `snakemake_pipeline_tutorial/` | Scaffold to complete: the `<< what goes here ? >>` blank in the `Snakefile`, the `# TODO` in `scripts/filter_measurements.sh` (keep the header plus the first 100 names alphabetically), and the `# TODO`s in `scripts/plot_weight_histogram.py` (read the TSV with pandas, `sns.histplot` of `weight_kg`) |
 | `snakemake_pipeline_solution/` | Complete reference workflow |
 
+### ⚠️ Why the repo README's commands fail on this Mac
+The upstream README says:
 ```bash
-source .venv/bin/activate        # snakemake is installed in .venv
-cd 02_accessing_and_handling_data/01_apis_and_data_collection/hands_on/python-data-tutorials/snakemake_pipeline_tutorial
-snakemake --cores 1              # run after filling in the blanks
-snakemake -n                     # dry run: shows the planned jobs without running them
+conda install snakemake
+cd snakemake_pipeline_solution
+snakemake --cores all
+```
+| Command | What goes wrong here | Fix |
+|---------|---------------------|-----|
+| `conda install snakemake` | Your conda only searches the `defaults` channel, and Snakemake isn't in it, so you get *"PackagesNotFoundError / No match found"*. Snakemake lives on **conda-forge / bioconda** | Not needed: Snakemake **9.27.1 is already installed** in `.venv` (by `start.sh`) and in Anaconda base. If you ever do want conda: `conda install -c conda-forge -c bioconda snakemake` (slow to solve in base; prefer a separate env) |
+| `cd snakemake_pipeline_solution` | That folder isn't in `02_accessing_and_handling_data/`. It's 4 levels deeper, inside `hands_on/python-data-tutorials/` | Use the full path, or the helper below |
+| `snakemake --cores all` | Works once you're in the right folder (tested: 3/3 steps) | — |
+
+### ✅ What to run instead (works from any folder)
+```bash
+cd ~/Projects/EMBL-EBI-Data-Science-Life-Scientists-Implementation.
+H=02_accessing_and_handling_data/01_apis_and_data_collection/hands_on
+
+bash $H/run_snakemake.sh solution                      # run the complete reference workflow
+bash $H/run_snakemake.sh tutorial -n                   # dry run of your scaffold
+bash $H/run_snakemake.sh tutorial                      # run your completed scaffold
+bash $H/run_snakemake.sh tutorial --sdm conda          # bonus: per-rule conda environments
+bash $H/run_snakemake.sh solution --delete-all-output  # clean results and start again
+```
+Or the manual equivalent of the upstream README:
+```bash
+source .venv/bin/activate
+cd 02_accessing_and_handling_data/01_apis_and_data_collection/hands_on/python-data-tutorials/snakemake_pipeline_solution
+snakemake --cores all
 ```
 ✅ Expected outputs: `results/filtered_measurements.tsv` (header + 100 rows) and `results/weight_histogram.png`.
-These and `.snakemake/` are git-ignored.
+These and `.snakemake/` are git-ignored. Until you fill in the blanks, the tutorial version stops with
+`SyntaxError … << what goes here ? >>`. That's expected.
 
 🏅 **Bonus challenge (from the repo README):** make the `plot_histogram` rule run in its **own conda environment**,
 with its Python dependencies listed in a YAML file. Hints: the rule-level `conda:` directive in the
 [Snakemake docs](https://snakemake.readthedocs.io/en/stable/snakefiles/deployment.html#integrated-package-management);
-run with `snakemake --cores 1 --sdm conda`. Conda is available on this Mac (Anaconda, `conda 26.1.1`).
+run with `bash run_snakemake.sh tutorial --sdm conda`. Conda is available on this Mac (Anaconda, `conda 26.1.1`), but
+because your conda only uses the `defaults` channel, list `channels: [conda-forge, bioconda]` **inside your env YAML**.
 
 ## ✅ Progress
 - [ ] Part 0: first API call
