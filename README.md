@@ -143,7 +143,7 @@ This repository combines material under different licences:
 | `DataScience_EBI/` | MIT (licence file included) |
 | Third-party figures inside slides; EMBL/EMBL-EBI trademarks | Owned by their rights holders; not relicensed |
 | Datasets, the unlicensed bioimaging repo, journal articles | **Not redistributed**: fetched locally by `scripts/fetch_course_materials.sh` |
-| My own code and write-ups (everything outside `course_materials/`) | [MIT](LICENSE) |
+| My own code and write-ups (everything outside `course_materials/`) | [MIT](LICENSE): scope in [LICENSE-SCOPE.md](LICENSE-SCOPE.md) |
 
 ---
 
