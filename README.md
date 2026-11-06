@@ -11,6 +11,8 @@
 ![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?logo=huggingface&logoColor=black)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?logo=jupyter&logoColor=white)
 ![Status](https://img.shields.io/badge/status-in%20progress-yellow)
+![License](https://img.shields.io/badge/license-MIT%20(own%20work)-blue)
+[![Lint](https://github.com/Seid-M-Adem/EMBL-EBI-Data-Science-Life-Scientists-Implementation./actions/workflows/lint.yml/badge.svg)](https://github.com/Seid-M-Adem/EMBL-EBI-Data-Science-Life-Scientists-Implementation./actions/workflows/lint.yml)
 
 </div>
 
@@ -102,8 +104,8 @@ CI lints **only my code**; `course_materials/` is excluded.
 ## 🚀 Getting Started
 
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/Seid-M-Adem/EMBL-EBI-Data-Science-Life-Scientists-Implementation..git
+cd EMBL-EBI-Data-Science-Life-Scientists-Implementation.
 
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
@@ -141,11 +143,13 @@ This repository combines material under different licences:
 | `DataScience_EBI/` | MIT (licence file included) |
 | Third-party figures inside slides; EMBL/EMBL-EBI trademarks | Owned by their rights holders; not relicensed |
 | Datasets, the unlicensed bioimaging repo, journal articles | **Not redistributed**: fetched locally by `scripts/fetch_course_materials.sh` |
-| My own code and write-ups (everything outside `course_materials/`) | No licence chosen yet, so all rights are reserved by default |
+| My own code and write-ups (everything outside `course_materials/`) | [MIT](LICENSE) |
 
 ---
 
 ## 📬 Contact
 
 **Seid Adem**: open to opportunities in computational biology and bioinformatics.
-<!-- Add LinkedIn / email / personal site links here -->
+
+[![GitHub](https://img.shields.io/badge/GitHub-Seid--M--Adem-181717?logo=github)](https://github.com/Seid-M-Adem)
+<!-- TODO: add LinkedIn / email badges -->
