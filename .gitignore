@@ -53,3 +53,9 @@ desktop.ini
 # ---- Course resources without a redistribution licence (local use only) ---
 **/course_materials/local/
 *.part
+
+# ---- Datasets downloaded by hands-on launchers --------------------------
+**/hands_on/python-data-tutorials/Pediatric Anemia Dataset*/
+**/snakemake_pipeline_*/results/*
+!**/snakemake_pipeline_*/results/.gitkeep
+**/.snakemake/

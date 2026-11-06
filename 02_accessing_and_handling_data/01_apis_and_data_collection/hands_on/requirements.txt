@@ -5,3 +5,8 @@ numpy
 matplotlib
 seaborn
 requests
+# also listed in the python-data-tutorials README:
+scipy
+scikit-learn
+openpyxl          # read the Excel anaemia dataset (intro_to_ml.ipynb)
+snakemake         # optional pipeline tutorial

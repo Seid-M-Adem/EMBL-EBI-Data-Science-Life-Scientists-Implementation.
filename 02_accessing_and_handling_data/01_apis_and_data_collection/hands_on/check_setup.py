@@ -8,6 +8,7 @@ import logging
 import shutil
 import sys
 import urllib.request
+from pathlib import Path
 
 logging.disable(logging.INFO)  # mgnipy's dependencies log at DEBUG level on import; keep the output readable
 ok = True
@@ -25,7 +26,8 @@ report(in_venv, f"Python {sys.version.split()[0]} from a virtual env ({sys.prefi
        "use bash start.sh, or: source .venv/bin/activate")
 
 for module, expected in [("pandas", None), ("numpy", None), ("seaborn", None),
-                         ("requests", None), ("jupyterlab", None), ("mgnipy", "0.1.3")]:
+                         ("requests", None), ("jupyterlab", None), ("mgnipy", "0.1.3"),
+                         ("scipy", None), ("sklearn", None), ("openpyxl", None), ("snakemake", None)]:
     try:
         mod = importlib.import_module(module)
         version = getattr(mod, "__version__", "?")
@@ -33,6 +35,9 @@ for module, expected in [("pandas", None), ("numpy", None), ("seaborn", None),
         report(good, f"{module} {version}", f"pip install {module}=={expected}")
     except ImportError:
         report(False, f"{module} not installed", "pip install -r requirements.txt")
+
+xlsx = Path(__file__).parent / "python-data-tutorials" / "Pediatric Anemia Dataset Hematological Indicators and Diagnostic Classification" / "Anemia Dataset.xlsx"
+report(xlsx.exists(), "Anaemia dataset for intro_to_ml.ipynb", "run bash start.sh (downloads it automatically)")
 
 for tool in ("curl", "jq"):
     report(shutil.which(tool) is not None, f"{tool} on PATH", f"brew install {tool}")

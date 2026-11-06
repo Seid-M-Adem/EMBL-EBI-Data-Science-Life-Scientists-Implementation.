@@ -14,7 +14,8 @@ hands_on/
 └── python-data-tutorials/       ← full copy of github.com/SandyRogers/python-data-tutorials (Apache-2.0)
     ├── apis.ipynb               ← Part 1
     ├── intro_to_data_handling_and_viz.ipynb   ← Part 2
-    ├── intro_to_ml.ipynb        ← used later in 03.1
+    ├── intro_to_ml.ipynb        ← Part 3 (also the practical for 03.1)
+    ├── Pediatric Anemia Dataset…/Anemia Dataset.xlsx  ← downloaded by start.sh (CC BY 4.0, git-ignored)
     ├── people.tsv, measurements.tsv, iss-dust.png   ← data used by the notebooks
     ├── snakemake_pipeline_tutorial/   ← optional extra: build a Snakemake pipeline
     └── snakemake_pipeline_solution/   ← its solution
@@ -93,9 +94,34 @@ jupyter lab intro_to_data_handling_and_viz.ipynb
 Python lists vs. NumPy arrays → reading data with `csv` vs. **pandas** → **Task: anonymise `people.tsv`**
 (hash the names, parse dates with `to_datetime`, drop `NaT`, compute ages) → save to TSV → plot `measurements.tsv`.
 
-## Optional · Snakemake pipeline
-Follow `python-data-tutorials/snakemake_pipeline_tutorial/README.md` (needs `pip install snakemake`); compare your
-version with `snakemake_pipeline_solution/`.
+## Part 3 · `intro_to_ml.ipynb`: first machine-learning workflow
+Iris dataset: pair plots → train/test split → random forest → precision/recall/F1 → 5-fold cross-validation →
+k-means clustering (bonus: PCA projection). Then a **self-guided exercise** on the *Pediatric Anemia* dataset
+(Mojumdar et al., 2024, Mendeley Data, [doi:10.17632/y7v7ff3wpj.1](https://doi.org/10.17632/y7v7ff3wpj.1), CC BY 4.0):
+explore → encode categories → classify anaemia → evaluate. `start.sh` downloads the Excel file to the path the
+notebook expects; `openpyxl` reads it.
+
+## Part 4 (optional) · Snakemake data pipeline
+A two-step workflow: **filter** `measurements.txt` with a shell script → **plot** a seaborn histogram with Python.
+
+| Folder | What it is |
+|--------|-----------|
+| `snakemake_pipeline_tutorial/` | Scaffold to complete: the `<< what goes here ? >>` blank in the `Snakefile`, the `# TODO` in `scripts/filter_measurements.sh` (keep the header plus the first 100 names alphabetically), and the `# TODO`s in `scripts/plot_weight_histogram.py` (read the TSV with pandas, `sns.histplot` of `weight_kg`) |
+| `snakemake_pipeline_solution/` | Complete reference workflow |
+
+```bash
+source .venv/bin/activate        # snakemake is installed in .venv
+cd 02_accessing_and_handling_data/01_apis_and_data_collection/hands_on/python-data-tutorials/snakemake_pipeline_tutorial
+snakemake --cores 1              # run after filling in the blanks
+snakemake -n                     # dry run: shows the planned jobs without running them
+```
+✅ Expected outputs: `results/filtered_measurements.tsv` (header + 100 rows) and `results/weight_histogram.png`.
+These and `.snakemake/` are git-ignored.
+
+🏅 **Bonus challenge (from the repo README):** make the `plot_histogram` rule run in its **own conda environment**,
+with its Python dependencies listed in a YAML file. Hints: the rule-level `conda:` directive in the
+[Snakemake docs](https://snakemake.readthedocs.io/en/stable/snakefiles/deployment.html#integrated-package-management);
+run with `snakemake --cores 1 --sdm conda`. Conda is available on this Mac (Anaconda, `conda 26.1.1`).
 
 ## ✅ Progress
 - [ ] Part 0: first API call
@@ -104,11 +130,17 @@ version with `snakemake_pipeline_solution/`.
 - [ ] Part 1: ENA Portal API
 - [ ] Part 2: data handling & anonymisation task
 - [ ] Part 2: visualisation
-- [ ] Optional: Snakemake pipeline
+- [ ] Part 3: Iris workflow (classification, CV, k-means)
+- [ ] Part 3: anaemia self-guided exercise
+- [ ] Part 4: Snakemake tutorial completed
+- [ ] Part 4: bonus, per-rule conda environment
 
 ## 📝 My Notes
 _Answers, surprises, errors and what I'd do differently._
 
 ---
-*Tested 2026-11-06 with mgnipy 0.1.3 and pandas 2.3.3 (installed by `start.sh`): every solution cell in both notebooks runs. The only errors
-come from the intentional `...` exercise blanks and the known issue above.*
+*Tested 2026-11-06 (mgnipy 0.1.3, pandas 2.3.3, scikit-learn 1.9.1, snakemake 9.27.1):*
+- *`python-data-tutorials/` matches GitHub commit `f2872ae` byte for byte (22/22 files)*
+- *`apis.ipynb` and `intro_to_data_handling_and_viz.ipynb`: every solution cell runs; the only errors are the intentional `...` blanks and the known issue above*
+- *`intro_to_ml.ipynb`: runs with no errors, including the anaemia dataset*
+- *`snakemake_pipeline_solution`: 3/3 steps succeed; the tutorial version stops at its intended blanks*
