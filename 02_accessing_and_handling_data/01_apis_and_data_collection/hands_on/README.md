@@ -6,6 +6,8 @@ slides 22–24 of [the session slides](../course_materials/APIs_and_Python_for_d
 ```
 hands_on/
 ├── README.md                    ← this guide (setup, steps, checklist, notes)
+├── start.sh                     ← one-command launcher (venv + checks + Jupyter Lab)
+├── check_setup.py               ← verifies packages, jq and API access
 ├── requirements.txt             ← packages for this practical (mgnipy pinned, see below)
 ├── part0_first_api_call/
 │   └── first_api_call.sh        ← Part 0: first API call from the terminal
@@ -21,7 +23,28 @@ hands_on/
 `python-data-tutorials/` is my **working copy**: I fill in the exercises there. The untouched original is kept in
 [`../course_materials/python-data-tutorials/`](../course_materials/python-data-tutorials/) for reference.
 
-## 0 · Setup (replaces the course VM and `conda activate sandy`)
+## 🚀 Quick Start (one command)
+```bash
+bash 02_accessing_and_handling_data/01_apis_and_data_collection/hands_on/start.sh
+```
+This creates or repairs `.venv` if needed, runs `check_setup.py` (packages, `jq`, API connectivity), and opens
+Jupyter Lab in `python-data-tutorials/`. It works from any folder and in any conda env.
+`bash …/start.sh --check` runs the checks only.
+
+## ⚠️ Terminal vs. Python: where to type what
+| Where | What runs there | Example |
+|-------|-----------------|---------|
+| **Terminal (zsh)**: prompt like `seid@MacBook … %` | Shell commands | `curl …`, `jq`, `bash start.sh`, `jupyter lab` |
+| **Jupyter notebook cell**, or a `python` session (`>>>`) | Python code | `import pandas as pd` |
+
+Typing Python into the terminal doesn't work. On macOS `import` is also the ImageMagick screenshot tool, so
+`import pandas as pd` in zsh prints a long ImageMagick help text and `delegate library support not built-in (X11)`.
+That isn't a broken install: run the code in a notebook cell, or start `python` first.
+
+Also check the prompt: `(base)` means Anaconda's base environment is active, which **doesn't** have `mgnipy`.
+Use `start.sh`, or `source .venv/bin/activate` (the prompt then shows `(.venv)`).
+
+## 0 · Setup by hand (alternative to `start.sh`; replaces the course VM and `conda activate sandy`)
 From the repository root:
 ```bash
 brew install jq                                             # JSON processor (Part 0 and apis.ipynb)
@@ -56,6 +79,9 @@ jupyter lab apis.ipynb
 
 Each ☑️ task has a hidden **solution cell** underneath. Try first, then unfold it.
 
+ℹ️ `mgnipy` prints many `DEBUG:` log lines when imported. They're harmless; to hide them, run
+`import logging; logging.disable(logging.INFO)` in the first cell.
+
 ⚠️ **Known issue:** the cell `ssu = mgazine['Summary of SILVA-SSU taxonomies']` currently fails (`'NoneType' has no
 attribute 'load'`) because the live MGnify dataset no longer has an entry with that name. Print `mgazine` to list
 the available summaries and pick one that exists.
@@ -84,5 +110,5 @@ version with `snakemake_pipeline_solution/`.
 _Answers, surprises, errors and what I'd do differently._
 
 ---
-*Tested 2026-11-06 with mgnipy 0.1.3 and pandas 3.1.1: every solution cell in both notebooks runs. The only errors
+*Tested 2026-11-06 with mgnipy 0.1.3 and pandas 2.3.3 (installed by `start.sh`): every solution cell in both notebooks runs. The only errors
 come from the intentional `...` exercise blanks and the known issue above.*
