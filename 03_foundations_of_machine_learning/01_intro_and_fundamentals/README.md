@@ -10,6 +10,7 @@ The first builds intuition (what ML is, why biological data is hard). The second
 algorithms, from PCA to protein language models, with guidance on picking the right one.
 
 ## 📚 Course Materials Explained
+_Official EMBL-EBI material, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); sources and credits in [`course_materials/ATTRIBUTION.md`](course_materials/ATTRIBUTION.md)._
 
 ### [`course_materials/Intro_to_ML.pdf`](course_materials/Intro_to_ML.pdf): *How to think about biology as an ML problem* (34 slides)
 - **AI vs. ML vs. DL**, and the idea of *learning patterns from numeric data* (vectors and matrices)

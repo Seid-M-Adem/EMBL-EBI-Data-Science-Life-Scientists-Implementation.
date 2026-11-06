@@ -130,6 +130,21 @@ jupyter lab
 
 ---
 
+## ⚖️ Licensing
+
+This repository combines material under different licences:
+
+| Content | Licence |
+|---------|---------|
+| EMBL-EBI course slides and notebooks (`*/course_materials/`) and the supplementary webinar deck in `01_…` | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), credited in [COURSE_MATERIALS.md](COURSE_MATERIALS.md) and each `ATTRIBUTION.md` |
+| `python-data-tutorials/` | Apache-2.0 (licence file included) |
+| `DataScience_EBI/` | MIT (licence file included) |
+| Third-party figures inside slides; EMBL/EMBL-EBI trademarks | Owned by their rights holders; not relicensed |
+| Datasets, the unlicensed bioimaging repo, journal articles | **Not redistributed**: fetched locally by `scripts/fetch_course_materials.sh` |
+| My own code and write-ups (everything outside `course_materials/`) | No licence chosen yet, so all rights are reserved by default |
+
+---
+
 ## 📬 Contact
 
 **Seid Adem**: open to opportunities in computational biology and bioinformatics.

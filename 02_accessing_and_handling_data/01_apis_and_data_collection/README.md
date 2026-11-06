@@ -8,6 +8,7 @@ Clicking through a website doesn't scale to hundreds of samples. This session te
 calling EMBL-EBI web APIs to search, filter and download data with code. Every step is then repeatable and auditable.
 
 ## 📚 Course Materials Explained
+_Official EMBL-EBI material, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); sources and credits in [`course_materials/ATTRIBUTION.md`](course_materials/ATTRIBUTION.md)._
 
 ### [`course_materials/APIs_and_Python_for_data_collection.pdf`](course_materials/APIs_and_Python_for_data_collection.pdf) (24 slides)
 - **Why Python:** readable, good for both quick scripts and full libraries, with a large ecosystem

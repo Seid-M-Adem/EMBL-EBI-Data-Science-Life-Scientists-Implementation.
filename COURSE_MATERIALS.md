@@ -22,14 +22,24 @@ next to my own implementations. Everything inside a `course_materials/` folder i
 [`mevol/DataScience_EBI`](https://github.com/mevol/DataScience_EBI) (MIT). Each snapshot keeps its `LICENSE` file and a
 `SNAPSHOT_SOURCE.txt` recording the commit it was taken from.
 
-> ⚠️ **`01_introduction_to_embl_ebi/EMBLEBI_resources_introduction26.pptx`** (EMBL-EBI webinar *"An introduction to EMBL-EBI
-> data resources"*) was added separately and isn't part of the CC BY course download. Check its licence before publishing.
+**Supplementary webinar deck:** `01_introduction_to_embl_ebi/EMBLEBI_resources_introduction26.pptx` is the unmodified
+slide deck of the EMBL-EBI webinar *An introduction to EMBL-EBI resources* (2026; speakers: Flaminia Zane, James Alan Blackshaw,
+Noemi Tejera Hernandez, Louisse Mirabueno, Paulyna Gabriela Magana Gomez, Aurelien Luciani, Sandy Rogers). It's published under
+**CC BY 4.0** at https://www.ebi.ac.uk/training/events/introduction-embl-ebi-resources-2026/
+(file: https://ftp.ebi.ac.uk/pub/training/2026/Webinars/EMBLEBI_resources_introduction26.pptx).
+
+**Third-party content and trademarks:** some slides include figures or photos credited to third parties
+("Credit: …", "© …"). Those elements remain the property of their owners and are reproduced only as published by
+EMBL-EBI; CC BY 4.0 doesn't extend to them. EMBL and EMBL-EBI names and logos are trademarks of EMBL, aren't
+licensed for reuse, and their appearance doesn't imply endorsement of this repository.
+
+Each `course_materials/` folder contains an `ATTRIBUTION.md` listing its files, original URLs, trainers and licence.
 
 ## 🗂️ Index
 
 | Module | Session | Materials in repo | Online extras |
 |--------|---------|-------------------|---------------|
-| [01](01_introduction_to_embl_ebi/course_materials/) | Introduction to EMBL-EBI, its role, and mission | `Intro_to_EMBL-EBI.pdf` (+ supplementary `../EMBLEBI_resources_introduction26.pptx`, see note below) | — |
+| [01](01_introduction_to_embl_ebi/course_materials/) | Introduction to EMBL-EBI, its role, and mission | `Intro_to_EMBL-EBI.pdf` (+ supplementary webinar deck `../EMBLEBI_resources_introduction26.pptx`, CC BY 4.0) | — |
 | [02.1](02_accessing_and_handling_data/01_apis_and_data_collection/course_materials/) | Introduction to APIs and Python for data collection | `APIs_and_Python_for_data_collection.pdf`, `python-data-tutorials/` (notebooks + data, Apache-2.0) | [GitHub](https://github.com/SandyRogers/python-data-tutorials) |
 | [02.2](02_accessing_and_handling_data/02_handling_and_visualisation/course_materials/) | Handling and visualising data in Python | `PyLab_teaching_slides.pdf` | Practical: `intro_to_data_handling_and_viz.ipynb` in 02.1's `python-data-tutorials/` |
 | [03.1](03_foundations_of_machine_learning/01_intro_and_fundamentals/course_materials/) | Intro to ML; ML fundamentals: types of ML and common algorithms | `Intro_to_ML.pdf`, `ML_fundamentals_and_algorithms.pdf` | Practical: `intro_to_ml.ipynb` in 02.1's `python-data-tutorials/` |

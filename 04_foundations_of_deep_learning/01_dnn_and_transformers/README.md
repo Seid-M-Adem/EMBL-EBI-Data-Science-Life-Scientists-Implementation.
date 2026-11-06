@@ -9,6 +9,7 @@ for sequences. The practicals compare a classical neural baseline with a **fine-
 same task.
 
 ## 📚 Course Materials Explained
+_Official EMBL-EBI material, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); sources and credits in [`course_materials/ATTRIBUTION.md`](course_materials/ATTRIBUTION.md)._
 
 ### [`course_materials/Introduction_to_DNNs_and_Transformers.pdf`](course_materials/Introduction_to_DNNs_and_Transformers.pdf) (44 slides)
 **Part A: Deep neural networks**

@@ -9,6 +9,7 @@ and who looks after it. EMBL-EBI runs many of the world's core biological databa
 ChEMBL, Ensembl, MGnify, …). Knowing what each one holds is the first step in any data-science project in biology.
 
 ## 📚 Course Materials Explained
+_Official EMBL-EBI material, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); sources and credits in [`course_materials/ATTRIBUTION.md`](course_materials/ATTRIBUTION.md)._
 
 ### [`course_materials/Intro_to_EMBL-EBI.pdf`](course_materials/Intro_to_EMBL-EBI.pdf) (54 slides)
 *"Unleashing the potential of big data in biology"*
@@ -33,8 +34,8 @@ as the model. EMBL-EBI's curated, cross-referenced resources are the usual start
   **MGnify** (metagenomics)
 - Appendix of useful links and help-desk contacts for each resource
 
-> ⚠️ This file isn't part of the CC BY course download, and its licence hasn't been checked. Confirm it may be
-> redistributed before publishing the repository; otherwise move it into a git-ignored folder.
+> Source: EMBL-EBI webinar [*An introduction to EMBL-EBI resources* (2026)](https://www.ebi.ac.uk/training/events/introduction-embl-ebi-resources-2026/),
+> unmodified, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 ## 🧠 Key Concepts
 - **Data resource:** a structured, accessible collection of data, plus the tools, infrastructure and documentation to store, find and reuse it.

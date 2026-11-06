@@ -12,6 +12,7 @@ Each image becomes a high-dimensional **morphology profile**. The central questi
 > **Can Cell Painting morphology profiles predict chemical cytotoxicity or mode of action?**
 
 ## 📚 Course Materials Explained
+_Official EMBL-EBI material, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); sources and credits in [`course_materials/ATTRIBUTION.md`](course_materials/ATTRIBUTION.md)._
 
 ### [`course_materials/Bioimaging_project_overview.pdf`](course_materials/Bioimaging_project_overview.pdf) (7 slides)
 - **Context:** hepatotoxicity and mode of action from morphology

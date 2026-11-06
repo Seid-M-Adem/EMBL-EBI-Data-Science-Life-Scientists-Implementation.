@@ -12,6 +12,7 @@ The material builds on the *CABANA BiotrAIn* programme and Juan Bizzoto's
 [cancer_data_for_cluster_and_classification](https://github.com/jbzt/cancer_data_for_cluster_and_classification).
 
 ## 📚 Course Materials Explained
+_Official EMBL-EBI material, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); sources and credits in [`course_materials/ATTRIBUTION.md`](course_materials/ATTRIBUTION.md)._
 
 ### Slides
 | File | What it covers |

@@ -1,6 +1,6 @@
 # 03.2 · Hyperparameters & Performance
 
-> **Status:** ⚪ Not started · **Course page:** [Data, hyperparameters, and model performance](https://www.ebi.ac.uk/training/materials/data-science-for-life-scientists-materials-2026/foundations-of-machine-learning-ml/data-hyperparameters-and-model-performance/)
+> **Status:** ⚪ Not started · **Trainer:** Melanie Vollmar · **Course page:** [Data, hyperparameters, and model performance](https://www.ebi.ac.uk/training/materials/data-science-for-life-scientists-materials-2026/foundations-of-machine-learning-ml/data-hyperparameters-and-model-performance/)
 
 ## Overview
 A practical session on what decides whether a model works in practice: **data preparation**,
@@ -10,6 +10,7 @@ crystallography data. The same slides and code are the starting point for the
 [structural biology project](../../05_group_projects/structural_biology/).
 
 ## 📚 Course Materials Explained
+_Official EMBL-EBI material, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); sources and credits in [`course_materials/ATTRIBUTION.md`](course_materials/ATTRIBUTION.md)._
 
 ### [`course_materials/Data_hyperparameters_and_model_performance.pdf`](course_materials/Data_hyperparameters_and_model_performance.pdf) (84 slides)
 | Slides | Topic | Highlights |

@@ -9,6 +9,7 @@
 analysing errors, and tracking experiments so the results can be trusted and reproduced.
 
 ## 📚 Course Materials Explained
+_Official EMBL-EBI material, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); sources and credits in [`course_materials/ATTRIBUTION.md`](course_materials/ATTRIBUTION.md)._
 
 ### [`course_materials/Deep_learning_model_evaluation_and_visualisation.pdf`](course_materials/Deep_learning_model_evaluation_and_visualisation.pdf) (23 slides)
 - **Train → validate → test once → report**: what each split is for

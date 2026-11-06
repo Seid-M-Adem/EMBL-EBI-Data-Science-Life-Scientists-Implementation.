@@ -9,6 +9,7 @@ core data structures, reading files, cleaning and transforming tables with **pan
 It's aimed especially at life scientists coming from **R**.
 
 ## 📚 Course Materials Explained
+_Official EMBL-EBI material, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); sources and credits in [`course_materials/ATTRIBUTION.md`](course_materials/ATTRIBUTION.md)._
 
 ### [`course_materials/PyLab_teaching_slides.pdf`](course_materials/PyLab_teaching_slides.pdf) (16 slides)
 Companion to **PyLab**, a browser-based (Pyodide) set of 30 graded Python challenges in six biology-themed tiers:

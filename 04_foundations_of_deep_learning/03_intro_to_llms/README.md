@@ -8,6 +8,7 @@
 how a raw model becomes an assistant, why LLMs hallucinate, and how to use them **reliably** in scientific work.
 
 ## 📚 Course Materials Explained
+_Official EMBL-EBI material, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); sources and credits in [`course_materials/ATTRIBUTION.md`](course_materials/ATTRIBUTION.md)._
 
 ### [`course_materials/Intro_to_LLMs.pdf`](course_materials/Intro_to_LLMs.pdf) (39 slides)
 | Act | Topic | Highlights |
