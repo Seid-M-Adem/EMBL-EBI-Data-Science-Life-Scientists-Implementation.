@@ -28,12 +28,16 @@ _Official EMBL-EBI material, [CC BY 4.0](https://creativecommons.org/licenses/by
 ### Practical notebooks (task: **PubMed RCT 20k** sentence classification, 5 labels)
 | Notebook | Model | What it does |
 |----------|-------|--------------|
-| [`session1A_dnn_pubmed_rct20k_tutorial.ipynb`](course_materials/session1A_dnn_pubmed_rct20k_tutorial.ipynb) ([Colab](https://colab.research.google.com/drive/1TInWLPKvYTG9icYRuHp2LKp2muX7HqhX?usp=sharing)) | **TF-IDF → TruncatedSVD → MLP** (scikit-learn `MLPClassifier`) | Loads `armanc/pubmed-rct20k` from Hugging Face; takes an 8,000-sentence subset; looks at the class balance; cleans text (`@` placeholders, symbols); trains and tunes the MLP; reports metrics and a confusion matrix; **saves predictions for Session 2** |
-| [`session1B_finetune_a_pretrained_transformer.ipynb`](course_materials/session1B_finetune_a_pretrained_transformer.ipynb) ([Colab](https://colab.research.google.com/drive/1WDO6TtHylzrw3HpLMzIqQsQ5WNPVzDc-?usp=sharing)) | **PubMedBERT** (`microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext`) + classification head | Loads the cleaned subset `Mardiyyah/pubmed-rct-subset_cleaned`; tokenises; dynamic padding with `DataCollatorWithPadding`; Hugging Face `Trainer` (3 epochs, lr 2e-5, best checkpoint by accuracy); per-class report, confusion matrix and error inspection; **saves predictions and metrics for Session 2** |
+| [`session1A_dnn_pubmed_rct20k_tutorial.ipynb`](course_materials/session1A_dnn_pubmed_rct20k_tutorial.ipynb) ([Colab](https://colab.research.google.com/drive/1WDO6TtHylzrw3HpLMzIqQsQ5WNPVzDc-?usp=sharing)) | **TF-IDF → TruncatedSVD → MLP** (scikit-learn `MLPClassifier`) | Loads `armanc/pubmed-rct20k` from Hugging Face; takes an 8,000-sentence subset; looks at the class balance; cleans text (`@` placeholders, symbols); trains and tunes the MLP; reports metrics and a confusion matrix; **saves predictions for Session 2** |
+| [`session1B_finetune_a_pretrained_transformer.ipynb`](course_materials/session1B_finetune_a_pretrained_transformer.ipynb) ([Colab](https://colab.research.google.com/drive/1TInWLPKvYTG9icYRuHp2LKp2muX7HqhX?usp=sharing)) | **PubMedBERT** (`microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext`) + classification head | Loads the cleaned subset `Mardiyyah/pubmed-rct-subset_cleaned`; tokenises; dynamic padding with `DataCollatorWithPadding`; Hugging Face `Trainer` (3 epochs, lr 2e-5, best checkpoint by accuracy); per-class report, confusion matrix and error inspection; **saves predictions and metrics for Session 2** |
 
 Both notebooks end with reflection questions: which labels are confused, and why (class imbalance, ambiguity, context)?
 
 ## ▶️ Running the Practicals
+- ⚠️ The course page's Colab links for 1A and 1B are **swapped** (its "1A" link opens the 1B notebook). The links above are corrected.
+- The committed notebooks are the published FTP snapshot. The trainers kept editing the Colab versions afterwards (e.g. a 60/40 instead of
+  70/30 first split in 1A, extra discussion prompts, Drive-mount cells). `make fetch-local` saves those live versions, with outputs
+  stripped, to `course_materials/local/colab/` (git-ignored) for comparison.
 - Written for **Google Colab**. Locally, **skip the `google.colab` / `drive.mount` cells** and set the output paths to a local folder.
 - 1B pins its own versions (`transformers==4.48.2`, `datasets==3.0.2`, `evaluate==0.4.5`). `requirements-course.txt` is compatible with them.
 - 1B fine-tunes a BERT-base model. A **GPU is strongly recommended**; on CPU, reduce the subset size or the number of epochs.

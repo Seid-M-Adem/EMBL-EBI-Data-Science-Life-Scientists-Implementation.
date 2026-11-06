@@ -39,7 +39,17 @@ The target is **`MR_success`** (0/1).
 | `DataScience_2026_training_<Model>.ipynb` ×8 | One notebook per classifier: Linear SVM, RBF SVM, Decision Tree, Decision Tree + Bagging, Decision Tree + AdaBoost, Random Forest, Extremely Randomised Trees, KNN. Each runs **`RandomizedSearchCV`**, refits the best model, reports CV accuracy and ROC-AUC, feature importances, and test-set performance |
 | `DataScience_2026_predict.ipynb` | Loads a saved model (`joblib`) and predicts on new samples in `predict.csv` |
 
-**Extra:** the [image-augmentation Colab](https://colab.research.google.com/drive/18Ew7O8HnyhlUAkK9lNfwV9By3qTltlM6?usp=sharing) linked from slide 80.
+### [`course_materials/image_augmentation_colab.ipynb`](course_materials/image_augmentation_colab.ipynb) ([Colab](https://colab.research.google.com/drive/18Ew7O8HnyhlUAkK9lNfwV9By3qTltlM6?usp=sharing))
+The image-augmentation demo linked from slide 80 (26 cells), saved with **outputs stripped**:
+1. Loads an example photo with Keras `load_img`, resizes it to 500 × 500 and converts it to an array
+2. **Normalises pixels** from 0–255 to 0–1, and explains why models need a common scale
+3. **Augments** with Keras `ImageDataGenerator`: rotation, width/height shift, shear, zoom, horizontal/vertical flip, and a combined pipeline
+4. Repeats the idea with **Albumentations** (`HorizontalFlip`, `RandomBrightnessContrast`, …) as the modern alternative
+
+To run it, use the Colab link, or locally `pip install tensorflow albumentations`, skip the `google.colab` / `drive.mount` cells and point
+`load_img(...)` at any JPEG. The trainer's example photo (`pexels-rinoadamo-35224529.jpg`, from Pexels) is **not** included: it's a
+third-party image, which is why the saved outputs were stripped. The notebook itself notes that `tensorflow.keras.preprocessing.image`
+is deprecated and kept only for teaching.
 
 ## ▶️ Running the Tutorials
 The notebooks read `data.csv` from their own folder, so start Jupyter there:

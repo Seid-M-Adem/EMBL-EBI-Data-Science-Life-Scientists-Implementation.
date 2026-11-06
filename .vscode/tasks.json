@@ -124,7 +124,7 @@
     },
     {
       "label": "make fetch-local",
-      "detail": "+ local-only resources (unlicensed bioimaging repo, reference papers; git-ignored)",
+      "detail": "+ local-only resources (bioimaging repo, reference papers, live Colab versions; git-ignored)",
       "type": "shell",
       "command": "make fetch-local",
       "options": {
@@ -134,9 +134,19 @@
     },
     {
       "label": "make fetch-data",
-      "detail": "+ project datasets into data/raw (~700 MB; git-ignored)",
+      "detail": "+ project datasets into data/raw (~730 MB; git-ignored)",
       "type": "shell",
       "command": "make fetch-data",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "make fetch-2025",
+      "detail": "+ supplementary 2025 course edition (~140 MB + 165 MB dataset; git-ignored)",
+      "type": "shell",
+      "command": "make fetch-2025",
       "options": {
         "cwd": "${workspaceFolder}"
       },

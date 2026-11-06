@@ -56,6 +56,7 @@ desktop.ini
 
 # ---- Course resources without a redistribution licence (local use only) ---
 **/course_materials/local/
+/supplementary/**/local/
 *.part
 
 # ---- Datasets downloaded by hands-on launchers --------------------------

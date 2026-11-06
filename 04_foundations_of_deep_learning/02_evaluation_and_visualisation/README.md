@@ -36,7 +36,8 @@ Compares the **Session 1 MLP baseline** with the **PubMedBERT** model:
 ## ▶️ Running the Practical
 Run [04.1](../01_dnn_and_transformers/) **1A and 1B first**. This notebook loads their saved prediction CSVs and
 metrics JSON. Update the candidate paths cell if your outputs are stored elsewhere. Skip the `google.colab`
-cells when running locally. W&B logging is optional and needs `WANDB_API_KEY` in a `.env` file, which is git-ignored.
+cells when running locally. The live Colab version (later edits: extra discussion prompts, `rprint` output) is saved by
+`make fetch-local` to `course_materials/local/colab/` for comparison. W&B logging is optional and needs `WANDB_API_KEY` in a `.env` file, which is git-ignored.
 
 ## 🧠 Key Concepts
 - **Macro-F1:** the unweighted mean over classes, so rare classes count equally.

@@ -36,7 +36,10 @@ They're git-ignored because publisher copyright varies.
 1. `scripts/fetch_course_materials.sh --data` downloads the datasets to `data/raw/gene_expression/` (~590 MB; `pan_cancer_dataset.RDS` alone is 570 MB).
 2. The notebooks were written for **Colab with a shared Google Drive folder**. Locally, skip the `drive.mount` cells and
    point the working directory or file paths to `data/raw/gene_expression/`.
-3. `pip install -r requirements-course.txt` (includes `pyreadr` for `.RDS` files, `umap-learn`, `plotly`).
+3. The two Google Drive folders linked from the session page were checked on 2026-11-06. *Folder 1* holds the same six data
+   files as the FTP `Data/` folder. *Folder 2* holds notebooks 1, 2 and 4; they're identical to the committed copies except that
+   the Drive clustering notebook has one extra cell that just displays `df`. The FTP copies (which also include part 2) are used here.
+4. `pip install -r requirements-course.txt` (includes `pyreadr` for `.RDS` files, `umap-learn`, `plotly`).
 
 ## 🧠 Key Concepts
 - **p ≫ n:** many more features than samples, so feature selection or dimensionality reduction is required to avoid overfitting.

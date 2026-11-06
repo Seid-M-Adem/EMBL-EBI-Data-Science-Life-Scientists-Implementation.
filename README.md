@@ -95,6 +95,7 @@ CI lints **only my code**; `course_materials/` is excluded.
 | ↳ | [Gene Expression](05_group_projects/gene_expression/) | TCGA prostate-cancer recurrence prediction; pan-cancer clustering |
 | ↳ | [Structural Biology](05_group_projects/structural_biology/) | Molecular-replacement success prediction; protein-crystal image classification |
 | ↳ | [Bioimaging](05_group_projects/bioimaging/) | Predicting cytotoxicity from Cell Painting morphology profiles |
+| — | [Supplementary](supplementary/) | 2025 edition index (statistics, Cytoscape, FAIR, ethics) — fetched locally |
 | — | [Notebooks](notebooks/) | Exploratory sandbox notebooks |
 | — | [Data](data/) | Local data layout (contents git-ignored) |
 | — | [Scripts](scripts/) | Reproducible download of all course resources |
@@ -141,7 +142,7 @@ This repository combines material under different licences:
 | `python-data-tutorials/` | Apache-2.0 (licence file included) |
 | `DataScience_EBI/` | MIT (licence file included) |
 | Third-party figures inside slides; EMBL/EMBL-EBI trademarks | Owned by their rights holders; not relicensed |
-| Datasets, the unlicensed bioimaging repo, journal articles | **Not redistributed**: fetched locally by `scripts/fetch_course_materials.sh` |
+| Datasets, the unlicensed bioimaging repo, journal articles, the 2025 edition, live Colab copies | **Not redistributed**: fetched locally by `scripts/fetch_course_materials.sh` |
 | My own code and write-ups (everything outside `course_materials/`) | [MIT](LICENSE): scope in [LICENSE-SCOPE.md](LICENSE-SCOPE.md) |
 
 ---

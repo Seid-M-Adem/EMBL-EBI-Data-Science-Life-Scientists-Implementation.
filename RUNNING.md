@@ -73,7 +73,7 @@ To run them **locally** instead, skip the `google.colab` / `drive.mount` cells a
 | Item | What it does | How to run |
 |------|--------------|-----------|
 | [`Makefile`](Makefile) | One documented command per task (below) | `make help` |
-| [`scripts/fetch_course_materials.sh`](scripts/fetch_course_materials.sh) | Re-downloads official slides, notebooks and tutorial repos; optionally local-only resources and datasets. Idempotent | `make fetch` · `make fetch-local` · `make fetch-data` |
+| [`scripts/fetch_course_materials.sh`](scripts/fetch_course_materials.sh) | Re-downloads official slides, notebooks, Colab notebooks and tutorial repos; optionally local-only resources, datasets and the 2025 edition. Safe to re-run: existing files are skipped | `make fetch` · `make fetch-local` · `make fetch-data` · `make fetch-2025` |
 | [`notebooks/00_environment_check.ipynb`](notebooks/00_environment_check.ipynb) | Prints the Python version and the versions of the key packages | Open in any IDE with the **EMBL-EBI DS** kernel |
 | [`ruff.toml`](ruff.toml) + [`.github/workflows/lint.yml`](.github/workflows/lint.yml) | Lints my own code and notebooks (course materials excluded) locally and on every push | `make lint` |
 | [`.vscode/`](.vscode/) | Interpreter, notebook folder, Ruff, tasks, debug configs, recommended extensions | Automatic in VS Code / Cursor |
@@ -92,7 +92,7 @@ To run them **locally** instead, skip the `google.colab` / `drive.mount` cells a
 | `make snakemake-solution` | 02.1 Part 4: run the complete Snakemake workflow |
 | `make snakemake-tutorial` | 02.1 Part 4: run your completed scaffold |
 | `make snakemake-clean` | Delete both workflows' outputs |
-| `make fetch` / `fetch-local` / `fetch-data` | Course materials / local-only resources / datasets |
+| `make fetch` / `fetch-local` / `fetch-data` / `fetch-2025` | Course materials / local-only resources / datasets / supplementary 2025 edition |
 | `make lint` | Ruff, same as CI |
 | `make clean` | Remove caches and notebook checkpoints |
 
@@ -111,9 +111,11 @@ To run them **locally** instead, skip the `google.colab` / `drive.mount` cells a
 ### Course notebooks in other modules
 | Notebook(s) | Run notes |
 |-------------|-----------|
+| `03.2 …/image_augmentation_colab.ipynb` | Needs `pip install tensorflow albumentations` (not in the requirements; Colab has both). Skip the `drive.mount` cells and load any local JPEG |
 | `03.2 …/DataScience_EBI/tutorials/*.ipynb` | Need `make setup-course` (imbalanced-learn). They read `data.csv` from their own folder; IDEs set that working directory automatically |
 | `04.1 session1A/1B`, `04.2 session2` | Need `make setup-course` (transformers, datasets, evaluate). Skip the `google.colab` cells. 1B fine-tunes BERT: on this Mac PyTorch can use the Apple GPU (`mps`); otherwise use Colab |
 | `05 gene_expression code/*.ipynb` | Need `make setup-course` (pyreadr, umap-learn) and `make fetch-data`. Skip `drive.mount`; point paths to `data/raw/gene_expression/` |
+| `supplementary/2025_edition/local/` | `make fetch-2025`. Python, statistics and ML notebooks run in `.venv`; the scRNA-seq project also needs `pip install scanpy`; the Cytoscape practical needs the Cytoscape desktop app |
 | `05 bioimaging` (local repo) | `make fetch-local fetch-data`, then that repo's own `requirements.txt` (pinned versions) |
 
 ---

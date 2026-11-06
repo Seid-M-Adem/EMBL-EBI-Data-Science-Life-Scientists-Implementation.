@@ -18,7 +18,7 @@ HANDS_ON    := 02_accessing_and_handling_data/01_apis_and_data_collection/hands_
 .DEFAULT_GOAL := help
 .PHONY: help setup setup-course kernel check lab lab-hands-on api-call \
         snakemake-solution snakemake-tutorial snakemake-clean \
-        fetch fetch-local fetch-data lint clean
+        fetch fetch-local fetch-data fetch-2025 lint clean
 
 help: ## Show this list of commands
 	@printf "Usage: make <target>\n\n"
@@ -68,11 +68,14 @@ snakemake-clean: ## 02.1 Part 4: delete the outputs of both Snakemake workflows
 fetch: ## Re-download the official slides, notebooks and tutorial code
 	bash scripts/fetch_course_materials.sh
 
-fetch-local: ## + local-only resources (unlicensed bioimaging repo, reference papers; git-ignored)
+fetch-local: ## + local-only resources (bioimaging repo, reference papers, live Colab versions; git-ignored)
 	bash scripts/fetch_course_materials.sh --local
 
-fetch-data: ## + project datasets into data/raw (~700 MB; git-ignored)
+fetch-data: ## + project datasets into data/raw (~730 MB; git-ignored)
 	bash scripts/fetch_course_materials.sh --data
+
+fetch-2025: ## + supplementary 2025 course edition (~140 MB + 165 MB dataset; git-ignored)
+	bash scripts/fetch_course_materials.sh --2025
 
 # ---- Quality -----------------------------------------------------------------
 lint: ## Lint my own code and notebooks with Ruff (same check as GitHub Actions)
