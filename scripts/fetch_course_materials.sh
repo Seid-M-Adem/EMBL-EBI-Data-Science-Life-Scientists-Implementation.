@@ -42,7 +42,8 @@ get() {
 }
 
 # drive_nb <Google Drive / Colab file id> <destination .ipynb>
-# Downloads a shared Colab notebook and strips its outputs (saved outputs can embed third-party images).
+# Downloads a shared Colab notebook and strips its outputs (they can embed third-party images) and its
+# Colab metadata (it records who ran each cell: display name and Google user id).
 drive_nb() {
   local id="$1" dest="$2"
   if [[ -s "$dest" ]]; then echo "  ✓ exists  $dest"; return; fi
@@ -55,9 +56,11 @@ import json, sys
 src, dest = sys.argv[1], sys.argv[2]
 nb = json.load(open(src, encoding="utf-8"))
 for c in nb["cells"]:
+    c["metadata"] = {}  # Colab stores executionInfo (runner name, Google user id), outputId, etc.
     if c["cell_type"] == "code":
         c["outputs"], c["execution_count"] = [], None
-nb.get("metadata", {}).pop("widgets", None)
+for k in ("widgets", "colab", "accelerator", "gpuClass"):
+    nb.get("metadata", {}).pop(k, None)
 json.dump(nb, open(dest, "w", encoding="utf-8"), indent=1, ensure_ascii=False)
 open(dest, "a").write("\n")
 ' "$dest.part" "$dest"
