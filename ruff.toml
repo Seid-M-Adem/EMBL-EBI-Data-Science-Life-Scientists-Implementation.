@@ -1,7 +1,7 @@
 # Ruff configuration — lints my own code and notebooks only.
 target-version = "py311"
 extend-include = ["*.ipynb"]
-extend-exclude = ["**/course_materials/**"]
+extend-exclude = ["**/course_materials/**", "**/hands_on/python-data-tutorials/**"]  # third-party exercise notebooks contain intentional `...` blanks
 
 [lint]
 select = ["E", "F", "W", "I", "B", "UP"]

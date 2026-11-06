@@ -30,6 +30,8 @@ _Official EMBL-EBI material, [CC BY 4.0](https://creativecommons.org/licenses/by
 Each exercise has a hidden **solution cell** underneath. Try the task first, then unfold it.
 
 ## ▶️ Running the Practical
+**👉 Step-by-step guide and my working copy: [`hands_on/`](hands_on/)** (Parts 0–2, setup tested, known issues).
+
 ```bash
 brew install jq                       # command-line JSON processor used in apis.ipynb
 pip install -r requirements.txt -r requirements-course.txt   # includes mgnipy

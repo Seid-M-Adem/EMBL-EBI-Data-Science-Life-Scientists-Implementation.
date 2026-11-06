@@ -1,0 +1,3 @@
+Working copy of https://github.com/SandyRogers/python-data-tutorials at commit f2872ae36e5ff9cd5f754662692c30e694c0eb70 (fetched 2026-11-06).
+Apache License 2.0, see LICENSE. Notebooks here are edited by me while doing the exercises;
+the untouched original is in ../../course_materials/python-data-tutorials/.
