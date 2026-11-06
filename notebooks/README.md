@@ -6,7 +6,7 @@
 Sandbox for exploratory Jupyter notebooks. Polished work is promoted into the relevant module folder.
 
 ## Planned Contents
-- `00_environment_check.ipynb` — verifies the Python environment and key package versions
+- `00_environment_check.ipynb` — verifies the Python environment and key package versions (use the **EMBL-EBI DS** kernel)
 - Naming convention: `NN_short_description.ipynb`
 
 ## Notes & Reflections

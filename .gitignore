@@ -47,7 +47,11 @@ Thumbs.db
 desktop.ini
 ~$*
 .idea/
-.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 *.swp
 
 # ---- Course resources without a redistribution licence (local use only) ---

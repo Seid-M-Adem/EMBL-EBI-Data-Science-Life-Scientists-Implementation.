@@ -14,3 +14,5 @@ scripts/fetch_course_materials.sh --help
 
 The script is **idempotent**: files that already exist are skipped, and downloads write to a `.part` file that is only
 renamed once complete, so an interrupted run can simply be restarted.
+
+Shortcut targets: `make fetch`, `make fetch-local`, `make fetch-data` (see the root [Makefile](../Makefile) and [RUNNING.md](../RUNNING.md)).

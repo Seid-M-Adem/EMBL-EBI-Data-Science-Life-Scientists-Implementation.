@@ -1,0 +1,166 @@
+// Every Makefile target as a VS Code / Cursor task: Terminal → Run Task… (generated from Makefile)
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "make setup",
+      "detail": "Create .venv and install core + 02.1 hands-on packages, then register the Jupyter kernel",
+      "type": "shell",
+      "command": "make setup",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "make setup-course",
+      "detail": "Also install the extras used by the course notebooks of modules 03-05 (large)",
+      "type": "shell",
+      "command": "make setup-course",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "make kernel",
+      "detail": "Register .venv as a Jupyter kernel visible to every IDE (\"Python 3 (EMBL-EBI DS .venv)\")",
+      "type": "shell",
+      "command": "make kernel",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "make check",
+      "detail": "Verify packages, tools (jq, curl), datasets and API access for the 02.1 hands-on",
+      "type": "shell",
+      "command": "make check",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "make lab",
+      "detail": "Open Jupyter Lab at the repository root (all modules)",
+      "type": "shell",
+      "command": "make lab",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "isBackground": true
+    },
+    {
+      "label": "make lab-hands-on",
+      "detail": "Check the setup, then open Jupyter Lab on the 02.1 hands-on notebooks",
+      "type": "shell",
+      "command": "make lab-hands-on",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "isBackground": true
+    },
+    {
+      "label": "make api-call",
+      "detail": "02.1 Part 0: first API call (curl + jq)",
+      "type": "shell",
+      "command": "make api-call",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "make snakemake-solution",
+      "detail": "02.1 Part 4: run the complete Snakemake reference workflow",
+      "type": "shell",
+      "command": "make snakemake-solution",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "make snakemake-tutorial",
+      "detail": "02.1 Part 4: run your completed Snakemake scaffold",
+      "type": "shell",
+      "command": "make snakemake-tutorial",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "make snakemake-clean",
+      "detail": "02.1 Part 4: delete the outputs of both Snakemake workflows",
+      "type": "shell",
+      "command": "make snakemake-clean",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "make fetch",
+      "detail": "Re-download the official slides, notebooks and tutorial code",
+      "type": "shell",
+      "command": "make fetch",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "make fetch-local",
+      "detail": "+ local-only resources (unlicensed bioimaging repo, reference papers; git-ignored)",
+      "type": "shell",
+      "command": "make fetch-local",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "make fetch-data",
+      "detail": "+ project datasets into data/raw (~700 MB; git-ignored)",
+      "type": "shell",
+      "command": "make fetch-data",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "make lint",
+      "detail": "Lint my own code and notebooks with Ruff (same check as GitHub Actions)",
+      "type": "shell",
+      "command": "make lint",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "make clean",
+      "detail": "Remove caches and notebook checkpoints (keeps .venv and data)",
+      "type": "shell",
+      "command": "make clean",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  // Run / debug configurations (F5). The interpreter comes from settings.json (.venv).
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: current file (run in its own folder)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "cwd": "${fileDirname}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "02.1 hands-on: check setup",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/02_accessing_and_handling_data/01_apis_and_data_collection/hands_on/check_setup.py",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}

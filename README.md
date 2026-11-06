@@ -98,6 +98,7 @@ CI lints **only my code**; `course_materials/` is excluded.
 | — | [Notebooks](notebooks/) | Exploratory sandbox notebooks |
 | — | [Data](data/) | Local data layout (contents git-ignored) |
 | — | [Scripts](scripts/) | Reproducible download of all course resources |
+| — | [RUNNING.md](RUNNING.md) · [Makefile](Makefile) | How to run everything from any IDE; one command per task |
 
 ---
 
@@ -107,16 +108,14 @@ CI lints **only my code**; `course_materials/` is excluded.
 git clone https://github.com/Seid-M-Adem/EMBL-EBI-Data-Science-Life-Scientists-Implementation..git
 cd EMBL-EBI-Data-Science-Life-Scientists-Implementation.
 
-python -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-pip install -r requirements-course.txt   # optional: extras for the course notebooks
-
-# Optional: datasets (~700 MB) and local-only resources (git-ignored)
-scripts/fetch_course_materials.sh --all
-
-jupyter lab
+make setup     # .venv + packages + Jupyter kernel "Python 3 (EMBL-EBI DS .venv)"
+make check     # verify everything → "All good"
+make lab       # open Jupyter Lab
+make help      # every available command
 ```
+
+Works the same in **VS Code / Cursor** (settings, tasks and debug configs included), **PyCharm**, **JupyterLab**
+and **Anaconda Navigator**. See **[RUNNING.md](RUNNING.md)** for per-IDE steps, every runnable file, and troubleshooting.
 
 ---
 

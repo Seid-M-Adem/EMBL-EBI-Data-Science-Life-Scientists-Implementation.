@@ -1,0 +1,10 @@
+{
+  // Recommended extensions: VS Code / Cursor offers to install these when the folder is opened.
+  "recommendations": [
+    "ms-python.python",
+    "ms-toolsai.jupyter",
+    "charliermarsh.ruff",
+    "snakemake.snakemake-lang",
+    "editorconfig.editorconfig"
+  ]
+}

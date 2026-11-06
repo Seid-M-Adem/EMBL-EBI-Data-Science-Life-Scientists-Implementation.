@@ -26,6 +26,9 @@ hands_on/
 [`../course_materials/python-data-tutorials/`](../course_materials/python-data-tutorials/) for reference.
 
 ## 🚀 Quick Start (one command)
+> From the repository root you can also use `make lab-hands-on`, `make check`, `make api-call` and
+> `make snakemake-solution`. These work from any IDE: see [RUNNING.md](../../../RUNNING.md).
+
 ```bash
 bash 02_accessing_and_handling_data/01_apis_and_data_collection/hands_on/start.sh
 ```
