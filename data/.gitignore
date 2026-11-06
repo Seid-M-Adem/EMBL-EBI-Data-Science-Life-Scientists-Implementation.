@@ -1,0 +1,6 @@
+# Ignore all data files; keep directory structure and documentation.
+*
+!*/
+!.gitignore
+!README.md
+!**/.gitkeep

@@ -1,0 +1,55 @@
+# ---- Data: keep folder structure, ignore contents -------------------------
+/data/**
+!/data/**/
+!/data/.gitignore
+!/data/README.md
+!/data/**/.gitkeep
+
+# ---- Python ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ---- Environments & secrets ------------------------------------------------
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# ---- Jupyter ---------------------------------------------------------------
+.ipynb_checkpoints/
+
+# ---- ML artefacts ----------------------------------------------------------
+*.pt
+*.pth
+*.ckpt
+*.h5
+runs/
+wandb/
+mlruns/
+
+# ---- OS / Editors ----------------------------------------------------------
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+~$*
+.idea/
+.vscode/
+*.swp
+
+# ---- Course resources without a redistribution licence (local use only) ---
+**/course_materials/local/
+*.part

@@ -1,0 +1,38 @@
+# Extra packages used by the official course notebooks (see COURSE_MATERIALS.md).
+# Install alongside the core stack:  pip install -r requirements.txt -r requirements-course.txt
+
+# Classical ML extras
+scipy>=1.11
+xgboost>=2.0
+umap-learn>=0.5
+shap>=0.44
+imbalanced-learn>=0.12   # SMOTE (03.2 preprocessing tutorial)
+
+# Deep learning / LLMs (Hugging Face ecosystem)
+# Versions tested by the course notebooks: transformers 4.48.2, datasets 3.0.2, evaluate 0.4.5
+transformers>=4.46,<5   # Trainer(processing_class=...) needs >=4.46
+datasets>=3.0
+evaluate>=0.4.5
+huggingface_hub>=0.23
+tqdm>=4.66
+ipywidgets>=8.1       # progress bars in notebooks (tqdm.notebook)
+
+# Data formats
+pyarrow>=15.0          # Parquet (bioimaging inputs)
+pyreadr>=0.5           # R .RDS files (gene-expression data)
+tifffile>=2024.1       # Microscopy images
+
+# Bioimaging profiling
+pycytominer>=1.2
+
+# EBI API clients
+mgnipy                # MGnify API client (apis.ipynb)
+
+# Utilities
+plotly>=5.20
+rich>=13.7
+httpx>=0.27
+python-dotenv>=1.0
+wandb>=0.17           # optional: experiment tracking (DL session 2)
+
+# System tools (not pip): `jq` and `curl` are used in apis.ipynb  →  brew install jq

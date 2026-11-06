@@ -1,0 +1,18 @@
+# Core data stack
+numpy>=1.26
+pandas>=2.1
+
+# Visualisation
+matplotlib>=3.8
+seaborn>=0.13
+
+# Machine learning / deep learning
+scikit-learn>=1.4
+torch>=2.2
+
+# Bioinformatics & data access
+biopython>=1.83
+requests>=2.31
+
+# Notebook environment
+jupyterlab>=4.1

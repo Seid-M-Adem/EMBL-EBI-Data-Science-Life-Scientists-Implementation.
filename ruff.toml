@@ -1,0 +1,8 @@
+# Ruff configuration — lints my own code and notebooks only.
+target-version = "py311"
+extend-include = ["*.ipynb"]
+extend-exclude = ["**/course_materials/**"]
+
+[lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E501"]   # long lines are common in notebooks and data paths
