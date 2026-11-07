@@ -127,7 +127,7 @@ and **Anaconda Navigator**. See **[RUNNING.md](RUNNING.md)** for per-IDE steps, 
 | Module | Course materials | My implementation |
 |--------|------------------|-------------------|
 | 01 · Introduction to EMBL-EBI | ✅ Collected & summarised | 🟡 In progress |
-| 02 · Accessing & Handling Data | ✅ Collected & summarised | 🟡 In progress: [API client, UniProt aquaporins, ChEMBL EGFR inhibitors](02_accessing_and_handling_data/01_apis_and_data_collection/implementation/) |
+| 02 · Accessing & Handling Data | ✅ Collected & summarised | 🟡 02.1 ✅ [API client, UniProt aquaporins, ChEMBL EGFR inhibitors, ENA Tara Oceans](02_accessing_and_handling_data/01_apis_and_data_collection/implementation/) · 02.2 not started |
 | 03 · Foundations of Machine Learning | ✅ Collected & summarised | ⚪ Not started |
 | 04 · Foundations of Deep Learning | ✅ Collected & summarised | ⚪ Not started |
 | 05 · Group Projects | ✅ Collected & summarised | ⚪ Not started |

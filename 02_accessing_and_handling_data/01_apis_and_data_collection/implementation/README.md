@@ -6,11 +6,13 @@ My own work for [02.1 APIs & Data Collection](../): a reusable API client, and a
 |------|------------|
 | [`01_uniprot_aquaporin_family.ipynb`](01_uniprot_aquaporin_family.ipynb) | **UniProt analysis of the aquaporin water-channel family.** Retrieves all 332 reviewed members via the REST API (4 paginated requests), flattens them into a table, and asks five questions: taxonomic spread, conservation of the family hallmarks (6 helices, 2 NPA motifs), length, structural coverage, subcellular location. Separates data artefacts (fragments, annotation gaps) from real biology (non-canonical NPC/NPG motifs) |
 | [`02_chembl_egfr_ic50.ipynb`](02_chembl_egfr_ic50.ipynb) | **ChEMBL analysis of EGFR inhibitors.** Retrieves all 19,378 EGFR IC50 values with a pChEMBL value (year-partitioned so it survives API failures), removes duplicates through an explicit, counted funnel, and asks: how potent are published inhibitors, how reproducible is an IC50, do approved drugs show the expected resistance pattern on T790M/C797S mutants, which compounds are mutant-selective, and how has the field shifted over time |
+| [`03_ena_tara_oceans_runs.ipynb`](03_ena_tara_oceans_runs.ipynb) | **ENA inventory of the Tara Oceans project (PRJEB402).** Lists all 6,423 runs across 22 sub-studies and summarises assays, instruments, read counts and release timeline. Recovers collection date, station, depth layer and size fraction from free-text sample descriptions, and audits metadata completeness (FAIR) |
 | [`figures/`](figures/) | Figures saved by the notebooks |
 | [`../../../src/dsls/ebi_api.py`](../../../src/dsls/ebi_api.py) | **Reusable EMBL-EBI API client** (used by this and later modules): retries with backoff and `Retry-After`, pagination strategies for UniProt / ChEMBL / MGnify, an on-disk cache with provenance (URL, time, data release) |
 | [`../../../src/dsls/uniprot.py`](../../../src/dsls/uniprot.py) | Flattens UniProtKB JSON entries into analysis-ready records |
 | [`../../../src/dsls/chembl.py`](../../../src/dsls/chembl.py) | ChEMBL curation: counted filter funnel, variant normalisation (`"L858R,T790M"` → `T790M/L858R`), per-compound medians |
-| [`../../../tests/`](../../../tests/) | 34 offline unit tests (fake HTTP session, synthetic ChEMBL rows) + 1 live smoke test; run in CI on every push |
+| [`../../../src/dsls/ena.py`](../../../src/dsls/ena.py) | ENA Portal helpers: run table with a `/count` integrity check, batched sample lookup, assay labels, placeholder-ontology detection, completeness audit |
+| [`../../../tests/`](../../../tests/) | 51 offline unit tests (fake HTTP clients, synthetic records) + 1 live smoke test; run in CI on every push |
 
 ## Key results: UniProt aquaporins (release 2026_04)
 
@@ -39,6 +41,20 @@ My own work for [02.1 APIs & Data Collection](../): a reusable API client, and a
 
 Full reasoning, including caveats on small n, is in each notebook's *Findings* section.
 
+## Key results: ENA Tara Oceans (retrieved 2026-11-07)
+
+![Instruments and output](figures/ena_01_instruments.png)
+
+- **6,423 runs, 1,940 samples, 149 stations, 77.4 Tbp.** Amplicon runs are 44 % of the runs but 2 % of the bases, and
+  the HiSeq 2000 produced 91 % of all bases.
+- **Median reads per run differ about 100× by assay** (amplicon 1.6 M vs metagenome 164 M). 57 runs have < 100k reads.
+- **Released over 12 years (2013–2025):** the median delay from sampling to release is 5–7.5 years, depending on assay.
+- **Metadata audit:**
+  - Collection date and country are empty in 100 % of structured fields. They exist only in prose, and I parsed 88–92 % of them.
+  - 82 % of runs carry a placeholder `ENVO:xxxxxxxx` material term.
+  - Size fractions are spelled 22 different ways.
+  - Searching samples by project finds only 448 of the 1,940 samples.
+
 ## Engineering notes
 - **Testing caught what it should, and the live data caught what the tests missed.** The first version split UniProt's
   `Link` header on commas, but UniProt's next-page URLs contain commas (`fields=accession,length,…`). The fake-data tests
@@ -56,12 +72,13 @@ Full reasoning, including caveats on small n, is in each notebook's *Findings* s
 ## Run it
 ```bash
 make setup      # installs the dsls package (editable) and test tools
-make test       # 34 offline tests
+make test       # 51 offline tests
 make lab        # open this notebook with the "Python 3 (EMBL-EBI DS .venv)" kernel → Run All
 ```
 The UniProt notebook's first run calls the API (~5 s). The ChEMBL notebook's first run downloads ~19k records (~30 min,
-because ChEMBL is slow); later runs take ~10 s from the cache. Later runs read the cache in `data/raw/api_cache/uniprot/` and are offline and
+because ChEMBL is slow); later runs take ~10 s from the cache. The ENA notebook needs ~30 s on its first run. Later runs read the cache in `data/raw/api_cache/uniprot/` and are offline and
 reproducible. Delete that folder to fetch a newer UniProt release.
 
+*ENA data: freely available ([ENA policies](https://www.ebi.ac.uk/ena/browser/about/policies)); Tara Oceans: Sunagawa et al., Science 348 (2015); Pesant et al., Sci. Data 2, 150023 (2015).*
 *ChEMBL data: [CC BY-SA 3.0](https://chembl.gitbook.io/chembl-interface-documentation/about#data-licensing). Zdrazil et al., The ChEMBL Database in 2023, Nucleic Acids Res. 52, D1180 (2024).*
 *UniProt data: [CC BY 4.0](https://www.uniprot.org/help/license). The UniProt Consortium, UniProt: the Universal Protein Knowledgebase.*

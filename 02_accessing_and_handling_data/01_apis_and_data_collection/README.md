@@ -1,6 +1,6 @@
 # 02.1 · APIs & Data Collection
 
-> **Status:** 🟡 In progress (2 / 4 tasks) · **Trainer:** Sandy Rogers (Project Leader, MGnify Web & Platform) ·
+> **Status:** ✅ Implementation complete (4 / 4 tasks) · **Trainer:** Sandy Rogers (Project Leader, MGnify Web & Platform) ·
 > **Course page:** [Introduction to APIs and Python for data collection](https://www.ebi.ac.uk/training/materials/data-science-for-life-scientists-materials-2026/accessing-and-handling-data-with-python/introduction-to-apis-and-python-for-data-collection/)
 
 ## Overview
@@ -50,7 +50,18 @@ See [`implementation/`](implementation/).
 - [x] Reusable API helper: retries, pagination and caching to `data/raw/` → [`src/dsls/ebi_api.py`](../../src/dsls/ebi_api.py), with tests
 - [x] UniProt: search entries for a protein family and tabulate annotations → [aquaporin family analysis](implementation/01_uniprot_aquaporin_family.ipynb)
 - [x] ChEMBL: fetch bioactivity (IC50) data for one target and plot the distribution → [EGFR inhibitors and resistance mutations](implementation/02_chembl_egfr_ic50.ipynb)
-- [ ] ENA: list the runs for a study and summarise read counts and instruments
+- [x] ENA: list the runs for a study and summarise read counts and instruments → [Tara Oceans run inventory and metadata audit](implementation/03_ena_tara_oceans_runs.ipynb)
 
 ## 📝 Notes & Reflections
-_Key takeaways, challenges, and design decisions will be recorded here as the work is completed._
+- **One client, three APIs, three pagination styles.** UniProt pages through a `Link` header, ChEMBL through
+  `page_meta.next`, and ENA returns everything in one response. Putting retries, caching and pagination in one tested
+  client ([`ebi_api.py`](../../src/dsls/ebi_api.py)) meant each analysis notebook only had to deal with the science.
+- **Check counts, not just status codes.** Every notebook asserts that it received as many records as the API says
+  exist. That assertion is what made a pagination bug (UniProt) and an unreliable API (ChEMBL) visible.
+- **Data problems outnumbered code problems.** Each database had its own quirk, and none showed up until I looked at real
+  outputs:
+  - UniProt: fragments look like missing hallmarks.
+  - ChEMBL: re-reported duplicates, and point-mutation-only variant fields.
+  - ENA: collection dates exist only in free text, and ontology IDs are left as `ENVO:xxxxxxxx` templates.
+- **FAIR in practice:** all three resources are open, but how *findable* the data are depends on the submitter's
+  metadata. The Tara Oceans audit is a concrete example: date-based search returns none of a 6,423-run flagship project.
