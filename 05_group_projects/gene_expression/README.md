@@ -34,12 +34,28 @@ They're git-ignored because publisher copyright varies.
 
 ## ▶️ Running the Notebooks
 1. `scripts/fetch_course_materials.sh --data` downloads the datasets to `data/raw/gene_expression/` (~590 MB; `pan_cancer_dataset.RDS` alone is 570 MB).
-2. The notebooks were written for **Colab with a shared Google Drive folder**. Locally, skip the `drive.mount` cells and
-   point the working directory or file paths to `data/raw/gene_expression/`.
+2. The notebooks were written for **Colab with a shared Google Drive folder**. `make runnable` writes local copies into
+   `course_materials/local/runnable/` (git-ignored): `drive.mount`, `!pip` and the `os.chdir` into the trainer's Drive are commented out,
+   and `Data/` is linked to `data/raw/gene_expression/`. Open those copies with the **EMBL-EBI DS** kernel.
 3. The two Google Drive folders linked from the session page were checked on 2026-11-06. *Folder 1* holds the same six data
    files as the FTP `Data/` folder. *Folder 2* holds notebooks 1, 2 and 4; they're identical to the committed copies except that
    the Drive clustering notebook has one extra cell that just displays `df`. The FTP copies (which also include part 2) are used here.
 4. `pip install -r requirements-course.txt` (includes `pyreadr` for `.RDS` files, `umap-learn`, `plotly`).
+
+### ✅ Tested on 2026-11-07 (Apple-silicon Mac, `.venv`, `make runnable` copies)
+
+| Notebook | Result | Notes |
+|----------|--------|-------|
+| `01_data_download` | ✅ 10 s, after a one-word fix | **Bug in the published notebook:** cell 16 defines `dfi_counts_with_nan` but prints `pfi_counts_with_nan` (`NameError`). Change the print to `dfi_counts_with_nan`. Downloads `PRAD_*` tables from UCSC Xena |
+| `02_classification_part1` | ✅ 18 s | |
+| `03_classification_part2` | ✅ 70 s | Needs `OMP_NUM_THREADS=1`, otherwise the kernel **deadlocks** (0 % CPU forever) when PyTorch and scikit-learn/UMAP each load their own OpenMP runtime on macOS. The **EMBL-EBI DS** kernel sets it (`make kernel`); in another kernel, run `import os; os.environ['OMP_NUM_THREADS']='1'` before any imports |
+| `04_clustering` | ✅ 33 s | Loads the 598 MB pan-cancer `.RDS` |
+
+Results from that run (held-out test set, `recurrence.3y`):
+- **Part 1/2 classifiers:** test AUC 0.54 (KNN) to 0.72 (logistic regression).
+- **Classifier autoencoder:** trained for 100 epochs it overfits (training accuracy 1.0, test AUC 0.66). With **early stopping**
+  (it stopped at epoch 54) test AUC rises to **0.74**, the best model in the notebook. A neat demonstration of why
+  early stopping matters with p ≫ n.
 
 ## 🧠 Key Concepts
 - **p ≫ n:** many more features than samples, so feature selection or dimensionality reduction is required to avoid overfitting.

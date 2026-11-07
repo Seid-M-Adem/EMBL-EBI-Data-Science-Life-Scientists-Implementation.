@@ -13,7 +13,9 @@ scripts/fetch_course_materials.sh --all      # everything (~1.1 GB)
 scripts/fetch_course_materials.sh --help
 ```
 
-| Helper | What it does |
+| [`localize_notebook.py`](localize_notebook.py) | Writes a **Colab-free copy** of a course notebook: comments out `drive.mount`, `!pip`, `os.chdir('/content/…')`; turns `Path("/content/drive/…")` into `Path.cwd()`; disables optional token/upload steps; can symlink a data folder. Originals are never modified, and existing copies are kept unless `--force`. Used by `make runnable` |
+
+| Helper (in the fetch script) | What it does |
 |--------|--------------|
 | `get` | Downloads one FTP file, with retries, to a `.part` file that's renamed only when complete |
 | `drive_nb` | Downloads a shared Colab/Drive notebook and **strips its saved outputs**, which can embed third-party images |

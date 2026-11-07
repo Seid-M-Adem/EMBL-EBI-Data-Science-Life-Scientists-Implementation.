@@ -18,7 +18,7 @@ HANDS_ON    := 02_accessing_and_handling_data/01_apis_and_data_collection/hands_
 .DEFAULT_GOAL := help
 .PHONY: help setup setup-course kernel check lab lab-hands-on api-call \
         snakemake-solution snakemake-tutorial snakemake-clean \
-        fetch fetch-local fetch-data fetch-2025 lint clean
+        fetch fetch-local fetch-data fetch-2025 runnable lint clean
 
 help: ## Show this list of commands
 	@printf "Usage: make <target>\n\n"
@@ -38,7 +38,7 @@ setup-course: setup ## Also install the extras used by the course notebooks of m
 	$(PIP) install -q -r requirements-course.txt
 
 kernel: $(PY) ## Register .venv as a Jupyter kernel visible to every IDE ("Python 3 (EMBL-EBI DS .venv)")
-	$(PY) -m ipykernel install --user --name $(KERNEL_NAME) --display-name "$(KERNEL_DISP)"
+	$(PY) -m ipykernel install --user --name $(KERNEL_NAME) --display-name "$(KERNEL_DISP)" --env OMP_NUM_THREADS 1
 
 check: ## Verify packages, tools (jq, curl), datasets and API access for the 02.1 hands-on
 	bash $(HANDS_ON)/start.sh --check
@@ -76,6 +76,15 @@ fetch-data: ## + project datasets into data/raw (~730 MB; git-ignored)
 
 fetch-2025: ## + supplementary 2025 course edition (~140 MB + 165 MB dataset; git-ignored)
 	bash scripts/fetch_course_materials.sh --2025
+
+# ---- Local copies of Colab-only notebooks ------------------------------------
+DL  := 04_foundations_of_deep_learning
+GE  := 05_group_projects/gene_expression/course_materials
+runnable: $(PY) ## Write Colab-free copies of the 04.x and gene-expression notebooks into course_materials/local/runnable/
+	$(PY) scripts/localize_notebook.py $(DL)/01_dnn_and_transformers/course_materials/session1*.ipynb \
+	    $(DL)/02_evaluation_and_visualisation/course_materials/session2*.ipynb \
+	    --out $(DL)/01_dnn_and_transformers/course_materials/local/runnable
+	$(PY) scripts/localize_notebook.py $(GE)/code/*.ipynb --out $(GE)/local/runnable --link Data=data/raw/gene_expression
 
 # ---- Quality -----------------------------------------------------------------
 lint: ## Lint my own code and notebooks with Ruff (same check as GitHub Actions)

@@ -153,6 +153,16 @@
       "problemMatcher": []
     },
     {
+      "label": "make runnable",
+      "detail": "Write Colab-free copies of the 04.x and gene-expression notebooks into course_materials/local/runnable/",
+      "type": "shell",
+      "command": "make runnable",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
       "label": "make lint",
       "detail": "Lint my own code and notebooks with Ruff (same check as GitHub Actions)",
       "type": "shell",

@@ -34,7 +34,16 @@ Compares the **Session 1 MLP baseline** with the **PubMedBERT** model:
 8. Saves the comparison tables and figures; optionally logs them to **W&B**
 
 ## ▶️ Running the Practical
-Run [04.1](../01_dnn_and_transformers/) **1A and 1B first**. This notebook loads their saved prediction CSVs and
+Run [04.1](../01_dnn_and_transformers/) **1A and 1B first**.
+
+> ⚠️ **Bug in the published notebooks (found 2026-11-07):** 1B saves its predictions as `predictions/test_predictions.csv`,
+> but this notebook expects `predictions/transformer_test_predictions.csv` (1A uses the matching `dnn_` prefix). Fix it after running 1B:
+> ```bash
+> cd <your artifacts>/session1B_transformer/predictions
+> cp test_predictions.csv transformer_test_predictions.csv && cp validation_predictions.csv transformer_validation_predictions.csv
+> ```
+> With that fix the notebook runs end to end locally (tested: comparison tables and 6 figures written to `artifacts/session2_evaluation/`).
+ This notebook loads their saved prediction CSVs and
 metrics JSON. Update the candidate paths cell if your outputs are stored elsewhere. Skip the `google.colab`
 cells when running locally. The live Colab version (later edits: extra discussion prompts, `rprint` output) is saved by
 `make fetch-local` to `course_materials/local/colab/` for comparison. W&B logging is optional and needs `WANDB_API_KEY` in a `.env` file, which is git-ignored.

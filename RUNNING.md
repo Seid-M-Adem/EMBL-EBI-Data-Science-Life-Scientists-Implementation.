@@ -84,7 +84,7 @@ To run them **locally** instead, skip the `google.colab` / `drive.mount` cells a
 |--------|---------|
 | `make setup` | Create `.venv`, install core + hands-on packages, register the kernel |
 | `make setup-course` | `setup` plus the large course-notebook extras |
-| `make kernel` | (Re)register `.venv` as the Jupyter kernel **Python 3 (EMBL-EBI DS .venv)** |
+| `make kernel` | (Re)register `.venv` as the Jupyter kernel **Python 3 (EMBL-EBI DS .venv)**, with `OMP_NUM_THREADS=1` (prevents a PyTorch + scikit-learn deadlock on macOS) |
 | `make check` | Run [`check_setup.py`](02_accessing_and_handling_data/01_apis_and_data_collection/hands_on/check_setup.py): packages, `jq`/`curl`, the anaemia dataset, three APIs |
 | `make lab` | Jupyter Lab at the repo root |
 | `make lab-hands-on` | Setup check, then Jupyter Lab in the 02.1 tutorials folder |
@@ -92,6 +92,7 @@ To run them **locally** instead, skip the `google.colab` / `drive.mount` cells a
 | `make snakemake-solution` | 02.1 Part 4: run the complete Snakemake workflow |
 | `make snakemake-tutorial` | 02.1 Part 4: run your completed scaffold |
 | `make snakemake-clean` | Delete both workflows' outputs |
+| `make runnable` | Colab-free copies of the 04.x and gene-expression notebooks in `course_materials/local/runnable/` (existing copies are kept) |
 | `make fetch` / `fetch-local` / `fetch-data` / `fetch-2025` | Course materials / local-only resources / datasets / supplementary 2025 edition |
 | `make lint` | Ruff, same as CI |
 | `make clean` | Remove caches and notebook checkpoints |
@@ -113,12 +114,23 @@ To run them **locally** instead, skip the `google.colab` / `drive.mount` cells a
 |-------------|-----------|
 | `03.2 …/image_augmentation_colab.ipynb` | Needs `pip install tensorflow albumentations` (not in the requirements; Colab has both). Skip the `drive.mount` cells and load any local JPEG |
 | `03.2 …/DataScience_EBI/tutorials/*.ipynb` | Need `make setup-course` (imbalanced-learn). They read `data.csv` from their own folder; IDEs set that working directory automatically |
-| `04.1 session1A/1B`, `04.2 session2` | Need `make setup-course` (transformers, datasets, evaluate). Skip the `google.colab` cells. 1B fine-tunes BERT: on this Mac PyTorch can use the Apple GPU (`mps`); otherwise use Colab |
-| `05 gene_expression code/*.ipynb` | Need `make setup-course` (pyreadr, umap-learn) and `make fetch-data`. Skip `drive.mount`; point paths to `data/raw/gene_expression/` |
+| `04.1 session1A/1B`, `04.2 session2` | `make setup-course runnable`, then open the copies in `04_…/01_dnn_and_transformers/course_materials/local/runnable/`. 1B fine-tunes BERT: 3 h 15 min on this Mac's GPU (`mps`), minutes on a Colab GPU. Session 2 needs the filename fix in the [04.2 README](04_foundations_of_deep_learning/02_evaluation_and_visualisation/) |
+| `05 gene_expression code/*.ipynb` | `make setup-course fetch-data runnable`, then open the copies in `05_…/gene_expression/course_materials/local/runnable/` (`Data/` is linked to `data/raw/gene_expression/`). See that README for two fixes |
 | `supplementary/2025_edition/local/` | `make fetch-2025`. Python, statistics and ML notebooks run in `.venv`; the scRNA-seq project also needs `pip install scanpy`; the Cytoscape practical needs the Cytoscape desktop app |
 | `05 bioimaging` (local repo) | `make fetch-local fetch-data`, then that repo's own `requirements.txt` (pinned versions) |
 
 ---
+
+### Verified runs (2026-11-07, Apple-silicon Mac, `.venv`)
+Every course notebook was executed unattended with `jupyter nbconvert --execute` on scratch or local copies:
+
+| Module | Result |
+|--------|--------|
+| 02.1 hands-on | ✅ all notebooks + Snakemake solution (one `apis.ipynb` cell depends on live MGnify data) |
+| 03.2 `DataScience_EBI` | ✅ 10/10 (`predict` needs your own model filename, by design) |
+| 04.1 / 04.2 | ✅ 3/3 via `make runnable`, after adding `accelerate` and fixing the 1B → session 2 filename mismatch |
+| 05 gene expression | ✅ 4/4 via `make runnable`; needs the EMBL-EBI DS kernel (it sets `OMP_NUM_THREADS=1` for part 2) and a one-word fix in `01_data_download` ([details](05_group_projects/gene_expression/)) |
+| 05 bioimaging | ✅ 6/7; `01_dl_protocol` stops at its "Your turn" exercise (intended) |
 
 ## 4 · Troubleshooting
 | Symptom | Cause | Fix |
@@ -130,5 +142,8 @@ To run them **locally** instead, skip the `google.colab` / `drive.mount` cells a
 | `'Studies' object has no attribute 'bulk_fetch'` | MGnipy ≥ 0.2 | `make setup` pins MGnipy 0.1.3 |
 | `FileNotFoundError: … Anemia Dataset.xlsx` | Dataset not downloaded | `make lab-hands-on` downloads it (or `make check` reports it) |
 | `pip … No matching distribution found for torch` | Network dropped during download | Re-run `make setup` (pip retries are built in) |
+| A notebook cell hangs forever at 0 % CPU (PyTorch + scikit-learn/UMAP in one kernel) | Two OpenMP runtimes (`sklearn/.dylibs/libomp.dylib` and `torch/lib/libomp.dylib`) deadlock on macOS | The **EMBL-EBI DS** kernel sets `OMP_NUM_THREADS=1` (since 2026-11-07): run `make kernel` once, reload the IDE, and select that kernel |
+| `ImportError: … requires accelerate>=0.26.0` | Hugging Face `Trainer` dependency | `make setup-course` |
+| `ValueError: <COMPRESSION.LZW: 5> requires the 'imagecodecs' package` | Compressed TIFFs | `make setup-course` |
 | Kernel **EMBL-EBI DS** not listed | Kernel not registered, or IDE needs a refresh | `make kernel`, then reload the IDE window |
 | Notebook can't find `people.tsv`, `data.csv`, … | Notebook not running in its own folder | VS Code: preset. PyCharm/others: set the working directory to the notebook's folder |

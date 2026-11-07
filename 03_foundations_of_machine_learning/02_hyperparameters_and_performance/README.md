@@ -59,6 +59,14 @@ pip install imbalanced-learn   # needed for SMOTE in the preprocessing notebook
 jupyter lab
 ```
 
+**Tested on 2026-11-07** (`.venv`, kernel *EMBL-EBI DS*, run on a scratch copy): **all 10 notebooks run.**
+Preprocessing and the 8 training notebooks take 5–100 s each (AdaBoost is the slowest).
+- **`predict` needs one edit, by design:** it loads `best_tree_rand_20260513_1105.pkl`, the trainer's own model. Change the
+  filename to a model you trained; the notebook says *"load your own model here by adjusting the name"*.
+- **Gotcha:** the six tree-based training notebooks (Decision Tree, Bagging, AdaBoost, Random Forest, Extra Trees) all save
+  to `best_tree_rand_<YYYYMMDD_HHMM>.pkl`. Two runs in the same minute overwrite each other; in my test the
+  "Decision Tree" file held the AdaBoost model. Rename each model after training it.
+
 ## 🧠 Key Concepts
 - **Data leakage:** fitting scalers or selectors on the full dataset inflates test scores. Fit on training data only (use a `Pipeline`).
 - **Stratification:** keeps class proportions the same in every split, which is essential for imbalanced labels.

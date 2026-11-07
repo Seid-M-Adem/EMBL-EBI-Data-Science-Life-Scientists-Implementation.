@@ -47,11 +47,29 @@ The `*_results.ipynb` versions are executed reference solutions.
 
 ## ▶️ Running the Practical
 ```bash
-scripts/fetch_course_materials.sh --local --data   # clone the repo + download inputs; links inputs/ automatically
-cd 05_group_projects/bioimaging/course_materials/local/ewald-lab-training
-pip install -r requirements.txt                     # pinned versions from the course (pycytominer, copairs, umap-learn, …)
-jupyter lab analysis/
+make fetch-local fetch-data      # clone the repo + download inputs; links inputs/ automatically
+make setup-course                # .venv has everything the notebooks import (incl. imagecodecs, sh)
+brew install awscli              # only for 01_plot_images (downloads public images from S3, no account needed)
+make lab                         # then open course_materials/local/ewald-lab-training/analysis/
 ```
+The repo's own `requirements.txt` pins older versions (e.g. scikit-learn 1.7.2) and adds `copairs` / `cytominer-eval`,
+which no notebook imports. `.venv` works without them. Install the AWS CLI with Homebrew, not pip: the pip version
+(`awscli` 1.x) downgrades `docutils` and breaks Snakemake.
+
+**Tested on 2026-11-07** (`.venv`, run on a scratch copy):
+
+| Notebook | Result |
+|----------|--------|
+| `01_plot_images` | ✅ after adding `imagecodecs` (the TIFFs are LZW-compressed) and the `aws` CLI. Downloads 5 channels of well A08, site 5 |
+| `02_cell_painting_pipeline` · `03_data_handling_visualising` | ✅ |
+| `01_ml_protocol` · `01_ml_protocol_results` | ✅ ~95 s each |
+| `01_dl_protocol` | ⏸ stops at the **"Your turn"** exercise: you write `make_data_loader()` yourself (intended) |
+| `01_dl_protocol_results` | ✅ reference solution, 34 s |
+
+**Observation:** in `01_plot_images` the channel titles look swapped. The panel titled *Mitochondria* shows round,
+separate blobs (nuclei, i.e. the DNA/Hoechst stain), and the panel titled *DNA* shows a fine punctate network
+(typical of MitoTracker). The `ch1` / `ch5` name mapping is probably reversed. Worth checking against the
+Cell Painting channel metadata before relying on the labels.
 
 ## 🧠 Key Concepts
 - **Morphological profiling:** describing cell state with hundreds of image-derived features instead of one marker.

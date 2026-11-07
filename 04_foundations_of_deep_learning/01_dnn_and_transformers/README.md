@@ -38,6 +38,19 @@ Both notebooks end with reflection questions: which labels are confused, and why
 - The committed notebooks are the published FTP snapshot. The trainers kept editing the Colab versions afterwards (e.g. a 60/40 instead of
   70/30 first split in 1A, extra discussion prompts, Drive-mount cells). `make fetch-local` saves those live versions, with outputs
   stripped, to `course_materials/local/colab/` (git-ignored) for comparison.
+- **Run locally without editing the originals:** `make runnable` writes Colab-free copies of 1A, 1B and session 2 into
+  `course_materials/local/runnable/` (git-ignored) using [`scripts/localize_notebook.py`](../../scripts/localize_notebook.py).
+  The copies comment out `drive.mount` / `!pip`, set `BASE_DIR` to the notebook's folder, and disable the optional Hugging Face
+  upload steps. All three share that folder, so session 2 finds the 1A/1B outputs.
+- **Tested on 2026-11-07** on an Apple-silicon Mac (`.venv`, PyTorch on the GPU via `mps`):
+
+  | Notebook | Time | Test accuracy | Test macro-F1 |
+  |----------|------|---------------|---------------|
+  | 1A · TF-IDF → SVD → MLP | 14 s | 0.635 | 0.535 |
+  | 1B · PubMedBERT fine-tune (3 epochs) | **3 h 15 min** | **0.853** | **0.790** |
+
+  1B needs **`accelerate`** (the Hugging Face `Trainer` refuses to start without it). It's now in `requirements-course.txt`.
+  On Colab with a T4 GPU, 1B takes minutes rather than hours.
 - Written for **Google Colab**. Locally, **skip the `google.colab` / `drive.mount` cells** and set the output paths to a local folder.
 - 1B pins its own versions (`transformers==4.48.2`, `datasets==3.0.2`, `evaluate==0.4.5`). `requirements-course.txt` is compatible with them.
 - 1B fine-tunes a BERT-base model. A **GPU is strongly recommended**; on CPU, reduce the subset size or the number of epochs.

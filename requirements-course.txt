@@ -13,6 +13,7 @@ imbalanced-learn>=0.12   # SMOTE (03.2 preprocessing tutorial)
 transformers>=4.46,<5   # Trainer(processing_class=...) needs >=4.46
 datasets>=3.0
 evaluate>=0.4.5
+accelerate>=0.26     # required by transformers' Trainer (04.1 session 1B)
 huggingface_hub>=0.23
 tqdm>=4.66
 ipywidgets>=8.1       # progress bars in notebooks (tqdm.notebook)
@@ -21,6 +22,8 @@ ipywidgets>=8.1       # progress bars in notebooks (tqdm.notebook)
 pyarrow>=15.0          # Parquet (bioimaging inputs)
 pyreadr>=0.5           # R .RDS files (gene-expression data)
 tifffile>=2024.1       # Microscopy images
+imagecodecs>=2024.1    # LZW-compressed TIFFs (bioimaging 01_plot_images)
+sh>=2.0                # bioimaging 01_plot_images calls the `aws` CLI through it
 
 # Bioimaging profiling
 pycytominer>=1.2
