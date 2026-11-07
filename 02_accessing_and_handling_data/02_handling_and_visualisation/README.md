@@ -1,6 +1,6 @@
 # 02.2 · Handling & Visualisation
 
-> **Status:** ⚪ Not started · **Trainers:** Mahfouz Shehu & Sandy Rogers ·
+> **Status:** ✅ Implementation complete (3 / 3 tasks) · **Trainers:** Mahfouz Shehu & Sandy Rogers ·
 > **Course page:** [Handling and visualising data in Python](https://www.ebi.ac.uk/training/materials/data-science-for-life-scientists-materials-2026/accessing-and-handling-data-with-python/handling-and-visualising-data-in-python/)
 
 ## Overview
@@ -42,10 +42,18 @@ It also includes an **"R → Python mindset"** table (`<-` vs `=`, 1- vs 0-based
 - **Pseudonymisation vs. anonymisation:** a consistent hash keeps records linkable without exposing identities.
 - **Missing values:** `NaN`/`NaT` must be handled explicitly (drop, impute, or flag).
 
-## 🛠️ My Implementation (planned)
-- [ ] EDA notebook on the API data from 02.1: cleaning, reshaping (`melt`/`pivot`), group-by summaries
-- [ ] Figure set: distributions, correlations and categorical comparisons, each with an interpretation
-- [ ] Small FASTA/k-mer utility (Tier 5 PyLab skills) with unit tests
+## 🛠️ My Implementation
+See [`implementation/`](implementation/).
+- [x] EDA notebook on the API data from 02.1: cleaning, reshaping (`melt`/`pivot`), group-by summaries → [aquaporin sequence EDA](implementation/01_aquaporin_sequence_eda.ipynb)
+- [x] Figure set: distributions, correlations and categorical comparisons, each with an interpretation → [`implementation/figures/`](implementation/figures/)
+- [x] Small FASTA/k-mer utility (Tier 5 PyLab skills) with unit tests → [`src/dsls/seq.py`](../../src/dsls/seq.py), [`tests/test_seq.py`](../../tests/test_seq.py)
 
 ## 📝 Notes & Reflections
-_Key takeaways, challenges, and design decisions will be recorded here as the work is completed._
+- **Most of the work is in cleaning, and cleaning decisions are findings.** Mapping 150 protein names to subfamilies
+  required lineage-aware rules: a name-only mapping would have put 18 fungal proteins into mammalian subfamilies.
+- **Long format makes analysis straightforward.** Once composition was melted to one row per protein × residue, every
+  summary was a `groupby` or `pivot_table` call, and seaborn plotted it directly.
+- **Check derived measures against the data.** My first NPA-spacing rule looked reasonable but produced a spread of 70
+  residues. Looking at the outliers led to a stricter rule, and the result became much cleaner.
+- **Use more than one view of the same question.** The name-based curation was checked with an independent,
+  alignment-free k-mer representation (93 % agreement), which gives more confidence than either method alone.
