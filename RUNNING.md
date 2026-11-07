@@ -94,6 +94,7 @@ To run them **locally** instead, skip the `google.colab` / `drive.mount` cells a
 | `make snakemake-clean` | Delete both workflows' outputs |
 | `make runnable` | Colab-free copies of the 04.x and gene-expression notebooks in `course_materials/local/runnable/` (existing copies are kept) |
 | `make fetch` / `fetch-local` / `fetch-data` / `fetch-2025` | Course materials / local-only resources / datasets / supplementary 2025 edition |
+| `make test` | My unit tests (offline); `make test ARGS="-m network"` adds the live API check |
 | `make lint` | Ruff, same as CI |
 | `make clean` | Remove caches and notebook checkpoints |
 

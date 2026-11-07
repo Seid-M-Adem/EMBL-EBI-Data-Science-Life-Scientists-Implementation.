@@ -12,7 +12,7 @@
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?logo=jupyter&logoColor=white)
 ![Status](https://img.shields.io/badge/status-in%20progress-yellow)
 ![License](https://img.shields.io/badge/license-MIT%20(own%20work)-blue)
-[![Lint](https://github.com/Seid-M-Adem/EMBL-EBI-Data-Science-Life-Scientists-Implementation./actions/workflows/lint.yml/badge.svg)](https://github.com/Seid-M-Adem/EMBL-EBI-Data-Science-Life-Scientists-Implementation./actions/workflows/lint.yml)
+[![CI](https://github.com/Seid-M-Adem/EMBL-EBI-Data-Science-Life-Scientists-Implementation./actions/workflows/lint.yml/badge.svg)](https://github.com/Seid-M-Adem/EMBL-EBI-Data-Science-Life-Scientists-Implementation./actions/workflows/lint.yml)
 
 </div>
 
@@ -95,6 +95,7 @@ CI lints **only my code**; `course_materials/` is excluded.
 | ↳ | [Gene Expression](05_group_projects/gene_expression/) | TCGA prostate-cancer recurrence prediction; pan-cancer clustering |
 | ↳ | [Structural Biology](05_group_projects/structural_biology/) | Molecular-replacement success prediction; protein-crystal image classification |
 | ↳ | [Bioimaging](05_group_projects/bioimaging/) | Predicting cytotoxicity from Cell Painting morphology profiles |
+| — | [`src/dsls/`](src/dsls/) · [`tests/`](tests/) | My reusable Python package (EMBL-EBI API client, parsers) and its unit tests (run in CI) |
 | — | [Supplementary](supplementary/) | 2025 edition index (statistics, Cytoscape, FAIR, ethics) — fetched locally |
 | — | [Notebooks](notebooks/) | Exploratory sandbox notebooks |
 | — | [Data](data/) | Local data layout (contents git-ignored) |
@@ -112,6 +113,7 @@ cd EMBL-EBI-Data-Science-Life-Scientists-Implementation.
 make setup     # .venv + packages + Jupyter kernel "Python 3 (EMBL-EBI DS .venv)"
 make check     # verify everything → "All good"
 make lab       # open Jupyter Lab
+make test      # run my unit tests
 make help      # every available command
 ```
 
@@ -125,7 +127,7 @@ and **Anaconda Navigator**. See **[RUNNING.md](RUNNING.md)** for per-IDE steps, 
 | Module | Course materials | My implementation |
 |--------|------------------|-------------------|
 | 01 · Introduction to EMBL-EBI | ✅ Collected & summarised | 🟡 In progress |
-| 02 · Accessing & Handling Data | ✅ Collected & summarised | ⚪ Not started |
+| 02 · Accessing & Handling Data | ✅ Collected & summarised | 🟡 In progress: [API client + UniProt analysis](02_accessing_and_handling_data/01_apis_and_data_collection/implementation/) |
 | 03 · Foundations of Machine Learning | ✅ Collected & summarised | ⚪ Not started |
 | 04 · Foundations of Deep Learning | ✅ Collected & summarised | ⚪ Not started |
 | 05 · Group Projects | ✅ Collected & summarised | ⚪ Not started |

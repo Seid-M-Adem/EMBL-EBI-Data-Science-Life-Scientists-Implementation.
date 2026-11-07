@@ -1,6 +1,6 @@
 # 02.1 · APIs & Data Collection
 
-> **Status:** ⚪ Not started · **Trainer:** Sandy Rogers (Project Leader, MGnify Web & Platform) ·
+> **Status:** 🟡 In progress (2 / 4 tasks) · **Trainer:** Sandy Rogers (Project Leader, MGnify Web & Platform) ·
 > **Course page:** [Introduction to APIs and Python for data collection](https://www.ebi.ac.uk/training/materials/data-science-for-life-scientists-materials-2026/accessing-and-handling-data-with-python/introduction-to-apis-and-python-for-data-collection/)
 
 ## Overview
@@ -45,9 +45,10 @@ jupyter lab 02_accessing_and_handling_data/01_apis_and_data_collection/course_ma
 - **Client library:** a Python wrapper (e.g. MGnipy) that hides raw HTTP calls behind functions.
 - **Study → sample → run → analysis:** how MGnify/ENA records link from metadata to raw reads.
 
-## 🛠️ My Implementation (planned)
-- [ ] Reusable `ebi_api.py` helper: retries, pagination and caching to `data/raw/`
-- [ ] UniProt: search entries for a protein family and tabulate annotations
+## 🛠️ My Implementation
+See [`implementation/`](implementation/).
+- [x] Reusable API helper: retries, pagination and caching to `data/raw/` → [`src/dsls/ebi_api.py`](../../src/dsls/ebi_api.py), with tests
+- [x] UniProt: search entries for a protein family and tabulate annotations → [aquaporin family analysis](implementation/01_uniprot_aquaporin_family.ipynb)
 - [ ] ChEMBL: fetch bioactivity (IC50) data for one target and plot the distribution
 - [ ] ENA: list the runs for a study and summarise read counts and instruments
 

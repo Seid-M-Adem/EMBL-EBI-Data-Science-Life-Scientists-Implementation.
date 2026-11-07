@@ -18,7 +18,7 @@ HANDS_ON    := 02_accessing_and_handling_data/01_apis_and_data_collection/hands_
 .DEFAULT_GOAL := help
 .PHONY: help setup setup-course kernel check lab lab-hands-on api-call \
         snakemake-solution snakemake-tutorial snakemake-clean \
-        fetch fetch-local fetch-data fetch-2025 runnable lint clean
+        fetch fetch-local fetch-data fetch-2025 runnable test lint clean
 
 help: ## Show this list of commands
 	@printf "Usage: make <target>\n\n"
@@ -30,8 +30,8 @@ $(PY):
 	python3 -m venv $(VENV)
 	$(PIP) install -q --upgrade pip
 
-setup: $(PY) ## Create .venv and install core + 02.1 hands-on packages, then register the Jupyter kernel
-	$(PIP) install -q -r requirements.txt -r $(HANDS_ON)/requirements.txt
+setup: $(PY) ## Create .venv; install core + 02.1 packages, dev tools and my dsls package; register the kernel
+	$(PIP) install -q -r requirements.txt -r $(HANDS_ON)/requirements.txt -r requirements-dev.txt -e .
 	@$(MAKE) --no-print-directory kernel
 
 setup-course: setup ## Also install the extras used by the course notebooks of modules 03-05 (large)
@@ -87,6 +87,9 @@ runnable: $(PY) ## Write Colab-free copies of the 04.x and gene-expression noteb
 	$(PY) scripts/localize_notebook.py $(GE)/code/*.ipynb --out $(GE)/local/runnable --link Data=data/raw/gene_expression
 
 # ---- Quality -----------------------------------------------------------------
+test: ## Run my unit tests (offline; add ARGS="-m network" for the live API smoke test)
+	$(VENV)/bin/pytest -q $(ARGS)
+
 lint: ## Lint my own code and notebooks with Ruff (same check as GitHub Actions)
 	@if [ -x $(VENV)/bin/ruff ]; then $(VENV)/bin/ruff check .; else ruff check .; fi
 

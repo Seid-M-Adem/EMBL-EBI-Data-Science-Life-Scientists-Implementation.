@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dsls"
+version = "0.1.0"
+description = "Reusable code for my implementations of the EMBL-EBI 'Data science for life scientists' course"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = ["requests>=2.31"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["network: calls live EMBL-EBI APIs (deselect with -m 'not network')"]
+addopts = "-m 'not network'"

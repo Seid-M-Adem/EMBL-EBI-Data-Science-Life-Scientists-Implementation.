@@ -1,5 +1,6 @@
 # Ruff configuration — lints my own code and notebooks only.
 target-version = "py311"
+line-length = 110
 extend-include = ["*.ipynb"]
 extend-exclude = ["**/course_materials/**", "**/hands_on/python-data-tutorials/**"]  # third-party exercise notebooks contain intentional `...` blanks
 

@@ -39,9 +39,7 @@ COLAB_LINE = re.compile(
     r")"
 )
 MARK = "# [localized] "
-DRIVE_PATH = re.compile(
-    r"""^(\s*)(\w+)\s*=\s*Path\(\s*['"]/content/drive/[^'"]*['"]\s*\)"""
-)
+DRIVE_PATH = re.compile(r"""^(\s*)(\w+)\s*=\s*Path\(\s*['"]/content/drive/[^'"]*['"]\s*\)""")
 TOKEN_CELL = re.compile(
     r"wandb\.login\(|wandb\.init\(|google\.colab import userdata|getpass\(|\.create_repo\(|upload_file\("
 )
@@ -59,9 +57,7 @@ def localize_source(src: str) -> tuple[str, int]:
         stripped = line.lstrip()
         m = DRIVE_PATH.match(line)
         if m:
-            out.append(
-                f"{m.group(1)}{m.group(2)} = Path.cwd()  {MARK}was: {line.strip()}\n"
-            )
+            out.append(f"{m.group(1)}{m.group(2)} = Path.cwd()  {MARK}was: {line.strip()}\n")
             n += 1
         elif TOKEN_LINE.search(line) and line.count("(") == line.count(")"):
             out.append(MARK + "optional (needs a Hugging Face token): " + line)
@@ -84,28 +80,20 @@ def localize(nb_path: Path, out_dir: Path) -> int:
         new, n = localize_source(src)
         if n:
             # A cell that is now only comments still runs fine; add `pass` for clarity.
-            if all(
-                not ln.strip() or ln.lstrip().startswith("#") for ln in new.splitlines()
-            ):
+            if all(not ln.strip() or ln.lstrip().startswith("#") for ln in new.splitlines()):
                 new += "\npass  # [localized] Colab-only cell\n"
             cell["source"] = new.splitlines(keepends=True)
             total += n
         cell["outputs"], cell["execution_count"] = [], None
     out_dir.mkdir(parents=True, exist_ok=True)
-    (out_dir / nb_path.name).write_text(
-        json.dumps(nb, indent=1, ensure_ascii=False) + "\n", encoding="utf-8"
-    )
+    (out_dir / nb_path.name).write_text(json.dumps(nb, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     return total
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(
-        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
-    )
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("notebooks", nargs="+", type=Path)
-    ap.add_argument(
-        "--out", required=True, type=Path, help="folder for the runnable copies"
-    )
+    ap.add_argument("--out", required=True, type=Path, help="folder for the runnable copies")
     ap.add_argument(
         "--link",
         action="append",
@@ -113,9 +101,7 @@ def main() -> None:
         metavar="NAME=TARGET",
         help="create OUT/NAME -> TARGET symlink (TARGET relative to the current directory)",
     )
-    ap.add_argument(
-        "--force", action="store_true", help="overwrite copies that already exist"
-    )
+    ap.add_argument("--force", action="store_true", help="overwrite copies that already exist")
     args = ap.parse_args()
 
     for nb in args.notebooks:
@@ -123,9 +109,7 @@ def main() -> None:
             print(f"  {nb.name}: copy exists, kept (use --force to regenerate)")
             continue
         n = localize(nb, args.out)
-        print(
-            f"  {nb.name}: {n} Colab-only line(s) commented out -> {args.out / nb.name}"
-        )
+        print(f"  {nb.name}: {n} Colab-only line(s) commented out -> {args.out / nb.name}")
     for spec in args.link:
         name, target = spec.split("=", 1)
         link = args.out / name
