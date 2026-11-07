@@ -49,7 +49,7 @@ jupyter lab 02_accessing_and_handling_data/01_apis_and_data_collection/course_ma
 See [`implementation/`](implementation/).
 - [x] Reusable API helper: retries, pagination and caching to `data/raw/` → [`src/dsls/ebi_api.py`](../../src/dsls/ebi_api.py), with tests
 - [x] UniProt: search entries for a protein family and tabulate annotations → [aquaporin family analysis](implementation/01_uniprot_aquaporin_family.ipynb)
-- [ ] ChEMBL: fetch bioactivity (IC50) data for one target and plot the distribution
+- [x] ChEMBL: fetch bioactivity (IC50) data for one target and plot the distribution → [EGFR inhibitors and resistance mutations](implementation/02_chembl_egfr_ic50.ipynb)
 - [ ] ENA: list the runs for a study and summarise read counts and instruments
 
 ## 📝 Notes & Reflections
