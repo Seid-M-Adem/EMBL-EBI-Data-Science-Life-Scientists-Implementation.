@@ -88,7 +88,7 @@ CI lints **only my code**; `course_materials/` is excluded.
 | ↳ | [Intro & Fundamentals](03_foundations_of_machine_learning/01_intro_and_fundamentals/) | Supervised vs. unsupervised learning; PCA/t-SNE/UMAP, clustering, SVM, random forests, protein language models |
 | ↳ | [Hyperparameters & Performance](03_foundations_of_machine_learning/02_hyperparameters_and_performance/) | Data preparation, SMOTE, cross-validation, grid/random search, ROC-AUC; 8 classifiers on crystallography data |
 | 04 | [Foundations of Deep Learning](04_foundations_of_deep_learning/) | Neural networks to LLMs, via biomedical text classification |
-| ↳ | [DNNs & Transformers](04_foundations_of_deep_learning/01_dnn_and_transformers/) | TF-IDF + MLP baseline vs. fine-tuned PubMedBERT on PubMed RCT |
+| ↳ | [DNNs & Transformers](04_foundations_of_deep_learning/01_dnn_and_transformers/) | TF-IDF + MLP baseline vs. fine-tuned PubMedBERT on PubMed RCT; protein language models |
 | ↳ | [Evaluation & Visualisation](04_foundations_of_deep_learning/02_evaluation_and_visualisation/) | Learning curves, macro-F1, confusion matrices, error and confidence analysis, W&B |
 | ↳ | [Intro to LLMs](04_foundations_of_deep_learning/03_intro_to_llms/) | Tokens, pre-training → post-training, hallucination, RAG, agents |
 | 05 | [Group Projects](05_group_projects/) | Three end-to-end applied projects |
@@ -96,7 +96,7 @@ CI lints **only my code**; `course_materials/` is excluded.
 | ↳ | [Structural Biology](05_group_projects/structural_biology/) | Molecular-replacement success prediction; protein-crystal image classification |
 | ↳ | [Bioimaging](05_group_projects/bioimaging/) | Predicting cytotoxicity from Cell Painting morphology profiles |
 | — | [LEARNING_GUIDE.md](LEARNING_GUIDE.md) · [GLOSSARY.md](GLOSSARY.md) | **Start here if you're new to the field:** a learning path through plain-language lessons for every session (no biology or data-science background assumed), plus an A–Z glossary |
-| — | [`src/dsls/`](src/dsls/) · [`tests/`](tests/) | My reusable Python package (EMBL-EBI API client; UniProt, ChEMBL and ENA helpers; FASTA/k-mer utilities; expression-data and MR-dataset helpers) and its 69 unit tests (run in CI) |
+| — | [`src/dsls/`](src/dsls/) · [`tests/`](tests/) | My reusable Python package (EMBL-EBI API client; UniProt, ChEMBL and ENA helpers; FASTA/k-mer utilities; expression-data and MR-dataset helpers; PyTorch text-classification and protein-sequence tools) and its 81 unit tests (run in CI) |
 | — | [Supplementary](supplementary/) | 2025 edition index (statistics, Cytoscape, FAIR, ethics) — fetched locally |
 | — | [Notebooks](notebooks/) | Exploratory sandbox notebooks |
 | — | [Data](data/) | Local data layout (contents git-ignored) |
@@ -133,7 +133,7 @@ and **Anaconda Navigator**. See **[RUNNING.md](RUNNING.md)** for per-IDE steps, 
 | 01 · Introduction to EMBL-EBI | ✅ Collected & summarised | ✅ [Resource map + EGFR cross-reference walk, FAIR notes](01_introduction_to_embl_ebi/implementation/) |
 | 02 · Accessing & Handling Data | ✅ Collected & summarised | ✅ [02.1: API client, UniProt, ChEMBL EGFR, ENA Tara Oceans](02_accessing_and_handling_data/01_apis_and_data_collection/implementation/) · [02.2: FASTA/k-mer utility, aquaporin sequence EDA](02_accessing_and_handling_data/02_handling_and_visualisation/implementation/) |
 | 03 · Foundations of Machine Learning | ✅ Collected & summarised | ✅ [03.1: Iris model comparison, PCA/t-SNE/UMAP and clustering on TCGA](03_foundations_of_machine_learning/01_intro_and_fundamentals/implementation/) · [03.2: MR data audit, leakage, nested CV, imbalance and learning curves](03_foundations_of_machine_learning/02_hyperparameters_and_performance/implementation/) |
-| 04 · Foundations of Deep Learning | ✅ Collected & summarised | ⚪ Not started |
+| 04 · Foundations of Deep Learning | ✅ Collected & summarised | 🟡 [04.1: PyTorch MLP, small biomedical transformers, ESM-2 protein localisation](04_foundations_of_deep_learning/01_dnn_and_transformers/implementation/) · 04.2 and 04.3 next |
 | 05 · Group Projects | ✅ Collected & summarised | ⚪ Not started |
 
 ---

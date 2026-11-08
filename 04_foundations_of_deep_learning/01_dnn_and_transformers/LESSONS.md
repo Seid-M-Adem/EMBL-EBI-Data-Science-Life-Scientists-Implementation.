@@ -7,6 +7,11 @@ in [`LEARNING_GUIDE.md`](../../LEARNING_GUIDE.md).*
 language models and protein models) work so well for sequences. The practical compares a classical text classifier
 with a fine-tuned biomedical transformer.
 
+**Worked examples in this repo:** [a PyTorch network from scratch, and the feature that matters most](implementation/01_pytorch_mlp_pubmed_rct.ipynb)
+(Lessons 1–3), [small biomedical transformers: speed vs accuracy](implementation/02_small_biomedical_transformers.ipynb)
+(Lessons 5–6) and [protein localisation from a protein language model](implementation/03_esm2_protein_localisation.ipynb)
+(Lessons 4–6, applied to protein sequences).
+
 ---
 
 ## Background · The practical task in plain language
@@ -117,7 +122,7 @@ training (fine-tuning). It is much faster than training a radiologist from birth
 | Model | Test accuracy | Macro-F1 | Training time (Apple-silicon laptop) |
 |-------|---------------|----------|----------------------------------------|
 | TF-IDF → SVD → MLP | 0.635 | 0.535 | 14 s |
-| PubMedBERT fine-tuned | **0.853** | **0.790** | 3 h 15 min (minutes on a cloud GPU) |
+| PubMedBERT fine-tuned | **0.853** | **0.790** | 3 h 15 min wall-clock (about 5 min of actual training; see below) |
 
 **Lessons from this result:**
 - Pre-trained context-aware models beat word counts by a large margin on this task.
@@ -127,3 +132,14 @@ training (fine-tuning). It is much faster than training a radiologist from birth
 
 **Why it matters at work:** "fine-tune a pre-trained model on domain data and compare it against a baseline" is one of
 the most common real-world deep-learning tasks in industry and research.
+
+**What my re-analysis added** (details in the [implementation notebooks](implementation/)):
+- **Most of 1A's gap was preprocessing, not the network.** Removing English stop words deletes the small words that
+  signal a sentence's role ("**We** aimed **to**…", "…**were** randomized"). Keeping them and skipping the SVD
+  compression lifts plain logistic regression to macro-F1 0.676.
+- **Telling the model where the sentence sits in the abstract** is the single most valuable step: +0.13 macro-F1 for
+  a small network, +0.05 for PubMedBERT (to 0.847, written into the text as "sentence 3 of 12: …").
+- **The 3 h 15 min was mostly waiting.** In the course run's log, an evaluation that normally takes 9.5 seconds took
+  35 minutes. Fine-tuning the same model with my own loop took about 5 minutes on the same laptop.
+- **Smaller models are often enough:** a 14-million-parameter model came within 0.05 macro-F1 of PubMedBERT at an
+  eighth of the cost.

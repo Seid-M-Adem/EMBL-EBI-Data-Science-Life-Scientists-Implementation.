@@ -18,6 +18,9 @@ dependencies = [
     "scikit-learn>=1.4",
 ]
 
+[project.optional-dependencies]
+dl = ["torch>=2.2"]  # dsls.textclf (deep-learning modules)
+
 [tool.setuptools.packages.find]
 where = ["src"]
 

@@ -27,6 +27,9 @@ jobs:
         with:
           python-version: "3.11"
       - name: Install my package and test tools
-        run: pip install -e . -r requirements-dev.txt
+        # CPU-only PyTorch wheel (~200 MB instead of ~2 GB with CUDA) for dsls.textclf
+        run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -e ".[dl]" -r requirements-dev.txt
       - name: Run unit tests (offline)
         run: pytest -q

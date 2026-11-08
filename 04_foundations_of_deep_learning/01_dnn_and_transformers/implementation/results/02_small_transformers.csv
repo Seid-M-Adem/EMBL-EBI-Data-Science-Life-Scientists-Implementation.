@@ -1,0 +1,7 @@
+model,input,parameters (M),accuracy,macro-F1,training seconds,test sentences / s
+tiny-biobert,sentence only,13.8757,0.8169,0.7504,49.9288,1583.3974
+bio-mobilebert,sentence only,24.5845,0.2948,0.1529,244.9207,237.7544
+distil-biobert,sentence only,65.7869,0.8376,0.7743,177.9407,408.0955
+PubMedBERT,sentence only,109.4861,0.8578,0.7954,309.6493,225.462
+distil-biobert,sentence + position,65.7869,0.886,0.8341,185.2253,377.5674
+PubMedBERT,sentence + position,109.4861,0.8989,0.8468,325.2529,206.3513
