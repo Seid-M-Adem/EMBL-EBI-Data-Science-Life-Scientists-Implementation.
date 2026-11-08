@@ -6,6 +6,10 @@ in [`LEARNING_GUIDE.md`](../../LEARNING_GUIDE.md).*
 **What this session teaches:** how to turn a biological question into a machine-learning problem, why biological data
 is especially tricky, and how to choose among the main families of algorithms.
 
+**Worked examples in this repo:** [Iris model comparison](implementation/01_iris_pipeline_model_comparison.ipynb)
+(Lessons 5–6), [PCA vs t-SNE vs UMAP on cancer data](implementation/02_tcga_dimensionality_reduction.ipynb) and
+[k-means vs hierarchical clustering](implementation/03_tcga_clustering_kmeans_vs_hierarchical.ipynb) (Lessons 3, 4, 6).
+
 ---
 
 ## Lesson 1 · What machine learning actually is

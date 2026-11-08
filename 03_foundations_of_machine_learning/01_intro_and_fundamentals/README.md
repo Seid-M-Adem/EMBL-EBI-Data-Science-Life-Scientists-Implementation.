@@ -1,6 +1,6 @@
 # 03.1 · Intro & Fundamentals
 
-> **Status:** ⚪ Not started · **Trainer:** Jiawei Wang (Lecturer in Computational Biology, University of Bath) ·
+> **Status:** ✅ Implementation complete (3 / 3 tasks) · **Trainer:** Jiawei Wang (Lecturer in Computational Biology, University of Bath) ·
 > **Course pages:** [Intro to ML](https://www.ebi.ac.uk/training/materials/data-science-for-life-scientists-materials-2026/foundations-of-machine-learning-ml/intro-to-ml/) ·
 > [ML fundamentals](https://www.ebi.ac.uk/training/materials/data-science-for-life-scientists-materials-2026/foundations-of-machine-learning-ml/ml-fundamentals-types-of-ml-and-common-algorithms/)
 
@@ -49,10 +49,21 @@ It ends with a decision guide for choosing a method, after *"A guide to machine 
 - **Bias–variance trade-off:** simple models underfit, complex models overfit
 - **Feature importance:** which genes or biomarkers drive a prediction
 
-## 🛠️ My Implementation (planned)
-- [ ] Re-implement the Iris workflow with a scikit-learn `Pipeline` and compare logistic regression, SVM and random forest
-- [ ] PCA vs. t-SNE vs. UMAP on a public expression dataset, with a written comparison
-- [ ] k-means vs. hierarchical clustering, evaluated with silhouette score and adjusted Rand index
+## 🛠️ My Implementation
+See [`implementation/`](implementation/). Each notebook explains every step in plain language for readers new to ML.
+- [x] Re-implement the Iris workflow with scikit-learn `Pipeline`s and compare logistic regression, SVM and random forest → [Iris model comparison](implementation/01_iris_pipeline_model_comparison.ipynb)
+- [x] PCA vs. t-SNE vs. UMAP on a public expression dataset (TCGA, 12 cancer types), with a quantitative comparison → [dimensionality reduction](implementation/02_tcga_dimensionality_reduction.ipynb)
+- [x] k-means vs. hierarchical clustering, evaluated with silhouette score and adjusted Rand index → [clustering](implementation/03_tcga_clustering_kmeans_vs_hierarchical.ipynb)
+- [x] Tested helpers for expression data and embedding scores → [`src/dsls/expression.py`](../../src/dsls/expression.py), [`tests/test_expression.py`](../../tests/test_expression.py)
 
 ## 📝 Notes & Reflections
-_Key takeaways, challenges, and design decisions will be recorded here as the work is completed._
+- **"Which model is best?" often has no answer.** On Iris, three very different models were statistically tied, and
+  a 38-sample test set reversed their ranking. I now report fold-to-fold spread and confidence intervals by default.
+- **Score pictures, don't just admire them.** t-SNE and UMAP plots *look* far better than PCA. Measuring showed they
+  win on local neighbourhoods and lose on global layout, and that UMAP's layout changes with the random seed.
+- **Design the benchmark so the answer is known.** Choosing related cancer-type pairs turned "the clusters look
+  reasonable" into testable statements, such as colon and rectum being indistinguishable.
+- **Label-free scores answer a different question.** The silhouette preferred 9 clusters (organs), not the 12
+  clinical labels. Neither is wrong, but which *k* to use has to be justified from the biology.
+- **Leave unexplained things unexplained.** My first idea for the mixed cluster (non-tumour cells) wasn't
+  supported by marker genes, so the notebook says so instead of telling a story.
