@@ -4,6 +4,8 @@
 > **Course page:** [Handling and visualising data in Python](https://www.ebi.ac.uk/training/materials/data-science-for-life-scientists-materials-2026/accessing-and-handling-data-with-python/handling-and-visualising-data-in-python/)
 
 ## Overview
+> 🎓 **New to the field?** [`LESSONS.md`](LESSONS.md) explains this material in plain language, with no biology or data-science background assumed.
+
 Raw data is rarely ready to analyse. This session covers the everyday Python skills of data science:
 core data structures, reading files, cleaning and transforming tables with **pandas**, and plotting with **seaborn**.
 It's aimed especially at life scientists coming from **R**.

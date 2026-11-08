@@ -3,6 +3,8 @@
 > **Status:** ⚪ Not started · **Trainer:** Melanie Vollmar · **Course page:** [Data, hyperparameters, and model performance](https://www.ebi.ac.uk/training/materials/data-science-for-life-scientists-materials-2026/foundations-of-machine-learning-ml/data-hyperparameters-and-model-performance/)
 
 ## Overview
+> 🎓 **New to the field?** [`LESSONS.md`](LESSONS.md) explains this material in plain language, with no biology or data-science background assumed.
+
 A practical session on what decides whether a model works in practice: **data preparation**,
 **correct splitting**, **hyperparameter search**, and **reading performance metrics**. The tutorials use a real
 structural-biology dataset: predicting whether **molecular replacement (MR) phasing** succeeds for X-ray

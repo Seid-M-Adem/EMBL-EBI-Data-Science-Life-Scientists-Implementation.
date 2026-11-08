@@ -4,6 +4,8 @@
 > **Course page:** [Introduction to EMBL-EBI, its role, and mission](https://www.ebi.ac.uk/training/materials/data-science-for-life-scientists-materials-2026/introduction-to-embl-ebi-its-role-and-mission/)
 
 ## Overview
+> 🎓 **New to the field?** [`LESSONS.md`](LESSONS.md) explains this material in plain language, with no biology or data-science background assumed.
+
 This session sets the context for the whole course. It explains **where public life-science data comes from**
 and who looks after it. EMBL-EBI runs many of the world's core biological databases (ENA, UniProt, PDBe,
 ChEMBL, Ensembl, MGnify, …). Knowing what each one holds is the first step in any data-science project in biology.

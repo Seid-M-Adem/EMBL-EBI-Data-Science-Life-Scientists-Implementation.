@@ -4,6 +4,8 @@
 > **Course page:** [Bioimaging](https://www.ebi.ac.uk/training/materials/data-science-for-life-scientists-materials-2026/group-projects/bioimaging/)
 
 ## Overview
+> 🎓 **New to the field?** [`LESSONS.md`](LESSONS.md) explains this material in plain language, with no biology or data-science background assumed.
+
 **Investigating chemical mode of action with cell profiling and machine learning.**
 Primary human hepatocytes were treated with ~1,085 reference compounds (8 concentrations, 44 h exposure) and imaged
 with the **Cell Painting** assay. Cell Painting uses six dyes to label the nucleus, ER, mitochondria, Golgi, actin and RNA.

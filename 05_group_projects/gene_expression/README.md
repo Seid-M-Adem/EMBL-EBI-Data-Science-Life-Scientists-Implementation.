@@ -4,6 +4,8 @@
 > **Course page:** [Gene expression](https://www.ebi.ac.uk/training/materials/data-science-for-life-scientists-materials-2026/group-projects/gene-expression/)
 
 ## Overview
+> 🎓 **New to the field?** [`LESSONS.md`](LESSONS.md) explains this material in plain language, with no biology or data-science background assumed.
+
 Machine learning on **cancer transcriptomics** from The Cancer Genome Atlas (TCGA). The project has two parts:
 1. **Supervised:** predict **3-year recurrence in prostate cancer** from gene expression, a classic *p ≫ n* problem (243 patients, 20,530 genes).
 2. **Unsupervised:** explore a **pan-cancer** dataset to see whether tumour types separate by expression (and by proteomics) using dimensionality reduction and clustering.

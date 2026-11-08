@@ -4,6 +4,8 @@
 > **Course page:** [Structural biology](https://www.ebi.ac.uk/training/materials/data-science-for-life-scientists-materials-2026/group-projects/structural-biology/)
 
 ## Overview
+> 🎓 **New to the field?** [`LESSONS.md`](LESSONS.md) explains this material in plain language, with no biology or data-science background assumed.
+
 During the live course only a few participants chose this track, so they worked on their own research questions.
 For on-demand learners the trainer provides **a tutorial and a short research challenge**. Both use tabular
 **X-ray diffraction** data and **crystallisation images** from *AXIS: a Lab-in-the-Loop machine learning approach

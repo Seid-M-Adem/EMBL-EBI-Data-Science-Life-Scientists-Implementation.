@@ -4,6 +4,8 @@
 > **Course page:** [Model evaluation and visualisation](https://www.ebi.ac.uk/training/materials/data-science-for-life-scientists-materials-2026/foundations-of-deep-learning-dl/model-evaluation-and-visualisation/)
 
 ## Overview
+> 🎓 **New to the field?** [`LESSONS.md`](LESSONS.md) explains this material in plain language, with no biology or data-science background assumed.
+
 *"Training performance is not scientific evidence."* This session moves from **training** models to
 **understanding** them: choosing the right metric, reading learning curves, spotting leakage and imbalance,
 analysing errors, and tracking experiments so the results can be trusted and reproduced.

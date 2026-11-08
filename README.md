@@ -95,7 +95,8 @@ CI lints **only my code**; `course_materials/` is excluded.
 | ↳ | [Gene Expression](05_group_projects/gene_expression/) | TCGA prostate-cancer recurrence prediction; pan-cancer clustering |
 | ↳ | [Structural Biology](05_group_projects/structural_biology/) | Molecular-replacement success prediction; protein-crystal image classification |
 | ↳ | [Bioimaging](05_group_projects/bioimaging/) | Predicting cytotoxicity from Cell Painting morphology profiles |
-| — | [`src/dsls/`](src/dsls/) · [`tests/`](tests/) | My reusable Python package (EMBL-EBI API client; UniProt, ChEMBL and ENA helpers; FASTA/k-mer utilities) and its 60 unit tests (run in CI) |
+| — | [LEARNING_GUIDE.md](LEARNING_GUIDE.md) · [GLOSSARY.md](GLOSSARY.md) | **Start here if you're new to the field:** a learning path through plain-language lessons for every session (no biology or data-science background assumed), plus an A–Z glossary |
+| — | [`src/dsls/`](src/dsls/) · [`tests/`](tests/) | My reusable Python package (EMBL-EBI API client; UniProt, ChEMBL and ENA helpers; FASTA/k-mer utilities) and its 61 unit tests (run in CI) |
 | — | [Supplementary](supplementary/) | 2025 edition index (statistics, Cytoscape, FAIR, ethics) — fetched locally |
 | — | [Notebooks](notebooks/) | Exploratory sandbox notebooks |
 | — | [Data](data/) | Local data layout (contents git-ignored) |
@@ -105,6 +106,9 @@ CI lints **only my code**; `course_materials/` is excluded.
 ---
 
 ## 🚀 Getting Started
+
+> 🎓 **Changing careers or new to biology or data science?** Start with **[LEARNING_GUIDE.md](LEARNING_GUIDE.md)**. Every session
+> has a `LESSONS.md` that explains its core ideas in plain language, and **[GLOSSARY.md](GLOSSARY.md)** defines the terms.
 
 ```bash
 git clone https://github.com/Seid-M-Adem/EMBL-EBI-Data-Science-Life-Scientists-Implementation..git

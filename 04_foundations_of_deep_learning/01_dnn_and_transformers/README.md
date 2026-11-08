@@ -4,6 +4,8 @@
 > **Course page:** [Deep neural networks (DNNs) and transformers](https://www.ebi.ac.uk/training/materials/data-science-for-life-scientists-materials-2026/foundations-of-deep-learning-dl/deep-neural-networks-dnns-and-transformers/)
 
 ## Overview
+> 🎓 **New to the field?** [`LESSONS.md`](LESSONS.md) explains this material in plain language, with no biology or data-science background assumed.
+
 Part A explains **how neural networks learn**. Part B explains **why transformers** became the standard architecture
 for sequences. The practicals compare a classical neural baseline with a **fine-tuned biomedical transformer** on the
 same task.

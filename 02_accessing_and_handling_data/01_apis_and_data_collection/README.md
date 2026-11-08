@@ -4,6 +4,8 @@
 > **Course page:** [Introduction to APIs and Python for data collection](https://www.ebi.ac.uk/training/materials/data-science-for-life-scientists-materials-2026/accessing-and-handling-data-with-python/introduction-to-apis-and-python-for-data-collection/)
 
 ## Overview
+> 🎓 **New to the field?** [`LESSONS.md`](LESSONS.md) explains this material in plain language, with no biology or data-science background assumed.
+
 Clicking through a website doesn't scale to hundreds of samples. This session teaches **programmatic data access**:
 calling EMBL-EBI web APIs to search, filter and download data with code. Every step is then repeatable and auditable.
 

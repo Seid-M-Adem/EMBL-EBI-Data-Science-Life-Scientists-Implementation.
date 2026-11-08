@@ -5,6 +5,8 @@
 > [ML fundamentals](https://www.ebi.ac.uk/training/materials/data-science-for-life-scientists-materials-2026/foundations-of-machine-learning-ml/ml-fundamentals-types-of-ml-and-common-algorithms/)
 
 ## Overview
+> 🎓 **New to the field?** [`LESSONS.md`](LESSONS.md) explains this material in plain language, with no biology or data-science background assumed.
+
 Two lectures with one question: *"Can we turn a biological problem into a machine learning problem?"*
 The first builds intuition (what ML is, why biological data is hard). The second is a tour of the
 algorithms, from PCA to protein language models, with guidance on picking the right one.

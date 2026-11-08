@@ -4,6 +4,8 @@
 > **Course page:** [Introduction to Large Language Models](https://www.ebi.ac.uk/training/materials/data-science-for-life-scientists-materials-2026/foundations-of-deep-learning-dl/introduction-to-large-language-models/)
 
 ## Overview
+> 🎓 **New to the field?** [`LESSONS.md`](LESSONS.md) explains this material in plain language, with no biology or data-science background assumed.
+
 *From next-token prediction to reasoning and agentic AI.* A conceptual lecture on what happens inside an LLM,
 how a raw model becomes an assistant, why LLMs hallucinate, and how to use them **reliably** in scientific work.
 
