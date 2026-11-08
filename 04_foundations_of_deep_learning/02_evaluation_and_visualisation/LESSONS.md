@@ -6,6 +6,10 @@ in [`LEARNING_GUIDE.md`](../../LEARNING_GUIDE.md).*
 **What this session teaches:** *"Training performance is not scientific evidence."* It covers how to choose metrics,
 read learning curves, catch leakage and imbalance, analyse errors, and track experiments so results can be trusted.
 
+**Worked examples in this repo:** [uncertainty, calibration and errors of three classifiers](implementation/01_uncertainty_calibration_errors.ipynb)
+(Lessons 1, 3–5) and [duplicates, label noise and learning curves](implementation/02_duplicates_label_noise_learning_curves.ipynb)
+(Lessons 1–2). Both use the PubMed RCT models from module 04.1.
+
 ---
 
 ## Lesson 1 · Train → validate → test once → report

@@ -1,6 +1,6 @@
 # 04.2 · Evaluation & Visualisation
 
-> **Status:** ⚪ Not started · **Trainer:** Amina Mardiyyah Rufai (Machine Learning Data Scientist) ·
+> **Status:** ✅ Implementation complete (3 / 3 tasks) · **Trainer:** Amina Mardiyyah Rufai (Machine Learning Data Scientist) ·
 > **Course page:** [Model evaluation and visualisation](https://www.ebi.ac.uk/training/materials/data-science-for-life-scientists-materials-2026/foundations-of-deep-learning-dl/model-evaluation-and-visualisation/)
 
 ## Overview
@@ -56,10 +56,23 @@ cells when running locally. The live Colab version (later edits: extra discussio
 - **Calibration / confidence:** whether predicted probabilities match how often the model is actually right.
 - **Data leakage:** test information reaching training (e.g. duplicate sentences across splits).
 
-## 🛠️ My Implementation (planned)
-- [ ] Reusable `evaluation.py`: learning curves, per-class report, normalised confusion matrix, reliability diagram
-- [ ] Repeat the confidence analysis for the MLP (the notebook's extra exercise)
-- [ ] Check for leakage: near-duplicate sentences across train and test
+## 🛠️ My Implementation
+See [`implementation/`](implementation/). Both notebooks explain each step in plain language for readers new to the field.
+- [x] Reusable `evaluation.py`: per-class report, grouped and paired bootstrap, reliability table, ECE, temperature scaling, coverage curve, duplicate search → [`src/dsls/evaluation.py`](../../src/dsls/evaluation.py) (12 tests); learning curves and confusion matrices in the notebooks
+- [x] Confidence analysis for the MLP *and* LR, next to PubMedBERT, with calibration and selective prediction → [notebook 01](implementation/01_uncertainty_calibration_errors.ipynb)
+- [x] Leakage check: exact and near-duplicate sentences across the official splits, plus label consistency → [notebook 02](implementation/02_duplicates_label_noise_learning_curves.ipynb)
 
 ## 📝 Notes & Reflections
-_Key takeaways, challenges, and design decisions will be recorded here as the work is completed._
+- **One number hides the story.** Accuracy called the MLP and PubMedBERT a tie (0.853 vs 0.850). Per-class F1 showed
+  each wins on different classes, and a paired bootstrap showed the MLP's macro-F1 lead (+0.015) is real.
+- **Compare models on the same resamples.** Two separate 95 % intervals almost touched; the paired interval
+  (+0.009 to +0.022) was clear-cut. That is the right test for "is A better than B?".
+- **Confidence is only useful if it's honest.** PubMedBERT said "≥ 90 % sure" for 96 % of sentences but was right on
+  85 %, so a "send uncertain cases to a human" rule would have sent almost nothing. Temperature scaling, fitted on a
+  separate calibration set, cut the error by more than half but couldn't fully fix it.
+- **A clean leakage check is a result.** Duplicates turned out to be stock phrases, and removing them changed nothing,
+  so the earlier scores stand. In 03.2 the same kind of check found a large inflation: check every time.
+- **Some errors are the labels' fault.** Authors file the same sentence under different headings, so part of the
+  remaining error is a ceiling. Reading the most confident mistakes found this faster than any metric.
+- **Learning curves told me where to invest:** the MLP had flattened, so better text reading (PubMedBERT + position,
+  04.1) was the way forward, not more data.
