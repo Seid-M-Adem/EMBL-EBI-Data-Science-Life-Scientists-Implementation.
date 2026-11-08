@@ -9,7 +9,14 @@ description = "Reusable code for my implementations of the EMBL-EBI 'Data scienc
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.11"
-dependencies = ["requests>=2.31"]
+# Everything src/dsls imports at runtime (CI installs only these plus pytest, so a missing entry fails CI)
+dependencies = [
+    "requests>=2.31",
+    "numpy>=1.26",
+    "pandas>=2.1",
+    "scipy>=1.11",
+    "scikit-learn>=1.4",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]
