@@ -1,6 +1,6 @@
 # 03.2 · Hyperparameters & Performance
 
-> **Status:** ⚪ Not started · **Trainer:** Melanie Vollmar · **Course page:** [Data, hyperparameters, and model performance](https://www.ebi.ac.uk/training/materials/data-science-for-life-scientists-materials-2026/foundations-of-machine-learning-ml/data-hyperparameters-and-model-performance/)
+> **Status:** ✅ Implementation complete (4 / 4 tasks) · **Trainer:** Melanie Vollmar · **Course page:** [Data, hyperparameters, and model performance](https://www.ebi.ac.uk/training/materials/data-science-for-life-scientists-materials-2026/foundations-of-machine-learning-ml/data-hyperparameters-and-model-performance/)
 
 ## Overview
 > 🎓 **New to the field?** [`LESSONS.md`](LESSONS.md) explains this material in plain language, with no biology or data-science background assumed.
@@ -76,11 +76,23 @@ Preprocessing and the 8 training notebooks take 5–100 s each (AdaBoost is the 
 - **Grid vs. random search:** random search covers large spaces more efficiently.
 - **ROC-AUC:** threshold-independent ranking quality. **Balanced accuracy** is more honest when classes are imbalanced.
 
-## 🛠️ My Implementation (planned)
-- [ ] Leakage-free `Pipeline` (impute → scale → select → model) on the MR dataset
-- [ ] Compare all eight classifiers with nested cross-validation and a summary table and plot
-- [ ] Class-imbalance study: class weights vs. SMOTE vs. undersampling
-- [ ] Learning and validation curves for the best model
+## 🛠️ My Implementation
+See [`implementation/`](implementation/). Both notebooks explain each step in plain language for readers new to the field.
+- [x] Leakage-free `Pipeline` (impute → scale → select → model) on the MR dataset, after a data audit → [notebook 01](implementation/01_mr_audit_leakage_nested_cv.ipynb), [`src/dsls/mr.py`](../../src/dsls/mr.py)
+- [x] Compare all eight classifiers with nested cross-validation (grouped by crystal), with a summary table and plot → [notebook 01](implementation/01_mr_audit_leakage_nested_cv.ipynb)
+- [x] Class-imbalance study: class weights vs. random oversampling vs. SMOTE vs. undersampling, plus threshold moving → [notebook 02](implementation/02_mr_imbalance_and_learning_curves.ipynb)
+- [x] Learning and validation curves → [notebook 02](implementation/02_mr_imbalance_and_learning_curves.ipynb)
 
 ## 📝 Notes & Reflections
-_Key takeaways, challenges, and design decisions will be recorded here as the work is completed._
+- **The biggest finding came from the data, not the models.** 663 rows are only 359 crystals, and repeated crystals
+  always share their outcome. Splitting by crystal dropped the random forest from 0.93 to 0.74 AUC. I now ask "are
+  my rows independent?" before choosing a cross-validation scheme.
+- **"Would I know this in time?"** is the test for target leakage. The MR results predict success almost perfectly
+  because success is judged from them. Conversely, sequence identity is known in advance, unused in the tutorial,
+  and the most valuable feature I tested.
+- **Honest evaluation makes models look alike.** Under nested grouped CV, eight algorithms landed within 0.05 AUC
+  of each other, so I would choose logistic regression for its simplicity.
+- **Resampling is a roundabout threshold.** It changed recall and precision, not ranking quality. Choosing the threshold
+  explicitly, from the cost of each mistake, was as effective and keeps all the data.
+- **A wrong split misleads twice:** it reports an inflated score *and* its validation curve recommends overly complex
+  models (depth 20 vs 2).

@@ -44,6 +44,7 @@ The slides also suggest [Teachable Machine](https://teachablemachine.withgoogle.
 
 ## 🛠️ My Implementation (planned)
 - [ ] **Part 1:** leakage-free MR-success classifier with nested CV, SHAP interpretation, and a comparison with the tutorial's models
+  - *Groundwork done in [03.2](../../03_foundations_of_machine_learning/02_hyperparameters_and_performance/implementation/): data audit, grouped nested CV (the same crystal appears in several rows, which inflates random-split scores from 0.74 to 0.93), imbalance and learning curves. SHAP interpretation is still to do.*
 - [ ] **Part 2:** PyTorch transfer-learning crystal classifier (augmentation, class weighting), reported against the targets above
 - [ ] Error analysis: show false negatives (missed crystals) and discuss why they were missed
 

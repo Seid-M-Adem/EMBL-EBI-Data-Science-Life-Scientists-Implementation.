@@ -7,6 +7,11 @@ in [`LEARNING_GUIDE.md`](../../LEARNING_GUIDE.md).*
 splitting it correctly, tuning settings, and reading performance metrics honestly. The examples use a
 structural-biology dataset, explained first.
 
+**Worked examples in this repo:** [data audit, leakage and nested CV](implementation/01_mr_audit_leakage_nested_cv.ipynb)
+(Lessons 1–3, 5, 7) and [imbalance, thresholds and learning curves](implementation/02_mr_imbalance_and_learning_curves.ipynb)
+(Lessons 4, 6). The first one shows a real case of Lesson 3's *grouped* splits: the same crystal in several rows
+inflated a model's score from 0.74 to 0.93.
+
 ---
 
 ## Background · The tutorial dataset in plain language
