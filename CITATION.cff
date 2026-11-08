@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you reuse code or analyses from this repository, please cite it as below."
+title: "EMBL-EBI Data Science for Life Scientists: proof-of-learning implementation"
+type: software
+authors:
+  - family-names: Adem
+    given-names: Seid
+license: MIT
+repository-code: "https://github.com/Seid-M-Adem/EMBL-EBI-Data-Science-Life-Scientists-Implementation."
+keywords:
+  - bioinformatics
+  - data science
+  - EMBL-EBI
+  - UniProt
+  - ChEMBL
+  - ENA
+  - FAIR
+references:
+  - type: generic
+    title: "Data science for life scientists (2026)"
+    authors:
+      - name: "EMBL-EBI Training"
+    doi: "10.6019/TOL.data-science-for-life-scientists-course-t.2026.00001.1"
+    license: CC-BY-4.0

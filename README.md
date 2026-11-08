@@ -126,7 +126,7 @@ and **Anaconda Navigator**. See **[RUNNING.md](RUNNING.md)** for per-IDE steps, 
 
 | Module | Course materials | My implementation |
 |--------|------------------|-------------------|
-| 01 · Introduction to EMBL-EBI | ✅ Collected & summarised | 🟡 In progress |
+| 01 · Introduction to EMBL-EBI | ✅ Collected & summarised | ✅ [Resource map + EGFR cross-reference walk, FAIR notes](01_introduction_to_embl_ebi/implementation/) |
 | 02 · Accessing & Handling Data | ✅ Collected & summarised | ✅ [02.1: API client, UniProt, ChEMBL EGFR, ENA Tara Oceans](02_accessing_and_handling_data/01_apis_and_data_collection/implementation/) · [02.2: FASTA/k-mer utility, aquaporin sequence EDA](02_accessing_and_handling_data/02_handling_and_visualisation/implementation/) |
 | 03 · Foundations of Machine Learning | ✅ Collected & summarised | ⚪ Not started |
 | 04 · Foundations of Deep Learning | ✅ Collected & summarised | ⚪ Not started |

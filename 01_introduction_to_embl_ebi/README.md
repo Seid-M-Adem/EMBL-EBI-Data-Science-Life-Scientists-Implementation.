@@ -1,6 +1,6 @@
 # 01 · Introduction to EMBL-EBI
 
-> **Status:** 🟡 In progress · **Trainer:** Dr Colman O'Cathail (ENA Project Lead) ·
+> **Status:** ✅ Implementation complete (2 / 2 tasks) · **Trainer:** Dr Colman O'Cathail (ENA Project Lead) ·
 > **Course page:** [Introduction to EMBL-EBI, its role, and mission](https://www.ebi.ac.uk/training/materials/data-science-for-life-scientists-materials-2026/introduction-to-embl-ebi-its-role-and-mission/)
 
 ## Overview
@@ -42,9 +42,16 @@ as the model. EMBL-EBI's curated, cross-referenced resources are the usual start
 - **FAIR principles:** data should be Findable, Accessible, Interoperable and Reusable.
 - **Primary vs. added-value databases:** archives such as ENA store data as submitted; curated resources such as UniProt add expert annotation.
 
-## 🛠️ My Implementation (planned)
-- [ ] One-page map of the EMBL-EBI resources used later in this repository (ENA, MGnify, UniProt, ChEMBL, PDBe, TCGA via UCSC Xena)
-- [ ] Short notes on FAIR data and how this repository follows it (raw vs. processed data, reproducible fetch script)
+## 🛠️ My Implementation
+See [`implementation/`](implementation/).
+- [x] One-page map of the EMBL-EBI resources used later in this repository (ENA, MGnify, UniProt, ChEMBL, PDBe, TCGA via UCSC Xena) → [`RESOURCE_MAP.md`](implementation/RESOURCE_MAP.md), with cross-references checked in code: [`01_egfr_cross_reference_walk.ipynb`](implementation/01_egfr_cross_reference_walk.ipynb)
+- [x] Short notes on FAIR data and how this repository follows it (raw vs. processed data, reproducible fetch script) → [`FAIR.md`](implementation/FAIR.md), plus [`CITATION.cff`](../CITATION.cff) and [`requirements-lock.txt`](../requirements-lock.txt)
 
 ## 📝 Notes & Reflections
-_Key takeaways, challenges, and design decisions will be recorded here as the work is completed._
+- **"The resources cross-reference each other" is testable.** Following one accession (EGFR) through six APIs showed
+  that the links resolve and agree, apart from a small, explainable lag between PDBe and UniProt.
+- **Archives and added-value resources need different handling.** Archives (ENA) keep submitters' metadata as it was
+  submitted, including errors. Curated resources (UniProt, ChEMBL) apply filters that I need to understand before I
+  trust a count.
+- **FAIR applies to my own work too.** Accessions, release numbers, cached raw responses with provenance, licences,
+  a citation file and exact package versions are what let someone else reproduce these notebooks.

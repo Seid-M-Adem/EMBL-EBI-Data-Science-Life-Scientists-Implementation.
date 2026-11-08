@@ -28,7 +28,7 @@ import json
 import random
 import re
 import time
-from collections.abc import Callable, Iterator
+from collections.abc import Callable, Iterator, Mapping
 from dataclasses import dataclass, field
 from datetime import UTC, datetime
 from pathlib import Path
@@ -36,6 +36,7 @@ from typing import Any
 from urllib.parse import urlencode, urljoin
 
 import requests
+from requests.structures import CaseInsensitiveDict
 
 __all__ = [
     "APIError",
@@ -76,7 +77,7 @@ class Response:
 
     url: str
     status: int
-    headers: dict[str, str]
+    headers: Mapping[str, str]  # case-insensitive, like real HTTP headers
     content: bytes
     from_cache: bool = False
     fetched_at: str = field(default_factory=lambda: datetime.now(UTC).isoformat(timespec="seconds"))
@@ -172,7 +173,7 @@ class EBIClient:
                 last_error = f"{type(exc).__name__}: {exc}"
             else:
                 if r.status_code < 400:
-                    headers = {k.lower(): v for k, v in r.headers.items()}
+                    headers = CaseInsensitiveDict({k.lower(): v for k, v in r.headers.items()})
                     return Response(
                         url=getattr(r, "url", None) or url,
                         status=r.status_code,
@@ -241,7 +242,7 @@ class EBIClient:
         return Response(
             url=meta["url"],
             status=meta["status"],
-            headers=meta["headers"],
+            headers=CaseInsensitiveDict(meta["headers"]),
             content=paths[0].read_bytes(),
             from_cache=True,
             fetched_at=meta["fetched_at"],
@@ -259,7 +260,7 @@ class EBIClient:
             "accept": accept,
             "status": response.status,
             "fetched_at": response.fetched_at,
-            "headers": response.headers,
+            "headers": dict(response.headers),
             "provenance": {h: response.headers[h] for h in PROVENANCE_HEADERS if h in response.headers},
         }
         paths[1].write_text(json.dumps(meta, indent=2))

@@ -120,6 +120,16 @@ def test_cache_hit_skips_network_and_keeps_provenance(tmp_path):
     assert meta["request_url"] == "https://api.example.org/thing?q=1"
 
 
+def test_headers_are_case_insensitive_live_and_cached(tmp_path):
+    # regression: a lower-cased plain dict made headers.get("X-UniProt-Release") silently return None
+    session = FakeSession(FakeResponse(200, {}, headers={"X-UniProt-Release": "2026_04"}))
+    client, _ = make_client(session, tmp_path)
+    live, cached = client.get("thing"), client.get("thing")
+    assert cached.from_cache
+    for r in (live, cached):
+        assert r.headers.get("X-UniProt-Release") == r.headers.get("x-uniprot-release") == "2026_04"
+
+
 def test_refresh_bypasses_cache(tmp_path):
     session = FakeSession(FakeResponse(200, {"v": 1}), FakeResponse(200, {"v": 2}))
     client, _ = make_client(session, tmp_path)
