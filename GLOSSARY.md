@@ -114,12 +114,14 @@ GE / BI / SB = the [gene-expression](05_group_projects/gene_expression/LESSONS.m
 | **PCA** | Principal component analysis: linear directions of greatest variance | 03.1, 02.2 |
 | **Pipeline** | A chain of preprocessing and model steps fitted together, which prevents leakage | 03.2 |
 | **Precision / recall** | Of predicted positives, how many are real / of real positives, how many were found | 03.2 |
+| **Proxy variable** | A feature that predicts the outcome only because it travels with the real cause | SB |
 | **Prompt** | The instructions and input text given to an LLM; its wording changes the answers and must be tested | 04.3 |
 | **PR-AUC / ROC-AUC** | Areas under the precision–recall and ROC curves; how well a model ranks positives | 03.2, BI |
 | **RAG** | Retrieval-augmented generation: an LLM answers from retrieved documents | 04.3 |
 | **Random forest / XGBoost** | Ensembles of decision trees (bagged / boosted) | 03.2, BI |
 | **Recall@k** | How often the correct document is among a search's top *k* results | 04.3 |
 | **Silhouette score** | How well each sample fits its cluster compared with the nearest other cluster (−1 to 1) | GE |
+| **SHAP values** | A split of one prediction into contributions from each feature, adding up to the prediction | SB |
 | **Stratified split** | A split that keeps class proportions equal in each part | 03.2 |
 | **Survival analysis / censoring** | Analysing time until an event; *censored* patients left follow-up before any event | GE |
 | **Temperature (sampling)** | How adventurous an LLM's choice of next token is; 0 always takes the most likely one | 04.3 |

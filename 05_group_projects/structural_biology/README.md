@@ -1,6 +1,6 @@
 # Structural Biology Project
 
-> **Status:** ⚪ Not started · **Trainer:** Melanie Vollmar ·
+> **Status:** 🟡 Part 1 complete; Part 2 not started · **Trainer:** Melanie Vollmar ·
 > **Course page:** [Structural biology](https://www.ebi.ac.uk/training/materials/data-science-for-life-scientists-materials-2026/group-projects/structural-biology/)
 
 ## Overview
@@ -42,11 +42,18 @@ The slides also suggest [Teachable Machine](https://teachablemachine.withgoogle.
 - **Balanced accuracy and recall:** the right metrics when crystals are rare and a missed crystal is costly.
 - **Transfer learning:** fine-tuning a pretrained CNN or ViT is the practical route with a few thousand labelled images.
 
-## 🛠️ My Implementation (planned)
-- [ ] **Part 1:** leakage-free MR-success classifier with nested CV, SHAP interpretation, and a comparison with the tutorial's models
-  - *Groundwork done in [03.2](../../03_foundations_of_machine_learning/02_hyperparameters_and_performance/implementation/): data audit, grouped nested CV (the same crystal appears in several rows, which inflates random-split scores from 0.74 to 0.93), imbalance and learning curves. SHAP interpretation is still to do.*
-- [ ] **Part 2:** PyTorch transfer-learning crystal classifier (augmentation, class weighting), reported against the targets above
-- [ ] Error analysis: show false negatives (missed crystals) and discuss why they were missed
+## 🛠️ My Implementation
+See [`implementation/`](implementation/).
+- [x] **Part 1:** leakage-free MR-success classifier with nested CV (in [03.2](../../03_foundations_of_machine_learning/02_hyperparameters_and_performance/implementation/)) and **SHAP interpretation** on unseen crystals, with stability, feature-family and proxy checks → [notebook 01](implementation/01_mr_success_shap.ipynb)
+- [ ] **Part 2:** PyTorch transfer-learning crystal classifier (augmentation, class weighting), reported against the targets above. *The image data are CC BY-NC 4.0; to be decided before download.*
+- [ ] Error analysis for Part 2: show false negatives (missed crystals) and discuss why they were missed. *(Part 1's error analysis is in notebook 01.)*
 
 ## 📝 Notes & Reflections
-_Key takeaways, challenges, and design decisions will be recorded here as the work is completed._
+- **The search model decides MR success.** Three search-model features matched all 28 features (AUC 0.87–0.89);
+  the data-quality statistics the tutorial centres on add almost nothing once sequence identity is known.
+- **SHAP explains the model, not the world.** Both models leaned on the anomalous signal, which MR doesn't use. A
+  stratified table showed why: anomalous data are collected when no close homologue exists, so the signal is a proxy.
+- **Check explanations like results:** out-of-fold only, across many training sets, and grouped by family when
+  features are near-duplicates. Only the top two features were stable.
+- **Interpretation found a data error the metrics hid:** a 73 Å model resolution barely changed AUC but dominated
+  one attempt's explanation.

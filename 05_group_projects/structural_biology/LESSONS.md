@@ -6,6 +6,10 @@ in [`LEARNING_GUIDE.md`](../../LEARNING_GUIDE.md).*
 **What this project teaches:** two ML problems from a real protein-structure lab: predicting whether a computational
 step will succeed (tabular data), and spotting protein crystals in microscope images (image data).
 
+**Worked example in this repo:** [what makes molecular replacement succeed, explained with SHAP](implementation/01_mr_success_shap.ipynb)
+(Lesson 1, plus [03.2](../../03_foundations_of_machine_learning/02_hyperparameters_and_performance/implementation/) for
+the evaluation).
+
 ---
 
 ## Background · Why scientists need protein crystals
