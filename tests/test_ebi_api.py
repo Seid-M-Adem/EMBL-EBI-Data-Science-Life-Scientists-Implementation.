@@ -43,6 +43,13 @@ class FakeSession:
             raise item
         return item
 
+    def post(self, url, data=None, headers=None, timeout=None):
+        self.calls.append(f"POST {url} {data.decode()} {headers['Content-Type']}")
+        item = self.script.pop(0)
+        if isinstance(item, Exception):
+            raise item
+        return item
+
 
 def make_client(session, tmp_path=None, **kwargs):
     sleeps: list[float] = []
@@ -55,6 +62,24 @@ def make_client(session, tmp_path=None, **kwargs):
         **kwargs,
     )
     return client, sleeps
+
+
+def test_post_sends_body_and_caches_per_body(tmp_path):
+    session = FakeSession(
+        FakeResponse(200, {"n": 1}),
+        FakeResponse(200, {"n": 2}),
+        FakeResponse(503),
+        FakeResponse(200, {"n": 3}),
+    )
+    client, sleeps = make_client(session, tmp_path)
+    assert client.post("analyse", "TP53\nEGFR").json() == {"n": 1}
+    assert client.post("analyse", "TP53\nEGFR").from_cache  # same body: cached, no new call
+    assert client.post("analyse", "BRCA1").json() == {"n": 2}  # different body: new request
+    assert (
+        client.get("analyse").json() == {"n": 3} and len(sleeps) == 1
+    )  # GET is cached separately, retries work
+    assert session.calls[0] == "POST https://api.example.org/analyse TP53\nEGFR text/plain"
+    assert len(session.calls) == 4
 
 
 # ----------------------------------------------------------------------------- URLs

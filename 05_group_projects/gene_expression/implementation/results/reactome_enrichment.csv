@@ -1,0 +1,1099 @@
+direction,rank,pathway,genes found,pathway size,FDR
+higher with progression,0,Cell Cycle,28,730,0.000522169785120985
+higher with progression,1,"Cell Cycle, Mitotic",22,588,0.0063676870723744505
+higher with progression,2,Cell Cycle Checkpoints,14,279,0.0073750223730844056
+higher with progression,3,Separation of Sister Chromatids,11,182,0.007795513422147904
+higher with progression,4,Mitotic Spindle Checkpoint,8,111,0.021484625971357696
+higher with progression,5,Amplification  of signal from unattached  kinetochores via a MAD2  inhibitory signal,7,94,0.03250385984898696
+higher with progression,6,Amplification of signal from the kinetochores,7,94,0.03250385984898696
+higher with progression,7,Mitotic Anaphase,11,236,0.03312075215630639
+higher with progression,8,Mitotic Metaphase and Anaphase,11,237,0.03312075215630639
+higher with progression,9,Homology Directed Repair,8,133,0.03528602360864852
+higher with progression,10,Resolution of Sister Chromatid Cohesion,8,135,0.03528602360864852
+higher with progression,11,Fanconi Anemia Pathway,5,53,0.04867610368563424
+higher with progression,12,EML4 and NUDC in mitotic spindle formation,7,121,0.07518178524737884
+higher with progression,13,DNA strand elongation,4,38,0.08743318497189034
+higher with progression,14,Activation of ATR in response to replication stress,4,39,0.08987481152570531
+higher with progression,15,Mitotic Prometaphase,9,212,0.09992956940040687
+higher with progression,16,Chromosome Maintenance,7,135,0.09992956940040687
+higher with progression,17,Polo-like kinase mediated events,3,23,0.14365500792191566
+higher with progression,18,PKMTs methylate histone lysines,4,48,0.14433328801547984
+higher with progression,19,RHO GTPases Activate Formins,7,149,0.14433328801547984
+higher with progression,20,Phosphorylation of Emi1,2,8,0.1694891306320353
+higher with progression,21,Synthesis of DNA,6,119,0.1694891306320353
+higher with progression,22,HDR through Homologous Recombination (HRR) or Single Strand Annealing (SSA),6,127,0.21077912592894732
+higher with progression,23,S Phase,7,167,0.21077912592894732
+higher with progression,24,DNA Double-Strand Break Repair,8,210,0.21077912592894732
+higher with progression,25,M Phase,12,403,0.21768221365667073
+higher with progression,26,Resolution of AP sites via the multiple-nucleotide patch replacement pathway,3,32,0.21768221365667073
+higher with progression,27,APC/C:Cdh1 mediated degradation of Cdc20 and other APC/C:Cdh1 targeted proteins in late mitosis/early G1,4,61,0.21768221365667073
+higher with progression,28,"Regulation of MITF-M-dependent genes involved in DNA replication, damage repair and senescence",2,11,0.21768221365667073
+higher with progression,29,Activation of APC/C and APC/C:Cdc20 mediated degradation of mitotic proteins,4,64,0.23345051049204146
+higher with progression,30,Unwinding of DNA,2,12,0.23345051049204146
+higher with progression,31,Activation of the pre-replicative complex,3,36,0.2397982613095766
+higher with progression,32,G2/M Checkpoints,6,142,0.2397982613095766
+higher with progression,33,Extension of Telomeres,4,67,0.2397982613095766
+higher with progression,34,Telomere Maintenance,5,108,0.27528615092485387
+higher with progression,35,Resolution of D-loop Structures through Holliday Junction Intermediates,3,39,0.27528615092485387
+higher with progression,36,Cyclin A/B1/B2 associated events during G2/M transition,3,39,0.27528615092485387
+higher with progression,37,Resolution of D-Loop Structures,3,40,0.2768401531992346
+higher with progression,38,POLB-Dependent Long Patch Base Excision Repair,2,15,0.28424477242485935
+higher with progression,39,HDR through Homologous Recombination (HRR),4,75,0.30834867483716444
+higher with progression,40,HDR through MMEJ (alt-NHEJ),2,17,0.33045968393635494
+higher with progression,41,APC/C-mediated degradation of cell cycle proteins,4,79,0.33045968393635494
+higher with progression,42,Regulation of mitotic cell cycle,4,79,0.33045968393635494
+higher with progression,43,PRC2 methylates histones and DNA,3,46,0.33045968393635494
+higher with progression,44,mRNA Splicing - Major Pathway,7,213,0.33045968393635494
+higher with progression,45,Resolution of Abasic Sites (AP sites),3,48,0.33045968393635494
+higher with progression,46,MITF-M-dependent gene expression,6,169,0.33045968393635494
+higher with progression,47,Telomere C-strand (Lagging Strand) Synthesis,3,49,0.33045968393635494
+higher with progression,48,DNA Replication,6,171,0.33045968393635494
+higher with progression,49,Phosphorylation of the APC/C,2,20,0.33045968393635494
+higher with progression,50,N-Glycan antennae elongation,2,20,0.33045968393635494
+higher with progression,51,Inhibition of the proteolytic activity of APC/C required for the onset of anaphase by mitotic spindle checkpoint components,2,21,0.33045968393635494
+higher with progression,52,Inactivation of APC/C via direct inhibition of the APC/C complex,2,21,0.33045968393635494
+higher with progression,53,Transcriptional regulation of testis differentiation,2,21,0.33045968393635494
+higher with progression,54,mRNA Splicing,7,224,0.33175690724338125
+higher with progression,55,Conversion from APC/C:Cdc20 to APC/C:Cdh1 in late anaphase,2,22,0.3561144974436963
+higher with progression,56,APC/C:Cdc20 mediated degradation of Securin,3,55,0.3561144974436963
+higher with progression,57,PCNA-Dependent Long Patch Base Excision Repair,2,23,0.3561144974436963
+higher with progression,58,Serotonin Neurotransmitter Release Cycle,2,23,0.3561144974436963
+higher with progression,59,ARL13B-mediated ciliary trafficking of INPP5E,1,3,0.3561144974436963
+higher with progression,60,TWIK-related alkaline pH activated K+ channel (TALK),1,3,0.3561144974436963
+higher with progression,61,APC/C:Cdc20 mediated degradation of Cyclin B,2,24,0.3784840531727399
+higher with progression,62,APC-Cdc20 mediated degradation of Nek2A,2,26,0.4148982390207383
+higher with progression,63,Lagging Strand Synthesis,2,26,0.4148982390207383
+higher with progression,64,Acetylcholine Neurotransmitter Release Cycle,2,26,0.4148982390207383
+higher with progression,65,Gap-filling DNA repair synthesis and ligation in GG-NER,2,27,0.4148982390207383
+higher with progression,66,Mitotic Metaphase/Anaphase Transition,1,4,0.4192659041886966
+higher with progression,67,APC/C:Cdc20 mediated degradation of mitotic proteins,3,63,0.4334898688484552
+higher with progression,68,DNA Repair,10,414,0.44120701570111454
+higher with progression,69,Dopamine Neurotransmitter Release Cycle,2,28,0.44237028047203175
+higher with progression,70,Regulation of MITF-M-dependent genes involved in cell cycle and proliferation,2,28,0.44237028047203175
+higher with progression,71,G2/M Transition,6,205,0.454802945340686
+higher with progression,72,Norepinephrine Neurotransmitter Release Cycle,2,30,0.454802945340686
+higher with progression,73,Mitotic G2-G2/M phases,6,207,0.454802945340686
+higher with progression,74,Kinesins,3,68,0.454802945340686
+higher with progression,75,Regulation of PTEN gene transcription,3,68,0.454802945340686
+higher with progression,76,Polymerase switching on the C-strand of the telomere,2,31,0.46237553263650655
+higher with progression,77,Processing of Capped Intron-Containing Pre-mRNA,8,317,0.4663337754966821
+higher with progression,78,Oxidative Stress Induced Senescence,4,113,0.4691933043513189
+higher with progression,79,Regulation of APC/C activators between G1/S and early anaphase,3,70,0.4691933043513189
+higher with progression,80,Glutamate Neurotransmitter Release Cycle,2,32,0.4691933043513189
+higher with progression,81,Activation of anterior HOX genes in hindbrain development during early embryogenesis,4,116,0.4691933043513189
+higher with progression,82,Activation of HOX genes during differentiation,4,116,0.4691933043513189
+higher with progression,83,Synthesis of active ubiquitin: roles of E1 and E2 enzymes,2,33,0.4691933043513189
+higher with progression,84,HCN channels,1,6,0.4691933043513189
+higher with progression,85,Regulation of PD-L1(CD274) transcription,3,74,0.4691933043513189
+higher with progression,86,DNA Replication Pre-Initiation,4,121,0.4691933043513189
+higher with progression,87,MITF-M-regulated melanocyte development,6,233,0.4691933043513189
+higher with progression,88,Switching of origins to a post-replicative state,3,81,0.4691933043513189
+higher with progression,89,Differentiation of naive CD4+ T cells to T helper 2 cells (Th2 cells),3,82,0.4691933043513189
+higher with progression,90,HDR through Single Strand Annealing (SSA),2,40,0.4691933043513189
+higher with progression,91,Phase 1 - inactivation of fast Na+ channels,1,8,0.4691933043513189
+higher with progression,92,The fatty acid cycling model,1,8,0.4691933043513189
+higher with progression,93,CDC6 association with the ORC:origin complex,1,8,0.4691933043513189
+higher with progression,94,CDH11 homotypic and heterotypic interactions,1,8,0.4691933043513189
+higher with progression,95,Dual Incision in GG-NER,2,41,0.4691933043513189
+higher with progression,96,E2F-enabled inhibition of pre-replication complex formation,1,9,0.4691933043513189
+higher with progression,97,"Activation of NIMA Kinases NEK9, NEK6, NEK7",1,9,0.4691933043513189
+higher with progression,98,Transport of gamma-carboxylated protein precursors from the endoplasmic reticulum to the Golgi apparatus,1,9,0.4691933043513189
+higher with progression,99,G1/S-Specific Transcription,2,43,0.4691933043513189
+higher with progression,100,mRNA Polyadenylation,4,139,0.4691933043513189
+higher with progression,101,G1/S Transition,4,141,0.4691933043513189
+higher with progression,102,FGFR3b ligand binding and activation,1,10,0.4691933043513189
+higher with progression,103,NR1H2 & NR1H3 regulate gene expression linked to triglyceride lipolysis in adipose,1,10,0.4691933043513189
+higher with progression,104,NR1H2 & NR1H3 regulate gene expression linked to gluconeogenesis ,1,10,0.4691933043513189
+higher with progression,105,NR1H2 & NR1H3 regulate gene expression to limit cholesterol uptake ,1,10,0.4691933043513189
+higher with progression,106,Mitochondrial transcription,1,10,0.4691933043513189
+higher with progression,107,Removal of aminoterminal propeptides from gamma-carboxylated proteins,1,10,0.4691933043513189
+higher with progression,108,Transcriptional Regulation by E2F6,2,46,0.4691933043513189
+higher with progression,109,Global Genome Nucleotide Excision Repair (GG-NER),3,92,0.4691933043513189
+higher with progression,110,N-glycan antennae elongation in the medial/trans-Golgi,2,47,0.4691933043513189
+higher with progression,111,Assembly of the 9+2 motile cilia,2,47,0.4691933043513189
+higher with progression,112,Transcriptional regulation of multiciliogenesis,2,47,0.4691933043513189
+higher with progression,113,Cellular Senescence,5,200,0.4691933043513189
+higher with progression,114,Zinc influx into cells by the SLC39 gene family,1,12,0.4691933043513189
+higher with progression,115,Base Excision Repair,3,99,0.4691933043513189
+higher with progression,116,RHO GTPase Effectors,7,325,0.4691933043513189
+higher with progression,117,Differentiation of T cells,3,100,0.4691933043513189
+higher with progression,118,Nucleosome assembly,2,53,0.4691933043513189
+higher with progression,119,Deposition of new CENPA-containing nucleosomes at the centromere,2,53,0.4691933043513189
+higher with progression,120,Regulation of MITF-M-dependent genes involved in pigmentation,2,53,0.4691933043513189
+higher with progression,121,Establishment of Sister Chromatid Cohesion,1,13,0.4691933043513189
+higher with progression,122,Tandem pore domain potassium channels,1,13,0.4691933043513189
+higher with progression,123,Regulation of CDH11 function,1,13,0.4691933043513189
+higher with progression,124,Assembly of the pre-replicative complex,3,103,0.4691933043513189
+higher with progression,125,Carboxyterminal post-translational modifications of tubulin,2,55,0.4691933043513189
+higher with progression,126,FGFRL1 modulation of FGFR1 signaling,1,14,0.4691933043513189
+higher with progression,127,Potassium Channels,3,107,0.4691933043513189
+higher with progression,128,COPI-dependent Golgi-to-ER retrograde traffic,3,107,0.4691933043513189
+higher with progression,129,mRNA 3'-end processing,4,164,0.4691933043513189
+higher with progression,130,NR1H2 & NR1H3 regulate gene expression to control bile acid homeostasis,1,15,0.4691933043513189
+higher with progression,131,Mitotic Telophase/Cytokinesis,1,15,0.4691933043513189
+higher with progression,132,Synthesis of diphthamide-EEF2,1,15,0.4691933043513189
+higher with progression,133,Gamma-carboxylation of protein precursors,1,15,0.4691933043513189
+higher with progression,134,Mitotic G1 phase and G1/S transition,4,165,0.4691933043513189
+higher with progression,135,Cytosolic sulfonation of small molecules,2,59,0.4691933043513189
+higher with progression,136,Cdc20:Phospho-APC/C mediated degradation of Cyclin A,2,60,0.4691933043513189
+higher with progression,137,Orc1 removal from chromatin,2,60,0.4691933043513189
+higher with progression,138,Polymerase switching,1,16,0.4691933043513189
+higher with progression,139,Leading Strand Synthesis,1,16,0.4691933043513189
+higher with progression,140,Advanced glycosylation endproduct receptor signaling,1,16,0.4691933043513189
+higher with progression,141,"Gamma-carboxylation, transport, and amino-terminal cleavage of proteins",1,16,0.4691933043513189
+higher with progression,142,APC:Cdc20 mediated degradation of cell cycle proteins prior to satisfation of the cell cycle checkpoint,2,61,0.4691933043513189
+higher with progression,143,NR1H2 & NR1H3 regulate gene expression linked to lipogenesis,1,17,0.4691933043513189
+higher with progression,144,FGFR2c ligand binding and activation,1,17,0.4691933043513189
+higher with progression,145,FGFR1c ligand binding and activation,1,17,0.4691933043513189
+higher with progression,146,Golgi Cisternae Pericentriolar Stack Reorganization,1,17,0.4691933043513189
+higher with progression,147,FGFR4 ligand binding and activation,1,17,0.4691933043513189
+higher with progression,148,Processing of SMDT1,1,17,0.4691933043513189
+higher with progression,149,RHOQ GTPase cycle,2,63,0.4691933043513189
+higher with progression,150,Paracetamol ADME,2,63,0.4691933043513189
+higher with progression,151,Nucleotide Excision Repair,3,117,0.4691933043513189
+higher with progression,152,Gap-filling DNA repair synthesis and ligation in TC-NER,2,64,0.4691933043513189
+higher with progression,153,Phospholipase C-mediated cascade; FGFR3,1,18,0.4691933043513189
+higher with progression,154,FGFR3c ligand binding and activation,1,18,0.4691933043513189
+higher with progression,155,Zinc transporters,1,18,0.4691933043513189
+higher with progression,156,Nuclear Envelope Breakdown,2,65,0.4691933043513189
+higher with progression,157,Phospholipase C-mediated cascade; FGFR4,1,19,0.4691933043513189
+higher with progression,158,Translesion synthesis by REV1,1,19,0.4691933043513189
+higher with progression,159,FGFR3 ligand binding and activation,1,19,0.4691933043513189
+higher with progression,160,Fatty Acids bound to GPR40 (FFAR1) regulate insulin secretion,1,19,0.4691933043513189
+higher with progression,161,Processive synthesis on the lagging strand,1,19,0.4691933043513189
+higher with progression,162,Negative Regulation of CDH1 Gene Transcription,2,68,0.4691933043513189
+higher with progression,163,Translesion synthesis by POLI,1,20,0.4691933043513189
+higher with progression,164,Phase 4 - resting membrane potential,1,20,0.4691933043513189
+higher with progression,165,Mitochondrial Uncoupling,1,20,0.4691933043513189
+higher with progression,166,Acetylcholine regulates insulin secretion,1,20,0.4691933043513189
+higher with progression,167,Receptor-type tyrosine-protein phosphatases,1,20,0.4691933043513189
+higher with progression,168,SUMOylation of transcription factors,1,20,0.4691933043513189
+higher with progression,169,The role of GTSE1 in G2/M progression after G2 checkpoint,2,70,0.4691933043513189
+higher with progression,170,Translesion synthesis by POLK,1,21,0.4691933043513189
+higher with progression,171,Synthesis of PG,1,21,0.4691933043513189
+higher with progression,172,tRNA modification in the mitochondrion,1,21,0.4691933043513189
+higher with progression,173,Loss of proteins required for interphase microtubule organization from the centrosome,2,71,0.4691933043513189
+higher with progression,174,Loss of Nlp from mitotic centrosomes,2,71,0.4691933043513189
+higher with progression,175,Phospholipase C-mediated cascade: FGFR1,1,22,0.4691933043513189
+higher with progression,176,Mismatch repair (MMR) directed by MSH2:MSH3 (MutSbeta),1,22,0.4691933043513189
+higher with progression,177,Mismatch repair (MMR) directed by MSH2:MSH6 (MutSalpha),1,22,0.4691933043513189
+higher with progression,178,Cilium Assembly,5,254,0.4691933043513189
+higher with progression,179,Chromatin modifying enzymes,5,254,0.4691933043513189
+higher with progression,180,AURKA Activation by TPX2,2,74,0.4691933043513189
+higher with progression,181,G beta:gamma signalling through PLC beta,1,23,0.4691933043513189
+higher with progression,182,Presynaptic function of Kainate receptors,1,23,0.4691933043513189
+higher with progression,183,FGFR1 ligand binding and activation,1,23,0.4691933043513189
+higher with progression,184,Regulation of TP53 Activity through Methylation,1,23,0.4691933043513189
+higher with progression,185,Mismatch Repair,1,23,0.4691933043513189
+higher with progression,186,PI-3K cascade:FGFR3,1,24,0.4691933043513189
+higher with progression,187,Translesion Synthesis by POLH,1,24,0.4691933043513189
+higher with progression,188,E2F mediated regulation of DNA replication,1,24,0.4691933043513189
+higher with progression,189,Somatic hypermutation of immunoglobulin genes by error-prone base excision repair (BER),1,24,0.4691933043513189
+higher with progression,190,Regulation of CDH1 Gene Transcription,2,78,0.4691933043513189
+higher with progression,191,Phospholipase C-mediated cascade; FGFR2,1,25,0.4691933043513189
+higher with progression,192,PI-3K cascade:FGFR4,1,25,0.4691933043513189
+higher with progression,193,Negative regulation of MET activity,1,25,0.4691933043513189
+higher with progression,194,SHC-mediated cascade:FGFR3,1,26,0.4691933043513189
+higher with progression,195,FGFR2 ligand binding and activation,1,26,0.4691933043513189
+higher with progression,196,Recruitment of mitotic centrosome proteins and complexes,2,81,0.4691933043513189
+higher with progression,197,G2/M DNA damage checkpoint,2,82,0.4691933043513189
+higher with progression,198,FRS-mediated FGFR3 signaling,1,27,0.4691933043513189
+higher with progression,199,SHC-mediated cascade:FGFR4,1,27,0.4691933043513189
+higher with progression,200,Somatic hypermutation of immunoglobulin genes by error-prone mismatch repair (MMR),1,27,0.4691933043513189
+higher with progression,201,Mitochondrial calcium ion transport,1,27,0.4691933043513189
+higher with progression,202,Centrosome maturation,2,83,0.4691933043513189
+higher with progression,203,Transcription-Coupled Nucleotide Excision Repair (TC-NER),2,83,0.4691933043513189
+higher with progression,204,Protein ubiquitination,2,83,0.4691933043513189
+higher with progression,205,FRS-mediated FGFR4 signaling,1,28,0.4691933043513189
+higher with progression,206,RNA Polymerase III Transcription Initiation From Type 3 Promoter,1,28,0.4691933043513189
+higher with progression,207,PI-3K cascade:FGFR1,1,28,0.4691933043513189
+higher with progression,208,FGFR2 alternative splicing,1,28,0.4691933043513189
+higher with progression,209,Free fatty acids regulate insulin secretion,1,28,0.4691933043513189
+higher with progression,210,NOTCH3 Activation and Transmission of Signal to the Nucleus,1,28,0.4691933043513189
+higher with progression,211,Golgi-to-ER retrograde transport,3,148,0.4691933043513189
+higher with progression,212,Regulation of Homotypic Cell-Cell Adhesion,4,216,0.4691933043513189
+higher with progression,213,Signaling by FGFR2,2,88,0.4691933043513189
+higher with progression,214,Signaling by MET,2,88,0.4691933043513189
+higher with progression,215,SHC-mediated cascade:FGFR1,1,30,0.4691933043513189
+higher with progression,216,Recognition of DNA damage by PCNA-containing replication complex,1,30,0.4691933043513189
+higher with progression,217,TRAF6 mediated NF-kB activation,1,30,0.4691933043513189
+higher with progression,218,Processing of DNA double-strand break ends,2,89,0.4691933043513189
+higher with progression,219,Intra-Golgi and retrograde Golgi-to-ER traffic,4,218,0.4691933043513189
+higher with progression,220,FRS-mediated FGFR1 signaling,1,31,0.4691933043513189
+higher with progression,221,PI-3K cascade:FGFR2,1,31,0.4691933043513189
+higher with progression,222,Tight junction interactions,1,31,0.4691933043513189
+higher with progression,223,Postmitotic nuclear pore complex (NPC) reformation,1,32,0.4691933043513189
+higher with progression,224,TRP channels,1,32,0.4691933043513189
+higher with progression,225,MET activates PTK2 signaling,1,32,0.4691933043513189
+higher with progression,226,Metalloprotease DUBs,1,32,0.4691933043513189
+higher with progression,227,Synthesis of PIPs at the Golgi membrane,1,32,0.4691933043513189
+higher with progression,228,PTEN Regulation,3,156,0.4691933043513189
+higher with progression,229,Regulation of PLK1 Activity at G2/M Transition,2,92,0.4691933043513189
+higher with progression,230,SHC-mediated cascade:FGFR2,1,33,0.4691933043513189
+higher with progression,231,Processive synthesis on the C-strand of the telomere,1,33,0.4691933043513189
+higher with progression,232,Signaling by BMP,1,33,0.4691933043513189
+higher with progression,233,"Gamma carboxylation, hypusinylation, hydroxylation, and arylsulfatase activation",2,95,0.4691933043513189
+higher with progression,234,FRS-mediated FGFR2 signaling,1,34,0.4691933043513189
+higher with progression,235,Negative regulation of FGFR3 signaling,1,34,0.4691933043513189
+higher with progression,236,Activation of kainate receptors upon glutamate binding,1,34,0.4691933043513189
+higher with progression,237,Telomere Extension By Telomerase,1,34,0.4691933043513189
+higher with progression,238,Recruitment of NuMA to mitotic centrosomes,2,97,0.4691933043513189
+higher with progression,239,Downstream signaling of activated FGFR3,1,35,0.4691933043513189
+higher with progression,240,Termination of translesion DNA synthesis,1,35,0.4691933043513189
+higher with progression,241,Negative regulation of FGFR4 signaling,1,35,0.4691933043513189
+higher with progression,242,Pyrimidine salvage,1,35,0.4691933043513189
+higher with progression,243,Regulation of CDH11 Expression and Function,1,35,0.4691933043513189
+higher with progression,244,Cell-cell junction organization,5,300,0.4691933043513189
+higher with progression,245,Antigen processing: Ubiquitination & Proteasome degradation,5,302,0.4691933043513189
+higher with progression,246,Downstream signaling of activated FGFR4,1,36,0.4691933043513189
+higher with progression,247,RNA Polymerase III Transcription Initiation,1,36,0.4691933043513189
+higher with progression,248,"GABA synthesis, release, reuptake and degradation",1,36,0.4691933043513189
+higher with progression,249,Anchoring of the basal body to the plasma membrane,2,99,0.4691933043513189
+higher with progression,250,Neurotransmitter release cycle,2,99,0.4691933043513189
+higher with progression,251,IP3 and IP4 transport between cytosol and nucleus,1,37,0.4691933043513189
+higher with progression,252,IP6 and IP7 transport between cytosol and nucleus,1,37,0.4691933043513189
+higher with progression,253,Cargo concentration in the ER,1,37,0.4691933043513189
+higher with progression,254,Synthesis of glycosylphosphatidylinositol (GPI),1,37,0.4691933043513189
+higher with progression,255,Mitochondrial protein degradation,2,104,0.4691933043513189
+higher with progression,256,Transport of the SLBP independent Mature mRNA,1,39,0.4691933043513189
+higher with progression,257,SUMOylation of SUMOylation proteins,1,39,0.4691933043513189
+higher with progression,258,Assembly of the ORC complex at the origin of replication,1,39,0.4691933043513189
+higher with progression,259,Negative regulation of FGFR1 signaling,1,39,0.4691933043513189
+higher with progression,260,Nuclear RNA decay,1,39,0.4691933043513189
+higher with progression,261,G-protein beta:gamma signalling,1,39,0.4691933043513189
+higher with progression,262,Cardiogenesis,1,39,0.4691933043513189
+higher with progression,263,Regulation of Expression and Function of Type II Classical Cadherins,1,39,0.4691933043513189
+higher with progression,264,IPs transport between nucleus and cytosol,1,40,0.4691933043513189
+higher with progression,265,Transport of the SLBP Dependant Mature mRNA,1,40,0.4691933043513189
+higher with progression,266,DNA Damage Recognition in GG-NER,1,40,0.4691933043513189
+higher with progression,267,Regulation of Glucokinase by Glucokinase Regulatory Protein,1,40,0.4691933043513189
+higher with progression,268,Synthesis of IP3 and IP4 in the cytosol,1,40,0.4691933043513189
+higher with progression,269,Negative regulation of FGFR2 signaling,1,41,0.4691933043513189
+higher with progression,270,Regulation of CDH1 posttranslational processing and trafficking to plasma membrane,1,41,0.4691933043513189
+higher with progression,271,Hyaluronan metabolism,1,41,0.4691933043513189
+higher with progression,272,Signaling by FGFR,2,109,0.4691933043513189
+higher with progression,273,SCF-beta-TrCP mediated degradation of Emi1,1,42,0.4691933043513189
+higher with progression,274,Nuclear Pore Complex (NPC) Disassembly,1,42,0.4691933043513189
+higher with progression,275,Downstream signaling of activated FGFR1,1,42,0.4691933043513189
+higher with progression,276,Downstream signaling of activated FGFR2,1,42,0.4691933043513189
+higher with progression,277,Formation of WDR5-containing histone-modifying complexes,1,42,0.4691933043513189
+higher with progression,278,Presynaptic phase of homologous DNA pairing and strand exchange,1,42,0.4691933043513189
+higher with progression,279,SUMOylation of ubiquitinylation proteins,1,43,0.4691933043513189
+higher with progression,280,RNA Polymerase III Transcription,1,43,0.4691933043513189
+higher with progression,281,RNA Polymerase III Abortive And Retractive Initiation,1,43,0.4691933043513189
+higher with progression,282,O-glycosylation of TSR domain-containing proteins,1,44,0.4691933043513189
+higher with progression,283,Voltage gated Potassium channels,1,44,0.4691933043513189
+higher with progression,284,Collagen chain trimerization,1,44,0.4691933043513189
+higher with progression,285,Cell junction organization,5,327,0.4691933043513189
+higher with progression,286,Regulation of HSF1-mediated heat shock response,2,113,0.4691933043513189
+higher with progression,287,Developmental Lineage of Pancreatic Endocrine Mid Progenitor Cells,1,45,0.4691933043513189
+higher with progression,288,Homologous DNA Pairing and Strand Exchange,1,45,0.4691933043513189
+higher with progression,289,MET promotes cell motility,1,45,0.4691933043513189
+higher with progression,290,Class I MHC mediated antigen processing & presentation,6,402,0.4691933043513189
+higher with progression,291,Transport of Mature mRNA Derived from an Intronless Transcript,1,46,0.4691933043513189
+higher with progression,292,RHOF GTPase cycle,1,46,0.4691933043513189
+higher with progression,293,Deactivation of the beta-catenin transactivating complex,1,46,0.4691933043513189
+higher with progression,294,Transport of Mature mRNAs Derived from Intronless Transcripts,1,47,0.4691933043513189
+higher with progression,295,Inhibition of DNA recombination at telomere,1,47,0.4691933043513189
+higher with progression,296,Formation of Incision Complex in GG-NER,1,47,0.4691933043513189
+higher with progression,297,ERCC6 (CSB) and EHMT2 (G9a) positively regulate rRNA expression,1,47,0.4691933043513189
+higher with progression,298,Transcriptional regulation of brown and beige adipocyte differentiation by EBF2,1,47,0.4691933043513189
+higher with progression,299,Transcriptional regulation of brown and beige adipocyte differentiation,1,47,0.4691933043513189
+higher with progression,300,Differentiation of Keratinocytes in Interfollicular Epidermis in Mammalian Skin,1,47,0.4691933043513189
+higher with progression,301,Negative regulation of NOTCH4 signaling,1,47,0.4691933043513189
+higher with progression,302,RAC1 GTPase cycle,3,191,0.4748985310684355
+higher with progression,303,Regulation of PD-L1(CD274) expression,3,191,0.4748985310684355
+higher with progression,304,Translesion synthesis by Y family DNA polymerases bypasses lesions on DNA template,1,48,0.476308742552521
+higher with progression,305,Intra-Golgi traffic,1,48,0.476308742552521
+higher with progression,306,Transcriptional Regulation by VENTX,1,48,0.476308742552521
+higher with progression,307,Stimuli-sensing channels,2,120,0.4805501753501271
+higher with progression,308,Regulation of Expression and Function of Type I Classical Cadherins,3,193,0.48172421940114685
+higher with progression,309,Regulation of CDH1 Expression and Function,3,193,0.48172421940114685
+higher with progression,310,Signaling by Rho GTPases,10,708,0.4831995207861641
+higher with progression,311,TBC/RABGAPs,1,49,0.4833292283633771
+higher with progression,312,Adherens junctions interactions,4,267,0.4842981486747655
+higher with progression,313,Factors involved in megakaryocyte development and platelet production,3,194,0.48512148089076346
+higher with progression,314,SUMOylation of DNA replication proteins,1,50,0.4902560231466465
+higher with progression,315,RNA Polymerase I Transcription Initiation,1,50,0.4902560231466465
+higher with progression,316,Epigenetic regulation of gene expression,5,345,0.49597715322094305
+higher with progression,317,Signaling by FGFR4,1,51,0.4970903715851759
+higher with progression,318,SUMOylation of RNA binding proteins,1,51,0.4970903715851759
+higher with progression,319,Inositol phosphate metabolism,2,125,0.5019749386867243
+higher with progression,320,RMTs methylate histone arginines,1,52,0.5038335019013875
+higher with progression,321,Signaling by FGFR3,1,53,0.5104866260740175
+higher with progression,322,"Signaling by Rho GTPases, Miro GTPases and RHOBTB3",10,724,0.5116080472640766
+higher with progression,323,Autodegradation of Cdh1 by Cdh1:APC/C,1,54,0.5170509400519492
+higher with progression,324,"Formation of the ternary complex, and subsequently, the 43S complex",1,54,0.5170509400519492
+higher with progression,325,Condensation of Prophase Chromosomes,1,54,0.5170509400519492
+higher with progression,326,N-glycan trimming in the ER and Calnexin/Calreticulin cycle,1,54,0.5170509400519492
+higher with progression,327,Interferon alpha/beta signaling,2,129,0.5187021458174846
+higher with progression,328,Retrograde transport at the Trans-Golgi-Network,1,55,0.5235276239652482
+higher with progression,329,TAK1-dependent IKK and NF-kappa-B activation  ,1,55,0.5235276239652482
+higher with progression,330,Assembly of the 9+0 primary cilium,3,207,0.528271411666539
+higher with progression,331,Developmental Cell Lineages of the Endocrine Pancreas,1,56,0.5299178423334874
+higher with progression,332,Nonhomologous End-Joining (NHEJ),1,56,0.5299178423334874
+higher with progression,333,DNA Damage Bypass,1,57,0.5362227442712262
+higher with progression,334,RHOD GTPase cycle,1,57,0.5362227442712262
+higher with progression,335,Metal ion SLC transporters,1,57,0.5362227442712262
+higher with progression,336,Mitotic Prophase,2,134,0.5390813544447125
+higher with progression,337,PI3K Cascade,1,58,0.5424434636909141
+higher with progression,338,Azathioprine ADME,1,58,0.5424434636909141
+higher with progression,339,Cellular response to heat stress,2,135,0.5430854985374566
+higher with progression,340,Cell-Cell communication,5,365,0.5456936128299416
+higher with progression,341,RHOJ GTPase cycle,1,59,0.5485811195030743
+higher with progression,342,Meiotic recombination,1,59,0.5485811195030743
+higher with progression,343,Regulation of clotting cascade,1,61,0.5606116421201066
+higher with progression,344,Co-inhibition by PD-1,3,219,0.5662742881363123
+higher with progression,345,Translation initiation complex formation,1,62,0.5665066735016397
+higher with progression,346,CDK-mediated phosphorylation and removal of Cdc6,1,62,0.5665066735016397
+higher with progression,347,SUMOylation of chromatin organization proteins,1,62,0.5665066735016397
+higher with progression,348,Transport to the Golgi and subsequent modification,3,220,0.5693564036657276
+higher with progression,349,HDACs deacetylate histones,1,63,0.5723229708112743
+higher with progression,350,NRAGE signals death through JNK,1,63,0.5723229708112743
+higher with progression,351,Signaling by NOTCH3,1,63,0.5723229708112743
+higher with progression,352,Interaction of NuRD complexes with transcription factors,1,64,0.5780615808621801
+higher with progression,353,Ribosomal scanning and start codon recognition,1,64,0.5780615808621801
+higher with progression,354,Signaling by FGFR1,1,64,0.5780615808621801
+higher with progression,355,Signaling by EGFR,1,64,0.5780615808621801
+higher with progression,356,IRS-mediated signalling,1,65,0.5837235366128841
+higher with progression,357,Synthesis of PA,1,65,0.5837235366128841
+higher with progression,358,Cardiac conduction,2,147,0.5892384947685834
+higher with progression,359,NR1H3 & NR1H2 regulate gene expression linked to cholesterol transport and efflux,1,66,0.5893098573497382
+higher with progression,360,"Activation of the mRNA upon binding of the cap-binding complex and eIFs, and subsequent binding to 43S",1,66,0.5893098573497382
+higher with progression,361,Dual incision in TC-NER,1,66,0.5893098573497382
+higher with progression,362,Signaling by Retinoic Acid,1,66,0.5893098573497382
+higher with progression,363,Organelle biogenesis and maintenance,5,385,0.5930007783475443
+higher with progression,364,snRNP Assembly,1,67,0.5948215488670976
+higher with progression,365,Metabolism of non-coding RNA,1,67,0.5948215488670976
+higher with progression,366,Assembly of collagen fibrils and other multimeric structures,1,67,0.5948215488670976
+higher with progression,367,Regulation of endogenous retroelements by Piwi-interacting RNAs (piRNAs),1,68,0.6002596036450847
+higher with progression,368,Formation of the beta-catenin:TCF transactivating complex,1,68,0.6002596036450847
+higher with progression,369,Recruitment and ATM-mediated phosphorylation of repair and signaling proteins at DNA double strand breaks,1,68,0.6002596036450847
+higher with progression,370,Chromatin organization,5,389,0.602134696131361
+higher with progression,371,PLC beta mediated events,1,69,0.6056250010250208
+higher with progression,372,Collagen degradation,1,69,0.6056250010250208
+higher with progression,373,IRS-related events triggered by IGF1R,1,69,0.6056250010250208
+higher with progression,374,Nucleotide salvage,1,69,0.6056250010250208
+higher with progression,375,Coagulation pathway,1,69,0.6056250010250208
+higher with progression,376,Mitochondrial protein import,1,70,0.6109187073826072
+higher with progression,377,tRNA processing in the nucleus,1,70,0.6109187073826072
+higher with progression,378,Signaling by PDGF,1,70,0.6109187073826072
+higher with progression,379,PIP3 activates AKT signaling,4,315,0.6139427652453364
+higher with progression,380,Metabolism of RNA,11,862,0.6142812484099581
+higher with progression,381,Ribosome-associated quality control,2,155,0.6180434225584402
+higher with progression,382,Complex I biogenesis,1,72,0.6212948487281578
+higher with progression,383,IGF1R signaling cascade,1,72,0.6212948487281578
+higher with progression,384,Insulin receptor signalling cascade,1,72,0.6212948487281578
+higher with progression,385,Signaling by Type 1 Insulin-like Growth Factor 1 Receptor (IGF1R),1,73,0.6263791531658885
+higher with progression,386,Macroautophagy,2,158,0.6284398107156752
+higher with progression,387,Neddylation,3,241,0.6308917723918377
+higher with progression,388,NuRD complex assembly,1,74,0.6313955058114333
+higher with progression,389,G-protein mediated events,1,74,0.6313955058114333
+higher with progression,390,CDC42 GTPase cycle,2,159,0.6318563044452348
+higher with progression,391,RHOB GTPase cycle,1,75,0.6363448107309004
+higher with progression,392,"CHD6, CHD7, CHD8, CHD9 subfamily",1,75,0.6363448107309004
+higher with progression,393,Collagen biosynthesis and modifying enzymes,1,76,0.6412279600168983
+higher with progression,394,RUNX1 regulates genes involved in megakaryocyte differentiation and platelet function,1,76,0.6412279600168983
+higher with progression,395,Neuronal System,6,488,0.643989755586606
+higher with progression,396,Developmental Lineage of Pancreatic Ductal Cells,1,77,0.6460458339464246
+higher with progression,397,Cargo trafficking to the periciliary membrane,1,77,0.6460458339464246
+higher with progression,398,"CHD3, CHD4, CHD5 subfamily",1,78,0.650799301136638
+higher with progression,399,COPII-mediated vesicle transport,1,78,0.650799301136638
+higher with progression,400,RHOG GTPase cycle,1,78,0.650799301136638
+higher with progression,401,Regulation of endogenous retroelements by KRAB-ZFP proteins,1,78,0.650799301136638
+higher with progression,402,CHD chromatin remodelers,2,165,0.6518437873708742
+higher with progression,403,Positive epigenetic regulation of rRNA expression,1,79,0.6554892186985863
+higher with progression,404,RHOC GTPase cycle,1,79,0.6554892186985863
+higher with progression,405,"Cell death signalling via NRAGE, NRIF and NADE",1,80,0.6601164323889592
+higher with progression,406,Transport of Mature mRNA derived from an Intron-Containing Transcript,1,81,0.6646817767597646
+higher with progression,407,SUMOylation of DNA damage response and repair proteins,1,81,0.6646817767597646
+higher with progression,408,Ca2+ pathway,1,81,0.6646817767597646
+higher with progression,409,Cotranslational targeting of proteins to the endoplasmic reticulum,2,169,0.6646852948123094
+higher with progression,410,Signaling by NOTCH4,1,82,0.6691860753061246
+higher with progression,411,ISG15 antiviral mechanism,1,83,0.6736301406120822
+higher with progression,412,Non-integrin membrane-ECM interactions,1,83,0.6736301406120822
+higher with progression,413,Autophagy,2,174,0.6802001332458054
+higher with progression,414,NR1H2 and NR1H3-mediated signaling,1,85,0.6823407681452331
+higher with progression,415,G alpha (12/13) signalling events,1,85,0.6823407681452331
+higher with progression,416,Nuclear Receptor transcription pathway,1,86,0.6866089022709121
+higher with progression,417,Interferon gamma signaling,2,177,0.6892260912730833
+higher with progression,418,RNA Polymerase I Transcription,1,87,0.6908199472316519
+higher with progression,419,Somatic hypermutation of immunoglobulin genes,2,178,0.692188065134403
+higher with progression,420,Nuclear Envelope (NE) Reassembly,1,88,0.6949746631773404
+higher with progression,421,PKR-mediated signaling,1,88,0.6949746631773404
+higher with progression,422,Regulation of TP53 Activity,2,179,0.695126841071136
+higher with progression,423,Transport of Mature Transcript to Cytoplasm,1,90,0.7031180983787491
+higher with progression,424,Senescence-Associated Secretory Phenotype (SASP),1,90,0.7031180983787491
+higher with progression,425,SUMO E3 ligases SUMOylate target proteins,2,184,0.7094758841768408
+higher with progression,426,RAC2 GTPase cycle,1,92,0.7110450899454667
+higher with progression,427,Meiosis,1,93,0.7149292150390396
+higher with progression,428,IFIT antiviral response,1,93,0.7149292150390396
+higher with progression,429,Protein-protein interactions at synapses,1,93,0.7149292150390396
+higher with progression,430,Regulation of T cell activation by CD28 family,3,276,0.7193775942312867
+higher with progression,431,Intracellular signaling by second messengers,4,363,0.7215217328124885
+higher with progression,432,RNA polymerase II transcribes snRNA genes,1,95,0.7225422322536549
+higher with progression,433,XBP1(S) activates chaperone genes,1,95,0.7225422322536549
+higher with progression,434,tRNA processing,2,189,0.7232588582105723
+higher with progression,435,Regulation of TP53 Activity through Phosphorylation,1,96,0.7262724998997385
+higher with progression,436,Peptide chain elongation,1,97,0.7299528420748946
+higher with progression,437,ER-Phagosome pathway,1,98,0.7335839239516089
+higher with progression,438,SUMOylation,2,193,0.733886064415096
+higher with progression,439,PELO:HBS1L and ABCE1 dissociate a ribosome on a non-stop mRNA,1,100,0.7407009235061764
+higher with progression,440,RAC3 GTPase cycle,1,100,0.7407009235061764
+higher with progression,441,ATP-dependent chromatin remodelers,2,196,0.7416280435098164
+higher with progression,442,Nonsense Mediated Decay (NMD) independent of the Exon Junction Complex (EJC),1,101,0.7441881278833486
+higher with progression,443,Processing of antigen in germinal center B cells,1,101,0.7441881278833486
+higher with progression,444,IRE1alpha activates chaperones,1,101,0.7441881278833486
+higher with progression,445,Antimicrobial mechanism of IFN-stimulated genes,3,288,0.7456692095353321
+higher with progression,446,Eukaryotic Translation Elongation,1,102,0.7476286455890968
+higher with progression,447,Signaling by Insulin receptor,1,102,0.7476286455890968
+higher with progression,448,Collagen formation,1,104,0.7543721015794845
+higher with progression,449,ZNF598 and the Ribosome-associated Quality Trigger (RQT) complex dissociate a ribosome stalled on a no-go mRNA,1,105,0.7576762596327938
+higher with progression,450,DDX58/IFIH1-mediated induction of interferon-alpha/beta,1,105,0.7576762596327938
+higher with progression,451,Formation of a pool of free 40S subunits,1,106,0.7609361707686322
+higher with progression,452,Eukaryotic Translation Termination,1,106,0.7609361707686322
+higher with progression,453,Ribosome Quality Control (RQC) complex extracts and degrades nascent peptide,1,106,0.7609361707686322
+higher with progression,454,Regulation of insulin secretion,1,108,0.7673256038258501
+higher with progression,455,Ion channel transport,2,207,0.7683915097177163
+higher with progression,456,p75 NTR receptor-mediated signalling,1,109,0.770456282051535
+higher with progression,457,MyD88 cascade initiated on plasma membrane,1,109,0.770456282051535
+higher with progression,458,Toll Like Receptor 10 (TLR10) Cascade,1,109,0.770456282051535
+higher with progression,459,Toll Like Receptor 5 (TLR5) Cascade,1,109,0.770456282051535
+higher with progression,460,HATs acetylate histones,1,110,0.7735450261737756
+higher with progression,461,Glycolysis,1,111,0.7765923953398911
+higher with progression,462,ABC-family protein mediated transport,1,111,0.7765923953398911
+higher with progression,463,Interleukin-4 and Interleukin-13 signaling,2,211,0.7775117889171267
+higher with progression,464,Selenocysteine synthesis,1,112,0.7795989412754534
+higher with progression,465,Interleukin-1 signaling,1,112,0.7795989412754534
+higher with progression,466,Regulation of endogenous retroelements,1,113,0.7825652083823692
+higher with progression,467,PI Metabolism,1,113,0.7825652083823692
+higher with progression,468,DNA Double Strand Break Response,1,114,0.7854917338356197
+higher with progression,469,Opioid Signalling,1,114,0.7854917338356197
+higher with progression,470,Response of EIF2AK4 (GCN2) to amino acid deficiency,1,115,0.7883790476787801
+higher with progression,471,Post-translational modification: synthesis of GPI-anchored proteins,1,115,0.7883790476787801
+higher with progression,472,Toll Like Receptor 3 (TLR3) Cascade,1,117,0.7940381256162868
+higher with progression,473,Phospholipid metabolism,3,313,0.7941337735295898
+higher with progression,474,Glycerophospholipid biosynthesis,2,220,0.7968948706047371
+higher with progression,475,GTP hydrolysis and joining of the 60S ribosomal subunit,1,120,0.802245506840586
+higher with progression,476,L13a-mediated translational silencing of Ceruloplasmin expression,1,120,0.802245506840586
+higher with progression,477,Antigen processing-Cross presentation,1,120,0.802245506840586
+higher with progression,478,TRAF6 mediated induction of NFkB and MAP kinases upon TLR7/8 or 9 activation,1,120,0.802245506840586
+higher with progression,479,MyD88 dependent cascade initiated on endosome,1,121,0.8049082942989667
+higher with progression,480,Developmental Cell Lineages of the Integumentary System,1,122,0.8075353885349705
+higher with progression,481,TRIF (TICAM1)-mediated TLR4 signaling ,1,122,0.8075353885349705
+higher with progression,482,MyD88-independent TLR4 cascade ,1,122,0.8075353885349705
+higher with progression,483,Keratinization,2,226,0.8089764475004575
+higher with progression,484,Affinity selection of immunoglobulins,4,414,0.8098261712499979
+higher with progression,485,Immunoglobulin maturation,4,414,0.8098261712499979
+higher with progression,486,Nonsense-Mediated Decay (NMD),1,124,0.8126843961449068
+higher with progression,487,Nonsense Mediated Decay (NMD) enhanced by the Exon Junction Complex (EJC),1,124,0.8126843961449068
+higher with progression,488,Post-translational protein modification,19,1675,0.8141273089152309
+higher with progression,489,Toll Like Receptor 7/8 (TLR7/8) Cascade,1,125,0.8152072431887246
+higher with progression,490,Interferon Signaling,5,511,0.8197987093066313
+higher with progression,491,Muscle contraction,2,232,0.8204163825232815
+higher with progression,492,Toll Like Receptor 9 (TLR9) Cascade,1,128,0.82257462992061
+higher with progression,493,Rab regulation of trafficking,1,129,0.8249648590303003
+higher with progression,494,Protein localization,3,332,0.8256312739610908
+higher with progression,495,Cap-dependent Translation Initiation,1,130,0.8273230326464474
+higher with progression,496,Eukaryotic Translation Initiation,1,130,0.8273230326464474
+higher with progression,497,Drug ADME,2,236,0.8276995374584715
+higher with progression,498,Glucose metabolism,1,131,0.8296495787213747
+higher with progression,499,MyD88:MAL(TIRAP) cascade initiated on plasma membrane,1,133,0.8342094716954471
+higher with progression,500,Toll Like Receptor TLR6:TLR2 Cascade,1,133,0.8342094716954471
+higher with progression,501,Transmission across Chemical Synapses,3,342,0.8404998368829861
+higher with progression,502,MHC class II antigen presentation,1,136,0.8408224803812285
+higher with progression,503,Toll Like Receptor TLR1:TLR2 Cascade,1,136,0.8408224803812285
+higher with progression,504,Toll Like Receptor 2 (TLR2) Cascade,1,136,0.8408224803812285
+higher with progression,505,Asparagine N-linked glycosylation,4,438,0.8427619134874698
+higher with progression,506,"PI5P, PP2A and IER3 Regulate PI3K/AKT Signaling",1,137,0.842967934928293
+higher with progression,507,MLL4 and MLL3 complexes regulate expression of PPARG target genes in adipogenesis and hepatic steatosis,1,139,0.8471728676009105
+higher with progression,508,Epigenetic regulation of adipogenesis genes by MLL3 and MLL4 complexes,1,139,0.8471728676009105
+higher with progression,509,Epigenetic regulation of gene expression by MLL3 and MLL4 complexes,1,139,0.8471728676009105
+higher with progression,510,Platelet degranulation ,1,140,0.8492331096253681
+higher with progression,511,Negative regulation of the PI3K/AKT network,1,145,0.8591269029370265
+higher with progression,512,Reproduction,1,146,0.8610266958747614
+higher with progression,513,Phase II - Conjugation of compounds,2,257,0.8617538702949605
+higher with progression,514,Adipogenesis,1,147,0.8629009839122943
+higher with progression,515,Response to elevated platelet cytosolic Ca2+,1,147,0.8629009839122943
+higher with progression,516,Degradation of the extracellular matrix,1,148,0.8647501079056733
+higher with progression,517,Integration of energy metabolism,1,152,0.8719016231030782
+higher with progression,518,O-linked glycosylation,1,153,0.8736298830905682
+higher with progression,519,RHOA GTPase cycle,1,154,0.8753349310178411
+higher with progression,520,Beta-catenin independent WNT signaling,1,155,0.87701707723245
+higher with progression,521,Unfolded Protein Response (UPR),1,156,0.8786766279514461
+higher with progression,522,Deubiquitination,2,275,0.8859342510399649
+higher with progression,523,Membrane Trafficking,6,667,0.8878538877075508
+higher with progression,524,ER to Golgi Anterograde Transport,1,165,0.8926443375355614
+higher with progression,525,Toll Like Receptor 4 (TLR4) Cascade,1,166,0.8940939047377459
+higher with progression,526,Developmental Cell Lineages of the Exocrine Pancreas,1,170,0.8996999176735109
+higher with progression,527,Regulation of expression of SLITs and ROBOs,1,170,0.8996999176735109
+higher with progression,528,Interleukin-1 family signaling,1,170,0.8996999176735109
+higher with progression,529,Epigenetic regulation by WDR5-containing histone modifying complexes,1,171,0.9010546346976466
+higher with progression,530,Death Receptor Signaling,1,172,0.9023911364740563
+higher with progression,531,PPARA activates gene expression,1,173,0.9037096668128071
+higher with progression,532,Regulation of lipid metabolism by PPARalpha,1,175,0.9062937722179516
+higher with progression,533,Cellular response to starvation,1,176,0.9075598188335271
+higher with progression,534,Signaling by TGFB family members,1,178,0.9100410552927414
+higher with progression,535,Selenoamino acid metabolism,1,182,0.9148063794021492
+higher with progression,536,Adaptive Immune System,12,1247,0.9158283078768763
+higher with progression,537,Major pathway of rRNA processing in the nucleolus and cytosol,1,189,0.9225488803030057
+higher with progression,538,Ub-specific processing proteases,1,192,0.9256487678013572
+higher with progression,539,Signaling by Receptor Tyrosine Kinases,5,633,0.9302839804802543
+higher with progression,540,Signaling by WNT,2,322,0.9318591262251982
+higher with progression,541,Respiratory electron transport,1,200,0.9333244550445933
+higher with progression,542,TCF dependent signaling in response to WNT,1,204,0.9368611098471078
+higher with progression,543,rRNA processing in the nucleus and cytosol,1,207,0.9393904786264814
+higher with progression,544,Toll-like Receptor Cascades,1,210,0.9418189640642606
+higher with progression,545,Cellular responses to stress,9,1039,0.9432411886713118
+higher with progression,546,Glycosaminoglycan metabolism,1,212,0.9433838929080841
+higher with progression,547,RHO GTPase cycle,3,460,0.9483089938246926
+higher with progression,548,Developmental Cell Lineages,2,349,0.9496922950795549
+higher with progression,549,Signaling by ROBO receptors,1,222,0.9506018537759288
+higher with progression,550,Aerobic respiration and respiratory electron transport,2,361,0.9561064332000161
+higher with progression,551,Neurotransmitter receptors and postsynaptic signal transmission,1,231,0.9563109421601563
+higher with progression,552,Transcriptional regulation by RUNX1,1,247,0.9648863724734947
+higher with progression,553,rRNA processing,1,252,0.9672055038208112
+higher with progression,554,Metabolism of nucleotides,1,257,0.9693721178736813
+higher with progression,555,Signaling by NOTCH,1,260,0.9706030603131358
+higher with progression,556,Vesicle-mediated transport,6,840,0.9717938345409335
+higher with progression,557,Metabolism of proteins,23,2405,0.9741373993861905
+higher with progression,558,Cellular responses to stimuli,9,1166,0.9777720166556373
+higher with progression,559,G alpha (q) signalling events,1,283,0.9785409413128414
+higher with progression,560,Translation,2,423,0.9785901714815597
+higher with progression,561,"Platelet activation, signaling and aggregation",1,292,0.9810299189987295
+higher with progression,562,RAF/MAP kinase cascade,1,309,0.9849736685185687
+higher with progression,563,MAPK1/MAPK3 signaling,1,316,0.9863496316776218
+higher with progression,564,Developmental Biology,18,2080,0.9871937394521226
+higher with progression,565,Hemostasis,5,828,0.9879267578808965
+higher with progression,566,Metabolism of carbohydrates and carbohydrate derivatives,2,476,0.9885846022901291
+higher with progression,567,Neutrophil degranulation,2,478,0.988855009191707
+higher with progression,568,Gene expression (Transcription),16,1924,0.9892616391472498
+higher with progression,569,Transcriptional Regulation by TP53,2,488,0.990116385928175
+higher with progression,570,Generic Transcription Pathway,12,1575,0.9911573509703125
+higher with progression,571,Extracellular matrix organization,1,351,0.9915603080300113
+higher with progression,572,RNA Polymerase II Transcription,13,1679,0.9916985028652731
+higher with progression,573,Signaling by Interleukins,3,646,0.992855189353119
+higher with progression,574,MAPK family signaling cascades,1,367,0.9932280439458108
+higher with progression,575,Signaling by Nuclear Receptors,1,380,0.9943381525038393
+higher with progression,576,Biological oxidations,2,543,0.9949300559857357
+higher with progression,577,SLC-mediated transmembrane transport,1,414,0.9964576182096004
+higher with progression,578,Class A/1 (Rhodopsin-like receptors),1,415,0.9965061948765612
+higher with progression,579,G alpha (i) signalling events,1,427,0.9970398828536091
+higher with progression,580,Transport of small molecules,5,996,0.9977541614705481
+higher with progression,581,Cytokine Signaling in Immune system,6,1197,0.9990576990489688
+higher with progression,582,Signal Transduction,24,3054,0.9993944360696614
+higher with progression,583,Signaling by GPCR,3,877,0.9995100032355915
+higher with progression,584,Axon guidance,1,565,0.9995640003625427
+higher with progression,585,Nervous system development,1,602,0.9997398529764485
+higher with progression,586,GPCR ligand binding,1,610,0.9997673735821958
+higher with progression,587,GPCR downstream signalling,2,794,0.9997860116042462
+higher with progression,588,Metabolism of amino acids and derivatives,1,658,0.9998812104438356
+higher with progression,589,Immune System,19,3040,0.9999888086751965
+higher with progression,590,Metabolism of lipids,4,1491,0.9999985197094952
+higher with progression,591,Innate Immune System,3,1395,0.9999993062790492
+higher with progression,592,Metabolism,13,3764,0.9999999999987801
+lower with progression,0,XBP1(S) activates chaperone genes,8,95,0.02066919956010771
+lower with progression,1,Metallothioneins bind metals,4,16,0.02066919956010771
+lower with progression,2,Unfolded Protein Response (UPR),10,156,0.02066919956010771
+lower with progression,3,IRE1alpha activates chaperones,8,101,0.02066919956010771
+lower with progression,4,Noncanonical activation of NOTCH3,3,8,0.025989091338417758
+lower with progression,5,Response to metal ions,4,21,0.025989091338417758
+lower with progression,6,Cardiogenesis,5,39,0.025989091338417758
+lower with progression,7,TGFBR3 PTM regulation,3,11,0.04571360880193953
+lower with progression,8,Regulated proteolysis of p75NTR,3,12,0.04728085532337478
+lower with progression,9,NOTCH4 Activation and Transmission of Signal to the Nucleus,3,12,0.04728085532337478
+lower with progression,10,Signaling by TGFBR3,5,54,0.06986858850860056
+lower with progression,11,NRIF signals cell death from the nucleus,3,18,0.11727131572162974
+lower with progression,12,Regulation of MITF-M dependent genes involved in metabolism,2,5,0.11727131572162974
+lower with progression,13,Regulation of FZD by ubiquitination,3,22,0.18594330950157856
+lower with progression,14,RUNX1 regulates transcription of genes involved in interleukin signaling,2,7,0.19672799124542917
+lower with progression,15,RUNX3 regulates CDKN1A transcription,2,8,0.22348178908877836
+lower with progression,16,TYSND1 cleaves peroxisomal proteins,2,8,0.22348178908877836
+lower with progression,17,NOTCH2 Activation and Transmission of Signal to the Nucleus,3,26,0.2273603619334148
+lower with progression,18,Abacavir transmembrane transport,2,9,0.2490422239124399
+lower with progression,19,NOTCH3 Activation and Transmission of Signal to the Nucleus,3,28,0.25351259910781165
+lower with progression,20,EPH-ephrin mediated repulsion of cells,4,55,0.25648567301480907
+lower with progression,21,Sprouting angiogenesis,4,57,0.2793972502140809
+lower with progression,22,Adrenoceptors,2,11,0.29261054962359534
+lower with progression,23,Activated NOTCH1 Transmits Signal to the Nucleus,3,32,0.29261054962359534
+lower with progression,24,Endosomal Sorting Complex Required For Transport (ESCRT),3,35,0.3561666019042464
+lower with progression,25,RAC3 GTPase cycle,5,100,0.36764519901722814
+lower with progression,26,Signaling by NOTCH2,3,41,0.4485927445983745
+lower with progression,27,The canonical retinoid cycle in rods (twilight vision),3,43,0.4485927445983745
+lower with progression,28,Vitamin E transport,1,2,0.4485927445983745
+lower with progression,29,trans-Golgi Network Vesicle Budding,4,80,0.4485927445983745
+lower with progression,30,"Cell death signalling via NRAGE, NRIF and NADE",4,80,0.4485927445983745
+lower with progression,31,Transcriptional regulation of brown and beige adipocyte differentiation by EBF2,3,47,0.4485927445983745
+lower with progression,32,Transcriptional regulation of brown and beige adipocyte differentiation,3,47,0.4485927445983745
+lower with progression,33,Nuclear signaling by ERBB4,3,47,0.4485927445983745
+lower with progression,34,TP53 Regulates Transcription of Cell Death Genes,4,83,0.4485927445983745
+lower with progression,35,"Synthesis, secretion, and inactivation of Glucose-dependent Insulinotropic Polypeptide (GIP)",2,21,0.4485927445983745
+lower with progression,36,PPARA activates gene expression,6,173,0.4485927445983745
+lower with progression,37,Regulation of lipid metabolism by PPARalpha,6,175,0.4485927445983745
+lower with progression,38,RNA Polymerase III Transcription Termination,2,23,0.4485927445983745
+lower with progression,39,RAC2 GTPase cycle,4,92,0.4485927445983745
+lower with progression,40,Creatine metabolism,2,24,0.4485927445983745
+lower with progression,41,Keratan sulfate degradation,2,25,0.4485927445983745
+lower with progression,42,Negative regulation of MET activity,2,25,0.4485927445983745
+lower with progression,43,Drug-mediated inhibition of ERBB2 signaling,1,4,0.4485927445983745
+lower with progression,44,Tandem of pore domain in a weak inwardly rectifying K+ channels (TWIK),1,4,0.4485927445983745
+lower with progression,45,Molybdenum cofactor biosynthesis,2,27,0.4485927445983745
+lower with progression,46,Ethanol oxidation,2,27,0.4485927445983745
+lower with progression,47,EPH-Ephrin signaling,4,101,0.4485927445983745
+lower with progression,48,Cellular hexose transport,2,28,0.4485927445983745
+lower with progression,49,TP53 regulates transcription of several additional cell death genes whose specific roles in p53-dependent apoptosis remain uncertain,2,28,0.4485927445983745
+lower with progression,50,Adipogenesis,5,147,0.4485927445983745
+lower with progression,51,Cardiac conduction,5,147,0.4485927445983745
+lower with progression,52,RHOQ GTPase cycle,3,63,0.4485927445983745
+lower with progression,53,Signaling by NOTCH3,3,63,0.4485927445983745
+lower with progression,54,Peroxisomal protein import,3,67,0.4485927445983745
+lower with progression,55,TGFBR3 expression,2,31,0.4485927445983745
+lower with progression,56,p75 NTR receptor-mediated signalling,4,109,0.4485927445983745
+lower with progression,57,Abacavir ADME,2,32,0.4485927445983745
+lower with progression,58,RUNX3 regulates BCL2L11 (BIM) transcription,1,6,0.4485927445983745
+lower with progression,59,MDK and PTN in ALK signaling,1,6,0.4485927445983745
+lower with progression,60,TP53 Regulates Transcription of Genes Involved in Cytochrome C Release,2,33,0.4485927445983745
+lower with progression,61,Activation of gene expression by SREBF (SREBP),3,71,0.4485927445983745
+lower with progression,62,Ion transport by P-type ATPases,3,71,0.4485927445983745
+lower with progression,63,ATF4 activates genes in response to endoplasmic reticulum  stress,2,34,0.4485927445983745
+lower with progression,64,Activation of C3 and C5,1,7,0.4485927445983745
+lower with progression,65,RHOB GTPase cycle,3,75,0.4485927445983745
+lower with progression,66,"RORA,B,C and NR1D1 (REV-ERBA) regulate gene expression",2,36,0.4485927445983745
+lower with progression,67,EGFR downregulation,2,37,0.4485927445983745
+lower with progression,68,Synthesis of glycosylphosphatidylinositol (GPI),2,37,0.4485927445983745
+lower with progression,69,Glycosphingolipid catabolism,3,77,0.4485927445983745
+lower with progression,70,RHOG GTPase cycle,3,78,0.4485927445983745
+lower with progression,71,Phase 1 - inactivation of fast Na+ channels,1,8,0.4485927445983745
+lower with progression,72,RA biosynthesis pathway,2,39,0.4485927445983745
+lower with progression,73,Signaling by NOTCH4,3,82,0.4485927445983745
+lower with progression,74,Signaling by ERBB4,3,82,0.4485927445983745
+lower with progression,75,Signaling by TGFB family members,5,178,0.4485927445983745
+lower with progression,76,Signaling by NOTCH1,3,84,0.4485927445983745
+lower with progression,77,PERK regulates gene expression,2,42,0.4485927445983745
+lower with progression,78,G alpha (12/13) signalling events,3,85,0.4485927445983745
+lower with progression,79,RNA Polymerase III Abortive And Retractive Initiation,2,43,0.4485927445983745
+lower with progression,80,RNA Polymerase III Transcription,2,43,0.4485927445983745
+lower with progression,81,Regulation of cholesterol biosynthesis by SREBP (SREBF),3,87,0.4485927445983745
+lower with progression,82,SMAD2/SMAD3:SMAD4 heterotrimer regulates transcription,2,44,0.4485927445983745
+lower with progression,83,SLC-mediated transport of organic cations,2,44,0.4485927445983745
+lower with progression,84,RHOU GTPase cycle,2,44,0.4485927445983745
+lower with progression,85,alpha-linolenic acid (ALA) metabolism,2,45,0.4485927445983745
+lower with progression,86,"Expression of BMAL (ARNTL), CLOCK, and NPAS2",2,46,0.4485927445983745
+lower with progression,87,"Synthesis, secretion, and inactivation of Glucagon-like Peptide-1 (GLP-1)",2,46,0.4485927445983745
+lower with progression,88,RAC1 GTPase cycle,5,191,0.4485927445983745
+lower with progression,89,Highly calcium permeable nicotinic acetylcholine receptors,1,11,0.4485927445983745
+lower with progression,90,Axonal growth inhibition (RHOA activation),1,11,0.4485927445983745
+lower with progression,91,Inhibition of DNA recombination at telomere,2,47,0.4485927445983745
+lower with progression,92,Metabolism of water-soluble vitamins and cofactors,6,248,0.4485927445983745
+lower with progression,93,"FOXO-mediated transcription of oxidative stress, metabolic and neuronal genes",2,49,0.4485927445983745
+lower with progression,94,Calcineurin activates NFAT,1,12,0.4485927445983745
+lower with progression,95,Regulation of CDH11 gene transcription,1,12,0.4485927445983745
+lower with progression,96,Lysosomal oligosaccharide catabolism,1,12,0.4485927445983745
+lower with progression,97,p75NTR regulates axonogenesis,1,12,0.4485927445983745
+lower with progression,98,"Incretin synthesis, secretion, and inactivation",2,50,0.4485927445983745
+lower with progression,99,Activation of PPARGC1A (PGC-1alpha) by phosphorylation,1,13,0.4485927445983745
+lower with progression,100,Highly calcium permeable postsynaptic nicotinic acetylcholine receptors,1,13,0.4485927445983745
+lower with progression,101,"WNT5A-dependent internalization of FZD2, FZD5 and ROR2",1,13,0.4485927445983745
+lower with progression,102,Metal sequestration by antimicrobial proteins,1,13,0.4485927445983745
+lower with progression,103,Tandem pore domain potassium channels,1,13,0.4485927445983745
+lower with progression,104,Positive Regulation of CDH1 Gene Transcription,1,13,0.4485927445983745
+lower with progression,105,Amine ligand-binding receptors,2,52,0.4485927445983745
+lower with progression,106,Class B/2 (Secretin family receptors),3,99,0.4485927445983745
+lower with progression,107,Somitogenesis,2,53,0.4485927445983745
+lower with progression,108,Metabolism of vitamins and cofactors,8,378,0.4485927445983745
+lower with progression,109,alpha-linolenic (omega3) and linoleic (omega6) acid metabolism,2,55,0.4485927445983745
+lower with progression,110,Presynaptic nicotinic acetylcholine receptors,1,15,0.4485927445983745
+lower with progression,111,Keratan sulfate/keratin metabolism,2,57,0.4485927445983745
+lower with progression,112,Asymmetric localization of PCP proteins,2,57,0.4485927445983745
+lower with progression,113,Transcriptional regulation of white adipocyte differentiation,3,107,0.4485927445983745
+lower with progression,114,Cholesterol biosynthesis from zymosterol (modified Kandutsch-Russell pathway),1,16,0.4485927445983745
+lower with progression,115,RHOJ GTPase cycle,2,59,0.4485927445983745
+lower with progression,116,Acetylcholine binding and downstream events,1,17,0.4485927445983745
+lower with progression,117,Postsynaptic nicotinic acetylcholine receptors,1,17,0.4485927445983745
+lower with progression,118,IL-6-type cytokine receptor ligand interactions,1,17,0.4485927445983745
+lower with progression,119,Reversible hydration of carbon dioxide,1,17,0.4485927445983745
+lower with progression,120,NFE2L2 regulating tumorigenic genes,1,17,0.4485927445983745
+lower with progression,121,Metabolism of steroids,7,337,0.4485927445983745
+lower with progression,122,Meiotic synapsis,2,61,0.4485927445983745
+lower with progression,123,Golgi Associated Vesicle Biogenesis,2,61,0.4485927445983745
+lower with progression,124,CRMPs in Sema3A signaling,1,18,0.4485927445983745
+lower with progression,125,The activation of arylsulfatases,1,18,0.4485927445983745
+lower with progression,126,CLEC7A (Dectin-1) induces NFAT activation,1,18,0.4485927445983745
+lower with progression,127,YAP1- and WWTR1 (TAZ)-stimulated gene expression,1,18,0.4485927445983745
+lower with progression,128,Physiological factors,1,18,0.4485927445983745
+lower with progression,129,Ciprofloxacin ADME,1,18,0.4485927445983745
+lower with progression,130,Cargo recognition for clathrin-mediated endocytosis,3,115,0.4485927445983745
+lower with progression,131,Transcriptional activity of SMAD2/SMAD3:SMAD4 heterotrimer,2,64,0.4485927445983745
+lower with progression,132,Signaling by EGFR,2,64,0.4485927445983745
+lower with progression,133,Ion homeostasis,2,64,0.4485927445983745
+lower with progression,134,Death Receptor Signaling,4,172,0.4485927445983745
+lower with progression,135,RNA Polymerase III Chain Elongation,1,19,0.4485927445983745
+lower with progression,136,Telomere C-strand synthesis initiation,1,19,0.4485927445983745
+lower with progression,137,SEMA3A-Plexin repulsion signaling by inhibiting Integrin adhesion,1,19,0.4485927445983745
+lower with progression,138,Sema3A PAK dependent Axon repulsion,1,19,0.4485927445983745
+lower with progression,139,Signaling by Activin,1,19,0.4485927445983745
+lower with progression,140,Biotin transport and metabolism,1,19,0.4485927445983745
+lower with progression,141,Muscle contraction,5,232,0.4485927445983745
+lower with progression,142,Signaling by Retinoic Acid,2,66,0.4485927445983745
+lower with progression,143,Cellular responses to stimuli,20,1166,0.4485927445983745
+lower with progression,144,Phase 4 - resting membrane potential,1,20,0.4485927445983745
+lower with progression,145,Receptor-type tyrosine-protein phosphatases,1,20,0.4485927445983745
+lower with progression,146,Membrane Trafficking,12,667,0.4485927445983745
+lower with progression,147,Formation of paraxial mesoderm,2,69,0.4485927445983745
+lower with progression,148,Heme signaling,2,70,0.4485927445983745
+lower with progression,149,Removal of the Flap Intermediate from the C-strand,1,22,0.4485927445983745
+lower with progression,150,Organic anion transport by SLC5/17/25 transporters,1,22,0.4485927445983745
+lower with progression,151,Synthesis of Ketone Bodies,1,22,0.4485927445983745
+lower with progression,152,Tie2 Signaling,1,23,0.4485927445983745
+lower with progression,153,Synthesis of epoxy (EET) and dihydroxyeicosatrienoic acids (DHET),1,23,0.4485927445983745
+lower with progression,154,Synthesis of bile acids and bile salts via 7alpha-hydroxycholesterol,2,74,0.4485927445983745
+lower with progression,155,Nicotinate metabolism,2,74,0.4485927445983745
+lower with progression,156,Germ layer formation at gastrulation,1,24,0.4485927445983745
+lower with progression,157,Metabolism of steroid hormones,2,75,0.4485927445983745
+lower with progression,158,Formation of definitive endoderm,1,25,0.4485927445983745
+lower with progression,159,Signaling by NODAL,1,25,0.4485927445983745
+lower with progression,160,Pregnenolone biosynthesis,1,25,0.4485927445983745
+lower with progression,161,"Synthesis, secretion, and deacylation of Ghrelin",1,26,0.4485927445983745
+lower with progression,162,Basigin interactions,1,26,0.4485927445983745
+lower with progression,163,Ketone body metabolism,1,26,0.4485927445983745
+lower with progression,164,Glycosphingolipid metabolism,3,136,0.4485927445983745
+lower with progression,165,RHOC GTPase cycle,2,79,0.4485927445983745
+lower with progression,166,Translocation of SLC2A4 (GLUT4) to the plasma membrane,2,79,0.4485927445983745
+lower with progression,167,RNA Polymerase III Transcription Initiation From Type 2 Promoter,1,27,0.4485927445983745
+lower with progression,168,FOXO-mediated transcription of cell cycle genes,1,27,0.4485927445983745
+lower with progression,169,Androgen biosynthesis,1,27,0.4485927445983745
+lower with progression,170,Ca2+ pathway,2,81,0.4485927445983745
+lower with progression,171,FGFR2 alternative splicing,1,28,0.4485927445983745
+lower with progression,172,Regulation of IFNA/IFNB signaling,1,28,0.4485927445983745
+lower with progression,173,WNT ligand biogenesis and trafficking,1,28,0.4485927445983745
+lower with progression,174,RNA Polymerase III Transcription Initiation From Type 3 Promoter,1,28,0.4485927445983745
+lower with progression,175,RNA Polymerase III Transcription Initiation From Type 1 Promoter,1,28,0.4485927445983745
+lower with progression,176,Reactions specific to the complex N-glycan synthesis pathway,1,28,0.4485927445983745
+lower with progression,177,Choline catabolism,1,28,0.4485927445983745
+lower with progression,178,Metabolism of fat-soluble vitamins,2,83,0.4485927445983745
+lower with progression,179,Synthesis of pyrophosphates in the cytosol,1,29,0.4485927445983745
+lower with progression,180,Synthesis of UDP-N-acetyl-glucosamine,1,29,0.4485927445983745
+lower with progression,181,Biosynthesis of maresins,1,29,0.4485927445983745
+lower with progression,182,RHO GTPase cycle,8,460,0.4485927445983745
+lower with progression,183,RNA Pol II CTD phosphorylation and interaction with CE,1,30,0.4485927445983745
+lower with progression,184,Interleukin-6 family signaling,1,30,0.4485927445983745
+lower with progression,185,Norepinephrine Neurotransmitter Release Cycle,1,30,0.4485927445983745
+lower with progression,186,TNFs bind their physiological receptors,1,30,0.4485927445983745
+lower with progression,187,Ion channel transport,4,207,0.4485927445983745
+lower with progression,188,Polymerase switching on the C-strand of the telomere,1,31,0.4485927445983745
+lower with progression,189,Tight junction interactions,1,31,0.4485927445983745
+lower with progression,190,Hyaluronan degradation,1,31,0.4485927445983745
+lower with progression,191,Glycogen breakdown (glycogenolysis),1,31,0.4485927445983745
+lower with progression,192,MicroRNA (miRNA) biogenesis,1,31,0.4485927445983745
+lower with progression,193,Beta-oxidation of pristanoyl-CoA,1,31,0.4485927445983745
+lower with progression,194,PIWI-interacting RNA (piRNA) biogenesis,1,31,0.4485927445983745
+lower with progression,195,Degradation of the extracellular matrix,3,148,0.4485927445983745
+lower with progression,196,PCP/CE pathway,2,88,0.4485927445983745
+lower with progression,197,Signaling by MET,2,88,0.4485927445983745
+lower with progression,198,Transcriptional activation of mitochondrial biogenesis,2,89,0.4485927445983745
+lower with progression,199,Amyloid fiber formation,2,89,0.4485927445983745
+lower with progression,200,Metalloprotease DUBs,1,32,0.4485927445983745
+lower with progression,201,ER Quality Control Compartment (ERQC),1,32,0.4485927445983745
+lower with progression,202,Cholesterol biosynthesis via desmosterol (Bloch pathway),1,32,0.4485927445983745
+lower with progression,203,Processive synthesis on the C-strand of the telomere,1,33,0.4485927445983745
+lower with progression,204,RNA Polymerase I Transcription Termination,1,33,0.4485927445983745
+lower with progression,205,Packaging Of Telomere Ends,1,33,0.4485927445983745
+lower with progression,206,EPHA-mediated growth cone collapse,1,33,0.4485927445983745
+lower with progression,207,Signaling by BMP,1,33,0.4485927445983745
+lower with progression,208,Disassembly of the destruction complex and recruitment of AXIN to the membrane,1,33,0.4485927445983745
+lower with progression,209,Synthesis of bile acids and bile salts via 27-hydroxycholesterol,1,33,0.4485927445983745
+lower with progression,210,Peroxisomal lipid metabolism,2,92,0.4485927445983745
+lower with progression,211,RHOA GTPase cycle,3,154,0.4485927445983745
+lower with progression,212,Formation of the Early Elongation Complex,1,34,0.4485927445983745
+lower with progression,213,Telomere Extension By Telomerase,1,34,0.4485927445983745
+lower with progression,214,Meiosis,2,93,0.4485927445983745
+lower with progression,215,Neutrophil degranulation,8,478,0.4485927445983745
+lower with progression,216,G alpha (q) signalling events,5,283,0.4485927445983745
+lower with progression,217,Sphingolipid metabolism,4,219,0.4485927445983745
+lower with progression,218,NOTCH signaling regulates gene expression in endothelial stalk cells,1,35,0.4485927445983745
+lower with progression,219,Regulation of CDH11 Expression and Function,1,35,0.4485927445983745
+lower with progression,220,DARPP-32 events,1,35,0.4485927445983745
+lower with progression,221,Activation of Matrix Metalloproteinases,1,35,0.4485927445983745
+lower with progression,222,RNA polymerase II transcribes snRNA genes,2,95,0.4485927445983745
+lower with progression,223,CDC42 GTPase cycle,3,159,0.4485927445983745
+lower with progression,224,Visual phototransduction,3,159,0.4485927445983745
+lower with progression,225,mRNA Capping,1,36,0.4485927445983745
+lower with progression,226,RNA Polymerase III Transcription Initiation,1,36,0.4485927445983745
+lower with progression,227,Downregulation of ERBB2 signaling,1,36,0.4485927445983745
+lower with progression,228,Neurotransmitter clearance,1,36,0.4485927445983745
+lower with progression,229,Clathrin-mediated endocytosis,3,161,0.4485927445983745
+lower with progression,230,Cargo concentration in the ER,1,37,0.4485927445983745
+lower with progression,231,Lewis blood group biosynthesis,1,37,0.4485927445983745
+lower with progression,232,Neurotransmitter release cycle,2,99,0.4485927445983745
+lower with progression,233,Downregulation of SMAD2/3:SMAD4 transcriptional activity,1,38,0.4485927445983745
+lower with progression,234,Recognition and association of DNA glycosylase with site containing an affected purine,1,38,0.4485927445983745
+lower with progression,235,Synthesis of bile acids and bile salts via 24-hydroxycholesterol,1,38,0.4485927445983745
+lower with progression,236,Keratan sulfate biosynthesis,1,39,0.4485927445983745
+lower with progression,237,Regulation of Expression and Function of Type II Classical Cadherins,1,39,0.4485927445983745
+lower with progression,238,Gastrulation,3,167,0.4485927445983745
+lower with progression,239,Effects of PIP2 hydrolysis,1,40,0.4485927445983745
+lower with progression,240,CS/DS degradation,1,40,0.4485927445983745
+lower with progression,241,Calnexin/calreticulin cycle,1,40,0.4485927445983745
+lower with progression,242,Hyaluronan metabolism,1,41,0.4485927445983745
+lower with progression,243,Regulation of CDH1 posttranslational processing and trafficking to plasma membrane,1,41,0.4485927445983745
+lower with progression,244,Recognition and association of DNA glycosylase with site containing an affected pyrimidine,1,41,0.4485927445983745
+lower with progression,245,Synthesis of bile acids and bile salts,2,105,0.4502651932685142
+lower with progression,246,"Turbulent (oscillatory, disturbed) flow shear stress activates signaling by PIEZO1 and integrins in endothelial cells",1,42,0.4565510259159872
+lower with progression,247,Oncogene Induced Senescence,1,42,0.4565510259159872
+lower with progression,248,COPI-mediated anterograde transport,2,107,0.45988608639798567
+lower with progression,249,Lysosome Vesicle Biogenesis,1,43,0.4643949276399403
+lower with progression,250,RUNX2 regulates bone development,1,43,0.4643949276399403
+lower with progression,251,Telomere Maintenance,2,108,0.4646598770916035
+lower with progression,252,Signaling by TGF-beta Receptor Complex,2,108,0.4646598770916035
+lower with progression,253,Transcriptional regulation by RUNX3,2,108,0.4646598770916035
+lower with progression,254,Cleavage of the damaged purine,1,44,0.47212608678426105
+lower with progression,255,Beta-oxidation of very long chain fatty acids,1,44,0.47212608678426105
+lower with progression,256,Metabolism of folate and pterines,1,44,0.47212608678426105
+lower with progression,257,SUMOylation of transcription cofactors,1,44,0.47212608678426105
+lower with progression,258,FOXO-mediated transcription,2,110,0.4741326976501705
+lower with progression,259,Depurination,1,45,0.4797461170325379
+lower with progression,260,Transcriptional regulation of pluripotent stem cells,1,45,0.4797461170325379
+lower with progression,261,SLC-mediated transport of inorganic anions,1,45,0.4797461170325379
+lower with progression,262,Signaling by ALK,1,46,0.48725660906900126
+lower with progression,263,RHOF GTPase cycle,1,46,0.48725660906900126
+lower with progression,264,Transcriptional regulation by small RNAs,1,46,0.48725660906900126
+lower with progression,265,N-glycan antennae elongation in the medial/trans-Golgi,1,47,0.4946591309049936
+lower with progression,266,Glycogen metabolism,1,47,0.4946591309049936
+lower with progression,267,Post-translational modification: synthesis of GPI-anchored proteins,2,115,0.49736663862153363
+lower with progression,268,Signaling by WNT,5,322,0.5009335680615042
+lower with progression,269,RNA Polymerase II Transcription Pre-Initiation And Promoter Opening,1,48,0.5019552282006907
+lower with progression,270,Intra-Golgi traffic,1,48,0.5019552282006907
+lower with progression,271,Bile acid and bile salt metabolism,2,117,0.5064762129763918
+lower with progression,272,Telomere C-strand (Lagging Strand) Synthesis,1,49,0.5091464245824112
+lower with progression,273,Degradation of CRY and PER proteins,1,49,0.5091464245824112
+lower with progression,274,SLC-mediated transport of neurotransmitters,1,49,0.5091464245824112
+lower with progression,275,RNA Polymerase II Transcription Initiation,1,50,0.5162342219553611
+lower with progression,276,RNA Polymerase I Transcription Initiation,1,50,0.5162342219553611
+lower with progression,277,Methylation,1,50,0.5162342219553611
+lower with progression,278,Cleavage of the damaged pyrimidine ,1,50,0.5162342219553611
+lower with progression,279,Depyrimidination,1,50,0.5162342219553611
+lower with progression,280,Blood group systems biosynthesis,1,50,0.5162342219553611
+lower with progression,281,TGF-beta receptor signaling activates SMADs,1,51,0.5232201008120342
+lower with progression,282,Protein localization,5,332,0.5278577378314199
+lower with progression,283,RNA Polymerase II Promoter Escape,1,52,0.5301055205361273
+lower with progression,284,Antimicrobial peptides,2,123,0.5331549344690034
+lower with progression,285,RNA Polymerase II Transcription Initiation And Promoter Clearance,1,54,0.5435807163715429
+lower with progression,286,Formation of TC-NER Pre-Incision Complex,1,54,0.5435807163715429
+lower with progression,287,mRNA Splicing - Minor Pathway,1,54,0.5435807163715429
+lower with progression,288,N-glycan trimming in the ER and Calnexin/Calreticulin cycle,1,54,0.5435807163715429
+lower with progression,289,Cellular responses to stress,15,1039,0.5447281902234725
+lower with progression,290,Retrograde transport at the Trans-Golgi-Network,1,55,0.5501733083825981
+lower with progression,291,SLC-mediated transmembrane transport,6,414,0.5569312744784048
+lower with progression,292,Circadian clock,3,202,0.5620825733869879
+lower with progression,293,Vesicle-mediated transport,12,840,0.5624357668086553
+lower with progression,294,Mitochondrial biogenesis,2,131,0.5671707880178732
+lower with progression,295,Peptide hormone metabolism,2,131,0.5671707880178732
+lower with progression,296,TCF dependent signaling in response to WNT,3,204,0.5687433161981057
+lower with progression,297,Azathioprine ADME,1,58,0.5693875375208366
+lower with progression,298,Transcriptional regulation by RUNX2,2,133,0.5753921057559992
+lower with progression,299,Formation of RNA Pol II elongation complex ,1,60,0.5817407432001822
+lower with progression,300,AMPK-induced ERAD and lysosome mediated degradation of PD-L1(CD274),1,60,0.5817407432001822
+lower with progression,301,Chromosome Maintenance,2,135,0.5834994977952969
+lower with progression,302,RNA Polymerase II Transcription Elongation,1,61,0.5877843651000918
+lower with progression,303,B-WICH complex positively regulates rRNA expression,1,61,0.5877843651000918
+lower with progression,304,Regulation of clotting cascade,1,61,0.5877843651000918
+lower with progression,305,RNA Polymerase I Promoter Escape,1,62,0.5937410246046582
+lower with progression,306,"Base-Excision Repair, AP Site Formation",1,62,0.5937410246046582
+lower with progression,307,Glycosaminoglycan metabolism,3,212,0.5947573091920244
+lower with progression,308,NRAGE signals death through JNK,1,63,0.5996119677778016
+lower with progression,309,Chondroitin sulfate/dermatan sulfate metabolism,1,63,0.5996119677778016
+lower with progression,310,Detoxification of Reactive Oxygen Species,1,63,0.5996119677778016
+lower with progression,311,Gap-filling DNA repair synthesis and ligation in TC-NER,1,64,0.6053984229040835
+lower with progression,312,Synthesis of PA,1,65,0.6111016007413583
+lower with progression,313,Asparagine N-linked glycosylation,6,438,0.611757290757653
+lower with progression,314,Dual incision in TC-NER,1,66,0.6167226947697462
+lower with progression,315,Transport to the Golgi and subsequent modification,3,220,0.6197376947874518
+lower with progression,316,Extension of Telomeres,1,67,0.6222628814371872
+lower with progression,317,Sialic acid metabolism,1,67,0.6222628814371872
+lower with progression,318,NAD+ and Sirtuins regulate the circadian clock,1,67,0.6222628814371872
+lower with progression,319,Amino acid transport across the plasma membrane,1,67,0.6222628814371872
+lower with progression,320,Synthesis of substrates in N-glycan biosythesis,2,145,0.6223230653146805
+lower with progression,321,Reproduction,2,146,0.6260485212473506
+lower with progression,322,RAB geranylgeranylation,1,68,0.6277233204014698
+lower with progression,323,Signaling by ERBB2,1,68,0.6277233204014698
+lower with progression,324,Sphingolipid de novo biosynthesis,1,68,0.6277233204014698
+lower with progression,325,Regulation of RUNX2 expression and activity,1,69,0.6331051547688347
+lower with progression,326,Endogenous sterols,1,69,0.6331051547688347
+lower with progression,327,Coagulation pathway,1,69,0.6331051547688347
+lower with progression,328,Semaphorin interactions,1,70,0.6384095113292501
+lower with progression,329,DNA Damage/Telomere Stress Induced Senescence,1,71,0.6436375007882618
+lower with progression,330,Estrogen-dependent gene expression,2,153,0.6513335747599535
+lower with progression,331,Retinoid metabolism and transport,1,73,0.6538687421708484
+lower with progression,332,MITF-M-regulated melanocyte development,3,233,0.6580636574607739
+lower with progression,333,Beta-catenin independent WNT signaling,2,155,0.6583046475946068
+lower with progression,334,SLC-mediated transport of amino acids,1,75,0.6638074514804078
+lower with progression,335,Drug ADME,3,236,0.6665045463747454
+lower with progression,336,O-linked glycosylation of mucins,1,76,0.6686697188858302
+lower with progression,337,Regulation of the circadian clock,1,76,0.6686697188858302
+lower with progression,338,Metabolism of lipids,20,1491,0.6751915138441362
+lower with progression,339,COPII-mediated vesicle transport,1,78,0.6781851738511424
+lower with progression,340,Downstream signaling events of B Cell Receptor (BCR),1,78,0.6781851738511424
+lower with progression,341,Regulation of CDH1 Gene Transcription,1,78,0.6781851738511424
+lower with progression,342,Cytosolic sensors of pathogen-associated DNA ,1,78,0.6781851738511424
+lower with progression,343,Positive epigenetic regulation of rRNA expression,1,79,0.6828403557440776
+lower with progression,344,NoRC negatively regulates rRNA expression,1,79,0.6828403557440776
+lower with progression,345,Transcriptional and post-translational regulation of MITF-M expression and activity,1,79,0.6828403557440776
+lower with progression,346,ECM proteoglycans,1,79,0.6828403557440776
+lower with progression,347,Metabolism of carbohydrates and carbohydrate derivatives,6,476,0.6903584298585699
+lower with progression,348,ER to Golgi Anterograde Transport,2,165,0.6915008490340842
+lower with progression,349,SLC-mediated transport of organic anions,1,82,0.6964073881126354
+lower with progression,350,Transcription-Coupled Nucleotide Excision Repair (TC-NER),1,83,0.700800055249835
+lower with progression,351,RNA Polymerase II Pre-transcription Events,1,83,0.700800055249835
+lower with progression,352,Signaling by Receptor Tyrosine Kinases,8,633,0.7015103909510663
+lower with progression,353,Cotranslational targeting of proteins to the endoplasmic reticulum,2,169,0.7040193043650528
+lower with progression,354,MITF-M-dependent gene expression,2,169,0.7040193043650528
+lower with progression,355,Iron uptake and transport,1,84,0.7051294305195651
+lower with progression,356,Cholesterol biosynthesis,1,84,0.7051294305195651
+lower with progression,357,Gene Silencing by RNA,1,85,0.7093964220396027
+lower with progression,358,Nuclear Receptor transcription pathway,1,86,0.7136019249528578
+lower with progression,359,TP53 Regulates Transcription of DNA Repair Genes,1,86,0.7136019249528578
+lower with progression,360,"Biosynthesis of the N-glycan precursor (dolichol lipid-linked oligosaccharide, LLO) and transfer to a nascent protein",2,173,0.7161139336365498
+lower with progression,361,RNA Polymerase I Transcription,1,87,0.717746821611962
+lower with progression,362,Signaling by FGFR2,1,88,0.721831981761242
+lower with progression,363,Negative epigenetic regulation of rRNA expression,1,88,0.721831981761242
+lower with progression,364,PKR-mediated signaling,1,88,0.721831981761242
+lower with progression,365,Biosynthesis of DHA-derived SPMs,1,89,0.725858262716152
+lower with progression,366,Signaling by NOTCH,3,260,0.7285891013878398
+lower with progression,367,TNFR2 non-canonical NF-kB pathway,1,91,0.7337375552187843
+lower with progression,368,Protein-protein interactions at synapses,1,93,0.7413913157238194
+lower with progression,369,MAPK6/MAPK4 signaling,1,93,0.7413913157238194
+lower with progression,370,Regulation of PD-L1(CD274) Post-translational modification,1,94,0.745135637668044
+lower with progression,371,RAB GEFs exchange GTP for GDP on RABs,1,94,0.745135637668044
+lower with progression,372,"Gamma carboxylation, hypusinylation, hydroxylation, and arylsulfatase activation",1,95,0.7488259730345042
+lower with progression,373,Extracellular matrix organization,4,351,0.7504303881159908
+lower with progression,374,ER-Phagosome pathway,1,98,0.7595807556878913
+lower with progression,375,Deubiquitination,3,275,0.762583983879878
+lower with progression,376,Anchoring of the basal body to the plasma membrane,1,99,0.7630627859816141
+lower with progression,377,Base Excision Repair,1,99,0.7630627859816141
+lower with progression,378,Ub-specific processing proteases,2,192,0.7680271212399442
+lower with progression,379,Regulation of CDH1 Expression and Function,2,193,0.7705170641312055
+lower with progression,380,Regulation of Expression and Function of Type I Classical Cadherins,2,193,0.7705170641312055
+lower with progression,381,Mitochondrial protein degradation,1,104,0.7797339060874853
+lower with progression,382,Transport of small molecules,12,996,0.7838188870751384
+lower with progression,383,GPCR ligand binding,7,610,0.7839767563349203
+lower with progression,384,Cellular Senescence,2,200,0.787304902265976
+lower with progression,385,COPI-dependent Golgi-to-ER retrograde traffic,1,107,0.7891704066846974
+lower with progression,386,Potassium Channels,1,107,0.7891704066846974
+lower with progression,387,CLEC7A (Dectin-1) signaling,1,107,0.7891704066846974
+lower with progression,388,Post-translational protein phosphorylation,1,109,0.7952366507932684
+lower with progression,389,Signaling by FGFR,1,109,0.7952366507932684
+lower with progression,390,Peptide ligand-binding receptors,2,205,0.7986282184197746
+lower with progression,391,ABC-family protein mediated transport,1,111,0.8011290679424569
+lower with progression,392,Signaling by Nuclear Receptors,4,380,0.8028003111040303
+lower with progression,393,Phase I - Functionalization of compounds,3,297,0.8061360725555242
+lower with progression,394,Signaling by Rho GTPases,8,708,0.8088422890064981
+lower with progression,395,Opioid Signalling,1,114,0.8096525803070053
+lower with progression,396,Interleukin-4 and Interleukin-13 signaling,2,211,0.81151152012721
+lower with progression,397,Cell-cell junction organization,3,300,0.8115243458285887
+lower with progression,398,Response of endothelial cells to shear stress,1,115,0.8124121219427708
+lower with progression,399,Antigen processing: Ubiquitination & Proteasome degradation,3,302,0.8150461380414316
+lower with progression,400,Activation of anterior HOX genes in hindbrain development during early embryogenesis,1,116,0.8151318244821698
+lower with progression,401,Activation of HOX genes during differentiation,1,116,0.8151318244821698
+lower with progression,402,Nucleotide Excision Repair,1,117,0.8178122606641434
+lower with progression,403,Platelet homeostasis,1,117,0.8178122606641434
+lower with progression,404,Regulation of Homotypic Cell-Cell Adhesion,2,216,0.8216827658513459
+lower with progression,405,Signaling by GPCR,10,877,0.8220530122605065
+lower with progression,406,Intra-Golgi and retrograde Golgi-to-ER traffic,2,218,0.8256121090859696
+lower with progression,407,GTP hydrolysis and joining of the 60S ribosomal subunit,1,120,0.8256235761668507
+lower with progression,408,Antigen processing-Cross presentation,1,120,0.8256235761668507
+lower with progression,409,Stimuli-sensing channels,1,120,0.8256235761668507
+lower with progression,410,"Signaling by Rho GTPases, Miro GTPases and RHOBTB3",8,724,0.827471993163855
+lower with progression,411,Class I MHC mediated antigen processing & presentation,4,402,0.8363223555784803
+lower with progression,412,Inositol phosphate metabolism,1,125,0.8379082374351456
+lower with progression,413,Neuronal System,5,488,0.837976552450859
+lower with progression,414,Transcriptional Regulation by TP53,5,488,0.837976552450859
+lower with progression,415,Cellular responses to mechanical stimuli,1,126,0.8402597346021539
+lower with progression,416,Regulation of Insulin-like Growth Factor (IGF) transport and uptake by Insulin-like Growth Factor Binding Proteins (IGFBPs),1,127,0.8425772605945155
+lower with progression,417,Interferon alpha/beta signaling,1,129,0.8471123468950658
+lower with progression,418,Rab regulation of trafficking,1,129,0.8471123468950658
+lower with progression,419,Cap-dependent Translation Initiation,1,130,0.8493308637205541
+lower with progression,420,Eukaryotic Translation Initiation,1,130,0.8493308637205541
+lower with progression,421,Class A/1 (Rhodopsin-like receptors),4,415,0.8538084287864836
+lower with progression,422,Cell junction organization,3,327,0.8545602418092273
+lower with progression,423,Nuclear events mediated by NFE2L2,1,135,0.8599517061335961
+lower with progression,424,Initial triggering of complement,1,136,0.8619846640136544
+lower with progression,425,Neddylation,2,241,0.8655151459582392
+lower with progression,426,FCERI mediated Ca+2 mobilization,1,138,0.8659628405248807
+lower with progression,427,Fatty acid metabolism,4,426,0.8673482001953062
+lower with progression,428,MLL4 and MLL3 complexes regulate expression of PPARG target genes in adipogenesis and hepatic steatosis,1,139,0.8679088991489128
+lower with progression,429,Epigenetic regulation of adipogenesis genes by MLL3 and MLL4 complexes,1,139,0.8679088991489128
+lower with progression,430,Epigenetic regulation of gene expression by MLL3 and MLL4 complexes,1,139,0.8679088991489128
+lower with progression,431,mRNA Polyadenylation,1,139,0.8679088991489128
+lower with progression,432,Platelet degranulation ,1,140,0.8698268213273672
+lower with progression,433,Transcriptional regulation by RUNX1,2,247,0.8744566289381785
+lower with progression,434,Transmission across Chemical Synapses,3,342,0.8745714335702347
+lower with progression,435,Response to elevated platelet cytosolic Ca2+,1,147,0.8824977626778068
+lower with progression,436,Golgi-to-ER retrograde transport,1,148,0.8842046991697188
+lower with progression,437,Regulation of Complement cascade,1,148,0.8842046991697188
+lower with progression,438,ESR-mediated signaling,2,256,0.8868495601772849
+lower with progression,439,O-linked glycosylation,1,153,0.892376027039657
+lower with progression,440,Cell surface interactions at the vascular wall,2,266,0.8992891464838558
+lower with progression,441,Adherens junctions interactions,2,267,0.9004607304876898
+lower with progression,442,Cell-Cell communication,3,365,0.9005486896697322
+lower with progression,443,Biosynthesis of specialized proresolving mediators (SPMs),1,161,0.904272338897381
+lower with progression,444,mRNA 3'-end processing,1,164,0.908387634534204
+lower with progression,445,Arachidonate metabolism,1,167,0.9123267326096071
+lower with progression,446,Axon guidance,5,565,0.9146924733118985
+lower with progression,447,KEAP1-NFE2L2 pathway,1,169,0.9148586339722217
+lower with progression,448,Epigenetic regulation by WDR5-containing histone modifying complexes,1,171,0.9173177178778974
+lower with progression,449,Complement cascade,1,172,0.9185206073697929
+lower with progression,450,Organelle biogenesis and maintenance,3,385,0.9190990210440202
+lower with progression,451,Cellular response to chemical stress,2,287,0.9213865829098467
+lower with progression,452,Somatic hypermutation of immunoglobulin genes,1,178,0.9253806523444729
+lower with progression,453,"Platelet activation, signaling and aggregation",2,292,0.9259325937953702
+lower with progression,454,SUMO E3 ligases SUMOylate target proteins,1,184,0.9316653659461268
+lower with progression,455,Post-translational protein modification,18,1675,0.9322138859292525
+lower with progression,456,G alpha (s) signalling events,1,190,0.9374228114383677
+lower with progression,457,C-type lectin receptors (CLRs),1,190,0.9374228114383677
+lower with progression,458,Regulation of PD-L1(CD274) expression,1,191,0.9383342728483648
+lower with progression,459,Cytochrome P450 - arranged by substrate type,1,191,0.9383342728483648
+lower with progression,460,Nervous system development,5,602,0.9386225895576911
+lower with progression,461,Signaling by the B Cell Receptor (BCR),1,193,0.9401177255453479
+lower with progression,462,SUMOylation,1,193,0.9401177255453479
+lower with progression,463,GPCR downstream signalling,7,794,0.9445260477339447
+lower with progression,464,Assembly of the 9+0 primary cilium,1,207,0.9512432337858518
+lower with progression,465,mRNA Splicing - Major Pathway,1,213,0.9553567974376168
+lower with progression,466,Biological oxidations,4,543,0.9563761834740926
+lower with progression,467,Co-inhibition by PD-1,1,219,0.9591246496170142
+lower with progression,468,Glycerophospholipid biosynthesis,1,220,0.9597210826882037
+lower with progression,469,Epigenetic regulation of gene expression,2,345,0.9610876087073825
+lower with progression,470,mRNA Splicing,1,224,0.9620213947899009
+lower with progression,471,Neurotransmitter receptors and postsynaptic signal transmission,1,231,0.965736570333992
+lower with progression,472,Fc epsilon receptor (FCERI) signaling,1,231,0.965736570333992
+lower with progression,473,MAPK family signaling cascades,2,367,0.9703847711759928
+lower with progression,474,Cilium Assembly,1,254,0.9755772215100114
+lower with progression,475,Phase II - Conjugation of compounds,1,257,0.9766331090116003
+lower with progression,476,Hemostasis,6,828,0.9819658154637155
+lower with progression,477,Regulation of T cell activation by CD28 family,1,276,0.9823414713503961
+lower with progression,478,DNA Repair,2,414,0.9836328915210792
+lower with progression,479,Innate Immune System,12,1395,0.9845593312360711
+lower with progression,480,Metabolism of proteins,24,2405,0.9851232042908864
+lower with progression,481,Antimicrobial mechanism of IFN-stimulated genes,1,288,0.9852071878600132
+lower with progression,482,Metabolism,41,3764,0.9872557428118238
+lower with progression,483,RAF/MAP kinase cascade,1,309,0.9891524880815233
+lower with progression,484,Phospholipid metabolism,1,313,0.9897753375644107
+lower with progression,485,MAPK1/MAPK3 signaling,1,316,0.9902189858491905
+lower with progression,486,Processing of Capped Intron-Containing Pre-mRNA,1,317,0.9903625667020981
+lower with progression,487,Generic Transcription Pathway,13,1575,0.9925931166588434
+lower with progression,488,Signal Transduction,30,3054,0.9949393471978507
+lower with progression,489,Interferon Signaling,2,511,0.9953511899709561
+lower with progression,490,Developmental Biology,18,2080,0.9956656950091679
+lower with progression,491,Signaling by Interleukins,3,646,0.9958960086073009
+lower with progression,492,Metabolism of amino acids and derivatives,3,658,0.996456218167173
+lower with progression,493,RNA Polymerase II Transcription,13,1679,0.9969137327926694
+lower with progression,494,Affinity selection of immunoglobulins,1,414,0.9977140958254384
+lower with progression,495,Immunoglobulin maturation,1,414,0.9977140958254384
+lower with progression,496,Translation,1,423,0.9980006737154188
+lower with progression,497,G alpha (i) signalling events,1,427,0.9981162736687836
+lower with progression,498,Cell Cycle,3,730,0.9985506420249982
+lower with progression,499,Gene expression (Transcription),14,1924,0.9992105059863277
+lower with progression,500,Adaptive Immune System,7,1247,0.999298074438769
+lower with progression,501,Cytokine Signaling in Immune system,6,1197,0.9996343041382029
+lower with progression,502,Immune System,20,3040,0.9999964869651589
+lower with progression,503,Metabolism of RNA,1,862,0.9999973550421473
+lower with progression,504,Sensory Perception,3,1252,0.9999986679094333

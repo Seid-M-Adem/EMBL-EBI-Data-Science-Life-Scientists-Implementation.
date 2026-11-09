@@ -1,6 +1,6 @@
 # Gene Expression Project
 
-> **Status:** ⚪ Not started · **Trainers:** Victor Muñiz (CIMAT, México) & Nelly Selem (CCM-UNAM, México) ·
+> **Status:** ✅ Implementation complete (4 / 4 tasks) · **Trainers:** Victor Muñiz (CIMAT, México) & Nelly Selem (CCM-UNAM, México) ·
 > **Course page:** [Gene expression](https://www.ebi.ac.uk/training/materials/data-science-for-life-scientists-materials-2026/group-projects/gene-expression/)
 
 ## Overview
@@ -66,11 +66,21 @@ Results from that run (held-out test set, `recurrence.3y`):
 - **Silhouette score:** how well each sample fits its cluster compared with the nearest other cluster.
 - **Select features on training data only.** Choosing genes using the whole dataset leaks test information.
 
-## 🛠️ My Implementation (planned)
-- [ ] Leakage-free pipeline: feature selection *inside* cross-validation folds
-- [ ] Compare selection strategies with nested CV and confidence intervals
-- [ ] Survival-aware extension: Cox model or random survival forest on DFI/PFI
-- [ ] Biological interpretation: pathway enrichment of the top-ranked genes
+## 🛠️ My Implementation
+See [`implementation/`](implementation/). Both notebooks explain each step in plain language for readers new to the field.
+- [x] Leakage-free pipeline: gene selection *inside* cross-validation folds (`GeneSelector` in [`src/dsls/expression.py`](../../src/dsls/expression.py)), with a shuffled-label test that exposes the leaky version → [notebook 01](implementation/01_recurrence_honest_evaluation.ipynb)
+- [x] Selection strategies × classifiers on the same 50 splits; nested cross-validation; a paired bootstrap interval against the clinical baseline; single-split variability → [notebook 01](implementation/01_recurrence_honest_evaluation.ipynb)
+- [x] Survival-aware extension: Kaplan–Meier, log-rank and Cox models on the progression-free interval, cross-validated concordance ([`src/dsls/survival.py`](../../src/dsls/survival.py)) → [notebook 02](implementation/02_survival_and_pathways.ipynb)
+- [x] Biological interpretation: a predefined Reactome proliferation score with a random-gene-set control, and Reactome pathway enrichment → [notebook 02](implementation/02_survival_and_pathways.ipynb)
 
 ## 📝 Notes & Reflections
-_Key takeaways, challenges, and design decisions will be recorded here as the work is completed._
+- **Start with what is already known.** The ISUP grade alone gave AUC 0.69. Without that baseline, "expression
+  predicts recurrence with AUC 0.69" would have looked like a finding.
+- **The shuffled-label test is the fastest leakage check I know.** Leaky gene selection scored noise at 0.74, higher
+  than the real outcome scored honestly. One extra run settles whether a pipeline is honest.
+- **With 243 patients, single test sets can't rank models.** The same model's test AUC spanned 0.52–0.72 across
+  random splits; repeated cross-validation on shared splits and paired intervals were needed.
+- **A hypothesis beat a search.** A predefined proliferation score, with random gene sets as a control, explained
+  more about the biology than ranking 20,000 genes, and Reactome confirmed the same cell-cycle and DNA-repair
+  signal independently.
+- **Survival analysis used the data better** than the 3-year label: 21 late events and all follow-up time came back.

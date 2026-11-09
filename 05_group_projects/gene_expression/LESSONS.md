@@ -6,6 +6,11 @@ in [`LEARNING_GUIDE.md`](../../LEARNING_GUIDE.md).*
 **What this project teaches:** how to apply ML to cancer genomics data honestly. That means predicting a clinical
 outcome when there are 100× more genes than patients, and exploring whether cancer types have molecular "signatures".
 
+**Worked examples in this repo:** [an honest evaluation of recurrence prediction](implementation/01_recurrence_honest_evaluation.ipynb)
+(Lessons 1–4) and [time to recurrence, proliferation and pathways](implementation/02_survival_and_pathways.ipynb)
+(Lesson 7). The pan-cancer exploration of Lesson 6 is done in module
+[03.1](../../03_foundations_of_machine_learning/01_intro_and_fundamentals/implementation/).
+
 ---
 
 ## Background · Gene expression and TCGA in plain language
@@ -136,6 +141,28 @@ tumour types. That shows whether tissue of origin dominates the molecular signal
 
 **Caution:** clusters can reflect **batch** (sequencing centre, processing date) rather than biology. Always check
 whether clusters line up with technical variables.
+
+---
+
+## Lesson 7 · Time-to-event data: survival analysis
+
+**In one sentence:** when patients are followed for different lengths of time, analyse *when* the event happened,
+not just *whether* it happened by a fixed date.
+
+1. **Censoring:** a patient followed for 4 years without recurrence tells you "no event for at least 4 years", not
+   "never". Dropping such patients, or counting them as "no event", throws away or distorts information.
+2. **Kaplan–Meier curve:** the share of patients still event-free over time, stepping down at each event. Compare
+   groups (e.g. tumour grades) with a **log-rank test**.
+3. **Cox model and hazard ratio (HR):** how much a factor multiplies the risk of the event at any moment. HR = 1.7
+   per grade step means each step up in grade raises the momentary risk by 70 %. Put several factors in one model to
+   see what each adds *given the others*.
+4. **Concordance index (C):** the survival version of AUC. Of all pairs of patients where one had the event first,
+   how often did the model give that patient the higher risk? 0.5 is chance.
+5. **Test a hypothesis, not 20,000 genes:** a predefined gene-set score (e.g. the cell-division genes of one pathway)
+   uses no outcome information, so it can't leak. Compare it with **random gene sets of the same size** to show it is
+   the biology, not just averaging.
+6. **Pathway enrichment:** ask whether the genes that differ between groups fall into known pathways (e.g. from
+   **Reactome**) more often than chance. It describes the difference; it doesn't validate a predictor.
 
 ---
 

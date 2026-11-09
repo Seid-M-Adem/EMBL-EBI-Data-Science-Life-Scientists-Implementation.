@@ -49,3 +49,47 @@ def test_embedding_scores_separate_good_from_scrambled():
     assert knn_label_agreement(high, shuffled, k=5) < 0.5
     with pytest.raises(ValueError):
         centroid_distance_correlation(high, high, labels % 2)
+
+
+def _toy_expression():
+    rng = np.random.default_rng(0)
+    X = pd.DataFrame(rng.normal(size=(40, 6)), columns=[f"G{i}" for i in range(6)])
+    y = np.r_[np.zeros(20), np.ones(20)]
+    X["G3"] += 3 * y  # strongly differentially expressed
+    X["G5"] *= 10  # highest variance, unrelated to y
+    X["G0"] = 1.0  # constant
+    return X, y
+
+
+def test_gene_selector_methods():
+    from dsls.expression import GeneSelector
+
+    X, y = _toy_expression()
+    assert GeneSelector(k=1).fit(X, y).genes_ == ["G3"]
+    assert GeneSelector(k=1, method="variance").fit(X).genes_ == ["G5"]
+    sel = GeneSelector(k=2, method="fixed", genes=["NOPE", "G4", "G2", "G1"]).fit(X)
+    assert sel.genes_ == ["G4", "G2"]
+    assert list(sel.transform(X).columns) == ["G4", "G2"]
+    assert (
+        GeneSelector(k=3, method="random", seed=1).fit(X).genes_
+        == GeneSelector(k=3, method="random", seed=1).fit(X).genes_
+    )
+    assert GeneSelector(k=6).fit(X, y).genes_[-1] == "G0"  # constant gene: p treated as 1, ranked last
+
+
+def test_gene_selector_refits_inside_cross_validation():
+    from sklearn.base import clone
+    from sklearn.linear_model import LogisticRegression
+    from sklearn.model_selection import cross_val_score
+    from sklearn.pipeline import make_pipeline
+
+    from dsls.expression import GeneSelector
+
+    X, y = _toy_expression()
+    pipe = make_pipeline(GeneSelector(k=1), LogisticRegression())
+    assert cross_val_score(pipe, X, y, cv=4).mean() >= 0.85  # G3 shifts by 3 SD: easy, not perfect
+    assert not hasattr(clone(pipe)[0], "genes_")  # unfitted copies carry no selection
+    with pytest.raises(ValueError):
+        GeneSelector(method="mannwhitney").fit(X)
+    with pytest.raises(TypeError):
+        GeneSelector().fit(X.to_numpy(), y)

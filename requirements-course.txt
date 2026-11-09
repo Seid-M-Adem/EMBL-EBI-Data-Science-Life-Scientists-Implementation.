@@ -21,6 +21,7 @@ ipywidgets>=8.1       # progress bars in notebooks (tqdm.notebook)
 # Data formats
 pyarrow>=15.0          # Parquet (bioimaging inputs)
 pyreadr>=0.5           # R .RDS files (gene-expression data)
+statsmodels>=0.14      # survival analysis: Kaplan–Meier, Cox models (gene-expression project)
 tifffile>=2024.1       # Microscopy images
 imagecodecs>=2024.1    # LZW-compressed TIFFs (bioimaging 01_plot_images)
 sh>=2.0                # bioimaging 01_plot_images calls the `aws` CLI through it

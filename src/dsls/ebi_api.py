@@ -47,6 +47,7 @@ __all__ = [
     "json_next",
     "link_header_next",
     "mgnify",
+    "reactome",
     "uniprot",
 ]
 
@@ -163,12 +164,42 @@ class EBIClient:
     def get_json(self, path: str, params: dict[str, Any] | None = None, **kwargs: Any) -> Any:
         return self.get(path, params, **kwargs).json()
 
-    def _fetch(self, url: str, accept: str) -> Response:
+    def post(
+        self,
+        path: str,
+        body: str,
+        params: dict[str, Any] | None = None,
+        *,
+        content_type: str = "text/plain",
+        accept: str = "application/json",
+        refresh: bool = False,
+    ) -> Response:
+        """POST ``body`` to ``path``, for read-only analysis services that take their input in the request body.
+
+        Cached like :meth:`get`; the cache key includes a hash of the body, so a different input is a different
+        entry. Only use it for requests that don't change anything on the server.
+        """
+        url = build_url(self.base_url, path, params)
+        digest = hashlib.sha256(f"{content_type}\n{body}".encode()).hexdigest()[:16]
+        key = f"POST {url} body={digest}"
+        if not refresh and (cached := self._cache_read(key, accept)):
+            return cached
+        response = self._fetch(url, accept, data=body.encode(), content_type=content_type)
+        self._cache_write(key, accept, response)
+        return response
+
+    def _fetch(
+        self, url: str, accept: str, data: bytes | None = None, content_type: str | None = None
+    ) -> Response:
         last_error = ""
         for attempt in range(self.max_retries + 1):
             retry_after: float | None = None
             try:
-                r = self.session.get(url, headers={"Accept": accept}, timeout=self.timeout)
+                if data is None:
+                    r = self.session.get(url, headers={"Accept": accept}, timeout=self.timeout)
+                else:
+                    headers = {"Accept": accept, "Content-Type": content_type or "text/plain"}
+                    r = self.session.post(url, data=data, headers=headers, timeout=self.timeout)
             except requests.RequestException as exc:  # connection reset, DNS, timeout, ...
                 last_error = f"{type(exc).__name__}: {exc}"
             else:
@@ -328,6 +359,15 @@ def ena_portal(**kwargs: Any) -> EBIClient:
     """ENA Portal API (https://www.ebi.ac.uk/ena/portal/api). It returns all rows in one response
     when ``limit=0``, so no pagination strategy is needed; use ``accept="text/tab-separated-values"``."""
     return _client("https://www.ebi.ac.uk/ena/portal/api", "ena", None, None, **kwargs)
+
+
+def reactome(**kwargs: Any) -> EBIClient:
+    """Reactome Analysis Service (https://reactome.org/AnalysisService): pathway over-representation analysis.
+
+    Post a newline-separated list of identifiers (gene symbols, UniProt accessions) with :meth:`EBIClient.post` to
+    ``identifiers/projection``; results are under ``pathways``.
+    """
+    return _client("https://reactome.org/AnalysisService", "reactome", None, "pathways", **kwargs)
 
 
 def _parse_retry_after(value: str | None) -> float | None:

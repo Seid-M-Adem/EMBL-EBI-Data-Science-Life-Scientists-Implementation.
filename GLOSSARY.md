@@ -83,6 +83,7 @@ GE / BI / SB = the [gene-expression](05_group_projects/gene_expression/LESSONS.m
 | **Clustering** | Grouping samples by similarity without labels (k-means, hierarchical, DBSCAN) | 03.1, GE |
 | **CNN** | Convolutional neural network, designed for images | 04.1, SB |
 | **Cohen's κ** | Agreement corrected for chance; 0 for a model that always predicts the majority | GE |
+| **Concordance index (C)** | The survival version of AUC: how often the patient with the higher predicted risk has the event first | GE |
 | **Confusion matrix** | A table of true vs predicted classes | 03.2, 04.2 |
 | **Cross-validation (k-fold)** | Rotating which part of the data is held out, then averaging scores | 03.1, 03.2 |
 | **Data leakage** | Test information influencing training, which inflates scores | 03.2, GE |
@@ -98,8 +99,10 @@ GE / BI / SB = the [gene-expression](05_group_projects/gene_expression/LESSONS.m
 | **Gradient descent** | Repeatedly adjusting weights a small step in the direction that lowers the loss | 04.1 |
 | **Grounding** | Making an LLM answer from supplied evidence (retrieved documents, tool results) rather than from memory | 04.3 |
 | **Hallucination** | A fluent but false statement produced by an LLM | 04.3 |
+| **Hazard ratio** | How much a factor multiplies the momentary risk of an event in a Cox model | GE |
 | **Hybrid search** | Combining exact matching on identifiers with keyword or neural search | 04.3 |
 | **Hyperparameter** | A setting chosen before training (tree depth, learning rate) | 03.2 |
+| **Kaplan–Meier curve** | The share of patients still event-free over time, accounting for censoring | GE |
 | **Learning curve** | Training and validation performance plotted over time or data size | 04.2 |
 | **LLM** | Large language model, trained to predict the next token | 04.3 |
 | **Loss function** | A number measuring how wrong the model is; training minimises it | 04.1 |
@@ -107,6 +110,7 @@ GE / BI / SB = the [gene-expression](05_group_projects/gene_expression/LESSONS.m
 | **Nested cross-validation** | Inner CV for tuning, outer CV for an honest estimate of the tuned model | 03.2 |
 | **Overfitting / underfitting** | Memorising noise / being too simple to capture the pattern | 03.1, 04.2 |
 | **p ≫ n** | Far more features than samples, common in genomics | 03.1, GE |
+| **Pathway enrichment** | Testing whether genes of interest fall into known pathways (e.g. Reactome) more often than chance | GE |
 | **PCA** | Principal component analysis: linear directions of greatest variance | 03.1, 02.2 |
 | **Pipeline** | A chain of preprocessing and model steps fitted together, which prevents leakage | 03.2 |
 | **Precision / recall** | Of predicted positives, how many are real / of real positives, how many were found | 03.2 |
@@ -117,6 +121,7 @@ GE / BI / SB = the [gene-expression](05_group_projects/gene_expression/LESSONS.m
 | **Recall@k** | How often the correct document is among a search's top *k* results | 04.3 |
 | **Silhouette score** | How well each sample fits its cluster compared with the nearest other cluster (−1 to 1) | GE |
 | **Stratified split** | A split that keeps class proportions equal in each part | 03.2 |
+| **Survival analysis / censoring** | Analysing time until an event; *censored* patients left follow-up before any event | GE |
 | **Temperature (sampling)** | How adventurous an LLM's choice of next token is; 0 always takes the most likely one | 04.3 |
 | **TF-IDF** | Weighting words by how often they appear in a document and how rare they are overall; classic keyword search | 04.1, 04.3 |
 | **t-SNE / UMAP** | Non-linear 2-D maps preserving neighbours; distances between clusters aren't meaningful | 03.1 |
