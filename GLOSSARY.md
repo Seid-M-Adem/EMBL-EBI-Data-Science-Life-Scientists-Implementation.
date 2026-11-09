@@ -96,7 +96,9 @@ GE / BI / SB = the [gene-expression](05_group_projects/gene_expression/LESSONS.m
 | **Fine-tuning** | Adapting a pre-trained model to a specific task | 04.1, SB |
 | **Foundation model** | A large model pre-trained on broad data and reused for many tasks | 03.1, 04.3 |
 | **Gradient descent** | Repeatedly adjusting weights a small step in the direction that lowers the loss | 04.1 |
+| **Grounding** | Making an LLM answer from supplied evidence (retrieved documents, tool results) rather than from memory | 04.3 |
 | **Hallucination** | A fluent but false statement produced by an LLM | 04.3 |
+| **Hybrid search** | Combining exact matching on identifiers with keyword or neural search | 04.3 |
 | **Hyperparameter** | A setting chosen before training (tree depth, learning rate) | 03.2 |
 | **Learning curve** | Training and validation performance plotted over time or data size | 04.2 |
 | **LLM** | Large language model, trained to predict the next token | 04.3 |
@@ -108,13 +110,18 @@ GE / BI / SB = the [gene-expression](05_group_projects/gene_expression/LESSONS.m
 | **PCA** | Principal component analysis: linear directions of greatest variance | 03.1, 02.2 |
 | **Pipeline** | A chain of preprocessing and model steps fitted together, which prevents leakage | 03.2 |
 | **Precision / recall** | Of predicted positives, how many are real / of real positives, how many were found | 03.2 |
+| **Prompt** | The instructions and input text given to an LLM; its wording changes the answers and must be tested | 04.3 |
 | **PR-AUC / ROC-AUC** | Areas under the precision–recall and ROC curves; how well a model ranks positives | 03.2, BI |
 | **RAG** | Retrieval-augmented generation: an LLM answers from retrieved documents | 04.3 |
 | **Random forest / XGBoost** | Ensembles of decision trees (bagged / boosted) | 03.2, BI |
+| **Recall@k** | How often the correct document is among a search's top *k* results | 04.3 |
 | **Silhouette score** | How well each sample fits its cluster compared with the nearest other cluster (−1 to 1) | GE |
 | **Stratified split** | A split that keeps class proportions equal in each part | 03.2 |
+| **Temperature (sampling)** | How adventurous an LLM's choice of next token is; 0 always takes the most likely one | 04.3 |
+| **TF-IDF** | Weighting words by how often they appear in a document and how rare they are overall; classic keyword search | 04.1, 04.3 |
 | **t-SNE / UMAP** | Non-linear 2-D maps preserving neighbours; distances between clusters aren't meaningful | 03.1 |
 | **Test / validation set** | Data held out for the final estimate / for making modelling choices | 03.2, 04.2 |
 | **Token** | A unit of text (often a word piece) processed by language models | 04.3 |
+| **Tokeniser** | The fixed procedure that splits text into a model's tokens; built from its training text | 04.3 |
 | **Transfer learning** | Reusing knowledge from a model trained on another task | SB |
 | **Transformer** | The attention-based architecture behind modern language and protein models | 04.1 |

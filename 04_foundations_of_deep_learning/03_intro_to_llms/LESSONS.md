@@ -6,6 +6,10 @@ in [`LEARNING_GUIDE.md`](../../LEARNING_GUIDE.md).*
 **What this session teaches:** what happens inside an LLM, how a raw text predictor becomes an assistant, why LLMs
 make things up, and how to use them **reliably** in scientific work.
 
+**Worked examples in this repo:** [tokens, gene symbols, DNA and proteins](implementation/01_tokens_genes_dna_proteins.ipynb)
+(Lessons 1, 4 and 6) and [a graded RAG system over UniProt](implementation/02_rag_over_uniprot.ipynb) (Lessons 4, 5
+and 7). Both run small open models on a laptop.
+
 ---
 
 ## Lesson 1 · The core task: predict the next token
