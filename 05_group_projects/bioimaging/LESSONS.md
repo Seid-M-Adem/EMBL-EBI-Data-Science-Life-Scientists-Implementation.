@@ -6,6 +6,9 @@ in [`LEARNING_GUIDE.md`](../../LEARNING_GUIDE.md).*
 **What this project teaches:** how microscope images of cells become numbers, and how those numbers can predict whether
 a chemical is toxic. The workflow is common in drug discovery and chemical safety.
 
+**Worked example in this repo:** [predicting liver-cell cytotoxicity from Cell Painting profiles](implementation/01_cytotoxicity_from_cell_painting.ipynb)
+(Lessons 4–6).
+
 ---
 
 ## Background · The biology in plain language

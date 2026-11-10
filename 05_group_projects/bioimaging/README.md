@@ -1,6 +1,6 @@
 # Bioimaging Project
 
-> **Status:** ⚪ Not started · **Trainer:** Guillaume Ollitrault ·
+> **Status:** ✅ Implementation complete (4 / 4 tasks) · **Trainer:** Guillaume Ollitrault ·
 > **Course page:** [Bioimaging](https://www.ebi.ac.uk/training/materials/data-science-for-life-scientists-materials-2026/group-projects/bioimaging/)
 
 ## Overview
@@ -80,11 +80,19 @@ Cell Painting channel metadata before relying on the labels.
 - **ToxCast:** the US EPA's high-throughput in-vitro toxicity screening data, used here as labels.
 - **Imbalanced endpoints:** active compounds are rare, so use PR-AUC, balanced accuracy and stratified splits.
 
-## 🛠️ My Implementation (planned)
-- [ ] Endpoint choice justified by class balance and biological relevance
-- [ ] XGBoost vs. logistic-regression baseline with scaffold- or compound-aware splitting
-- [ ] PyTorch MLP with early stopping, compared on identical splits
-- [ ] Interpretation: which compartments' features (Mito, ER, …) drive cytotoxicity predictions
+## 🛠️ My Implementation
+See [`implementation/`](implementation/). The notebook explains each step in plain language for readers new to the field.
+- [x] Endpoint choice justified by coverage, class balance and biological relevance (liver-cell cytotoxicity, 548 compounds, 24 % active) → [notebook 01](implementation/01_cytotoxicity_from_cell_painting.ipynb)
+- [x] XGBoost vs a logistic-regression baseline with compound-aware splitting, plus a no-training "profile strength" reference → [notebook 01](implementation/01_cytotoxicity_from_cell_painting.ipynb)
+- [x] PyTorch MLP with early stopping, compared on identical splits → [notebook 01](implementation/01_cytotoxicity_from_cell_painting.ipynb)
+- [x] Interpretation: per-channel and leave-one-channel-out models (which compartments drive predictions), plus error analysis → [notebook 01](implementation/01_cytotoxicity_from_cell_painting.ipynb)
 
 ## 📝 Notes & Reflections
-_Key takeaways, challenges, and design decisions will be recorded here as the work is completed._
+- **Always build the dumb baseline first.** "How much did the compound change the cells" scores ROC-AUC 0.78
+  without any training. Reporting 0.84 without it would have overstated what the model learned.
+- **One metric is not enough.** XGBoost beat the others on ROC-AUC in every repeat, yet all three tied on PR-AUC,
+  which is the metric that matches how a screen is actually used.
+- **Deep learning isn't the default.** The PyTorch network matched logistic regression and was the most variable.
+- **Redundancy is a result.** Every channel predicted about equally well, including unstained brightfield. For this
+  endpoint the expensive dyes add little; they should be judged on harder questions such as mode of action.
+- **Check the join.** A quarter of the profiled compounds never reached the model because names didn't match.
