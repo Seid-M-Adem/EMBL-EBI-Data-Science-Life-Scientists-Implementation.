@@ -68,7 +68,6 @@ and crystals can be tiny or blurred. Labels from humans are also imperfect.
 knowledge, and **fine-tune** it on the crystal images.
 
 ```python
-# needs torchvision (pip install torchvision), which isn't in this repo's environment yet
 import torch.nn as nn
 from torchvision import models
 model = models.resnet18(weights="IMAGENET1K_V1")      # pre-trained feature extractor
@@ -118,6 +117,53 @@ new training labels, so the model keeps improving with use.
 This is how ML is deployed in many real labs: it is not a one-off model but a cycle of **predict → review → relabel →
 retrain**, with monitoring for changes (a new imager, new plate types) that can silently reduce performance (**data
 drift**).
+
+---
+
+## Lesson 7 · When the training set is not as rare as real life (prior shift)
+
+**In one sentence:** the CRIMS training set is **60 % crystals**, a real plate is **about 7 %**, and that tenfold
+difference breaks every probability and every fixed threshold the model produces — while leaving its *ranking* of
+images untouched.
+
+**Why the datasets differ.** Nobody assembled the training set to be representative. They assembled it to be
+*learnable*: enough crystal examples for a network to generalise from. Collecting a representative set would mean
+labelling fourteen clear drops for every crystal. This is the normal situation in screening problems, not a mistake.
+
+**What breaks and what survives.**
+
+| | Survives the shift | Breaks |
+|---|---|---|
+| **Ranking metrics** — ROC-AUC, "is this image more crystal-like than that one" | ✅ | |
+| **Predicted probabilities** — "85 % sure this is a crystal" | | ❌ far too high |
+| **A threshold of 0.5** | | ❌ flags far too much |
+| **Precision, and how big the review pile is** | | ❌ far too optimistic |
+| **Balanced accuracy and recall** | ✅ mostly — each is an average *within* a class | |
+
+That last row is why the published AXIS numbers are balanced accuracy and crystal recall. Both average over the two
+classes separately, so neither moves much when the mix between classes changes. Plain accuracy and precision do.
+
+**The fix is one line of arithmetic, not more data.** If only the class balance changed and the images themselves
+did not, you shift the **log-odds** by the difference between the two prevalences:
+
+```python
+from dsls.crystals import shift_prior
+realistic = shift_prior(proba, train_prior=0.60, target_prior=0.067)
+```
+
+A prediction of 0.5 — carrying no evidence either way — becomes 0.067, the new base rate. Because the shift is the
+same for every image, the ordering never changes: ROC-AUC is identical before and after. Only the numbers you would
+actually act on move.
+
+> **In plain language.** A model trained on a crystal-rich set has absorbed "crystals are common" as a belief.
+> Prior correction tells it the truth about how rare they are, without retraining.
+
+- **Choose the threshold on validation data drawn from the deployment mix**, or correct the prior first. Picking a
+  threshold on the test set and then reporting that test score is a classic optimistic bias — the threshold has been
+  fitted to the data it is being scored on.
+- **Always report the review pile.** "94 % recall" means little if it comes with flagging a third of the plate.
+- **Check whether only the balance shifted.** Prior correction assumes the images of a crystal look the same in both
+  sets. A different imager or illumination breaks that assumption, and then arithmetic will not save you.
 
 ---
 

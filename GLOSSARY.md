@@ -115,6 +115,7 @@ GE / BI / SB = the [gene-expression](05_group_projects/gene_expression/LESSONS.m
 | **Pipeline** | A chain of preprocessing and model steps fitted together, which prevents leakage | 03.2 |
 | **Precision / recall** | Of predicted positives, how many are real / of real positives, how many were found | 03.2 |
 | **Proxy variable** | A feature that predicts the outcome only because it travels with the real cause | SB |
+| **Prior shift** | Training and deployment data differ in how common the positive class is. Rankings and ROC-AUC survive it; probabilities, fixed thresholds and precision do not. Correcting it is a constant shift of the log-odds | SB |
 | **Prompt** | The instructions and input text given to an LLM; its wording changes the answers and must be tested | 04.3 |
 | **PR-AUC / ROC-AUC** | Areas under the precision–recall and ROC curves; how well a model ranks positives | 03.2, BI |
 | **RAG** | Retrieval-augmented generation: an LLM answers from retrieved documents | 04.3 |
