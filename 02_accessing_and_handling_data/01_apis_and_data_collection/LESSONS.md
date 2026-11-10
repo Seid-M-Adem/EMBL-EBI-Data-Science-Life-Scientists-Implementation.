@@ -6,6 +6,11 @@ in [`LEARNING_GUIDE.md`](../../LEARNING_GUIDE.md).*
 **What this session teaches:** how to get data out of a database **with code** instead of by clicking around a website,
 so the work is repeatable, scalable and documented.
 
+**Worked examples in this repo:** the [aquaporin family from UniProt](implementation/01_uniprot_aquaporin_family.ipynb),
+[EGFR inhibitor activities from ChEMBL](implementation/02_chembl_egfr_ic50.ipynb) and
+[Tara Oceans runs from ENA](implementation/03_ena_tara_oceans_runs.ipynb), all built on my cached API client
+([`src/dsls/ebi_api.py`](../../src/dsls/ebi_api.py)).
+
 ---
 
 ## Lesson 1 · What an API is, and why scientists use one

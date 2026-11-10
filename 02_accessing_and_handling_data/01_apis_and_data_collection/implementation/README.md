@@ -12,7 +12,7 @@ My own work for [02.1 APIs & Data Collection](../): a reusable API client, and a
 | [`../../../src/dsls/uniprot.py`](../../../src/dsls/uniprot.py) | Flattens UniProtKB JSON entries into analysis-ready records |
 | [`../../../src/dsls/chembl.py`](../../../src/dsls/chembl.py) | ChEMBL curation: counted filter funnel, variant normalisation (`"L858R,T790M"` → `T790M/L858R`), per-compound medians |
 | [`../../../src/dsls/ena.py`](../../../src/dsls/ena.py) | ENA Portal helpers: run table with a `/count` integrity check, batched sample lookup, assay labels, placeholder-ontology detection, completeness audit |
-| [`../../../tests/`](../../../tests/) | 51 offline unit tests (fake HTTP clients, synthetic records) + 1 live smoke test; run in CI on every push |
+| [`../../../tests/`](../../../tests/) | 105 offline unit tests (fake HTTP clients, synthetic records) + 1 live smoke test; run in CI on every push. 53 of them cover the API client and its service helpers |
 
 ## Key results: UniProt aquaporins (release 2026_04)
 
@@ -72,7 +72,7 @@ Full reasoning, including caveats on small n, is in each notebook's *Findings* s
 ## Run it
 ```bash
 make setup      # installs the dsls package (editable) and test tools
-make test       # 51 offline tests
+make test       # 105 offline tests
 make lab        # open this notebook with the "Python 3 (EMBL-EBI DS .venv)" kernel → Run All
 ```
 The UniProt notebook's first run calls the API (~5 s). The ChEMBL notebook's first run downloads ~19k records (~30 min,

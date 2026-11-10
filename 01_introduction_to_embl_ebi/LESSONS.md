@@ -7,6 +7,10 @@
 different kinds of databases apart. Every later module downloads data from these places, so this is the map of the
 territory.
 
+**Worked examples in this repo:** a [resource map](implementation/RESOURCE_MAP.md), a
+[cross-reference walk from the EGFR gene to its structures, drugs and literature](implementation/01_egfr_cross_reference_walk.ipynb)
+and [FAIR notes](implementation/FAIR.md).
+
 ---
 
 ## Lesson 1 · EMBL-EBI is the infrastructure behind most biological data science

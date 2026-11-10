@@ -11,7 +11,7 @@ session's [`LESSONS.md`](../LESSONS.md).
 | [`03_tcga_clustering_kmeans_vs_hierarchical.ipynb`](03_tcga_clustering_kmeans_vs_hierarchical.ipynb) | **k-means vs hierarchical clustering (Ward / average / complete)** for k = 2–20, scored with silhouette (label-free) and ARI (vs known types); contingency tables; type dendrogram; a test of a tempting but unsupported explanation; two common traps |
 | [`figures/`](figures/) | Figures saved by the notebooks (01–04 Iris, 05–08 embeddings, 09–11 clustering) |
 | [`../../../src/dsls/expression.py`](../../../src/dsls/expression.py) | **Expression helpers**: TCGA sample-type parsing, balanced subsampling, top-variance gene selection, and two embedding-quality scores (cross-validated kNN label agreement, centroid-distance correlation) |
-| [`../../../tests/test_expression.py`](../../../tests/test_expression.py) | 4 unit tests for the helpers |
+| [`../../../tests/test_expression.py`](../../../tests/test_expression.py) | 6 unit tests for the helpers (two cover `GeneSelector`, added for the [gene-expression project](../../../05_group_projects/gene_expression/implementation/)) |
 
 ## Key results
 

@@ -6,6 +6,9 @@ in [`LEARNING_GUIDE.md`](../../LEARNING_GUIDE.md).*
 **What this session teaches:** the everyday Python skills of data science (core data structures, reading files,
 cleaning tables with **pandas**, plotting with **seaborn**), with notes for people coming from **R** or Excel.
 
+**Worked example in this repo:** [exploring aquaporin sequences](implementation/01_aquaporin_sequence_eda.ipynb)
+(pore motifs, length, hydrophobicity and alignment-free comparison).
+
 ---
 
 ## Lesson 1 · Python's core data structures, and when to use each

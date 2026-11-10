@@ -59,6 +59,26 @@ ideas myself** as clean, documented, reproducible code, with a write-up of what 
 
 ---
 
+## 🔬 Selected Results
+
+The theme running through this portfolio is **checking whether a result is real** before reporting it: build the
+baseline first, split the data the way the biology demands, and compare models on identical splits.
+
+| Finding | Where |
+|---|---|
+| **A random split inflated a crystallography model from AUC 0.74 to 0.93.** The 663 rows come from 359 crystals; splitting by crystal removed the illusion, and the "best" model changed with it. | [03.2](03_foundations_of_machine_learning/02_hyperparameters_and_performance/implementation/) |
+| **Selecting genes before cross-validation scored *shuffled* outcomes at AUC 0.74.** Selection inside each training fold correctly scored the same noise at 0.48. | [Gene expression](05_group_projects/gene_expression/implementation/) |
+| **A no-training baseline reached ROC-AUC 0.78** on cell-image toxicity prediction, against 0.84 for the best model: most of the apparent skill was "did the compound disturb the cells at all". | [Bioimaging](05_group_projects/bioimaging/implementation/) |
+| **The pathologist's grade matched the genomics.** Tumour grade alone predicted prostate-cancer recurrence as well as 20,000 genes; adding expression gave +0.034 AUC (95 % interval −0.044 to +0.111). | [Gene expression](05_group_projects/gene_expression/implementation/) |
+| **A fine-tuned transformer was confidently wrong:** PubMedBERT said "≥ 90 % sure" on 96 % of sentences while right on 85 % (calibration error 0.135). Temperature scaling more than halved it. | [04.2](04_foundations_of_deep_learning/02_evaluation_and_visualisation/implementation/) |
+| **Retrieval turned a 0.5B model from a guesser into a reader:** UniProt accession questions went from 0 % to 82 % correct, and it declined all 20 made-up genes instead of inventing functions for them. | [04.3](04_foundations_of_deep_learning/03_intro_to_llms/implementation/) |
+| **A feature the model relied on was a study-design artefact.** Both MR models used the anomalous signal, which molecular replacement never uses; it stood in for "no close search model existed". | [Structural biology](05_group_projects/structural_biology/implementation/) |
+| **One cheap feature beat the model upgrade.** Telling a model *where* a sentence sits in the abstract lifted a TF-IDF + MLP to macro-F1 0.797 in 23 s, above fine-tuned PubMedBERT (0.782–0.795, 310 s). Giving PubMedBERT the same hint won overall (0.847). | [04.1](04_foundations_of_deep_learning/01_dnn_and_transformers/implementation/) |
+
+Every number above is computed in the linked notebook and reproduced on a clean re-run.
+
+---
+
 ## 🧭 How This Repository Is Organised
 
 Every module folder follows the same pattern:
